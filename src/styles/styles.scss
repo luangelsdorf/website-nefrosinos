@@ -1,0 +1,53 @@
+:root {
+  --heading: "Work Sans", sans-serif;
+  --body: Poppins, sans-serif;
+
+  /* Headings */
+  --title-display: 500 56px/72px var(--heading);
+  --title-xl: 500 44px/56px var(--heading);
+  --title-lg: 500 32px/40px var(--heading);
+  --title-md: 600 24px/32px var(--heading);
+  --title-sm: 500 20px/32px var(--heading);
+  --title-xs: 600 16px/24px var(--heading);
+
+  /* Body Text */
+  --body-lg: 500 18px/28px var(--body);
+  --body-md: 500 16px/28px var(--body);
+  --body-sm: 500 14px/24px var(--body);
+
+  /* Grayscale */
+  --gray-10: #E7E9ED;
+  --gray-20: #CED2DB;
+  --gray-30: #B6BCC9;
+  --gray-40: #9EA5B8;
+  --gray-50: #858FA6;
+  --gray-60: #6D7994;
+  --gray-70: #556282;
+  --gray-80: #3C4C70;
+  --gray-90: #24365E;
+  --gray-100: #0B1F4D;
+
+  /* Brand Colors */
+  --blue: #193E72;
+  --pink: #DA3372;
+  --pink: #0A2156;
+
+  /* Support Colors */
+  --suport-01: #4070F4;
+  --suport-01: #0BB07B;
+  --suport-01: #FFAD0D;
+  --suport-01: #F03D3D;
+  --suport-01: #3C4C70;
+
+  /* Shadows */
+  --shadow-sm: 0px 2px 4px rgba(11, 31, 77, 0.08);
+  --shadow-md: 0px 4px 8px rgba(11, 31, 77, 0.1);
+  --shadow-lg: 0px 8px 16px rgba(11, 31, 77, 0.12);
+  --shadow-xl: 0px 12px 24px rgba(11, 31, 77, 0.14);
+  --shadow-xxl: 0px 16px 32px rgba(11, 31, 77, 0.16);
+}
+
+body {
+  font: var(--body-md);
+  color: var(--gray-70);
+}
