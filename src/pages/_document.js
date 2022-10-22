@@ -17,6 +17,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Work+Sans:wght@500;600&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" href="/images/logo.svg" />
       </Head>
       <body>
         <Main />
