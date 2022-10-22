@@ -51,3 +51,13 @@ body {
   font: var(--body-md);
   color: var(--gray-70);
 }
+
+.collapse:not(.show) {
+  display: none;
+}
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
