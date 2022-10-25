@@ -1,0 +1,17 @@
+:root {
+  --heading: "Work Sans", sans-serif;
+  --body: Poppins, sans-serif;
+
+  /* Headings */
+  --title-display: 500 56px/72px var(--heading);
+  --title-xl: 500 44px/56px var(--heading);
+  --title-lg: 500 32px/40px var(--heading);
+  --title-md: 600 24px/32px var(--heading);
+  --title-sm: 500 20px/32px var(--heading);
+  --title-xs: 600 16px/24px var(--heading);
+
+  /* Body Text */
+  --body-lg: 500 18px/28px var(--body);
+  --body-md: 500 16px/28px var(--body);
+  --body-sm: 500 14px/24px var(--body);
+}
