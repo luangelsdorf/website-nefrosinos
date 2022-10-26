@@ -15,3 +15,29 @@
   --body-md: 500 16px/28px var(--body);
   --body-sm: 500 14px/24px var(--body);
 }
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font: var(--title-display);
+}
+h2 {
+  font: var(--title-xl);
+}
+h3 {
+  font: var(--title-lg);
+}
+h4 {
+  font: var(--title-md);
+}
+h6 {
+  font: var(--title-sm);
+}
+h6 {
+  font: var(--title-xs);
+}

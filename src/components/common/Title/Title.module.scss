@@ -1,0 +1,18 @@
+.title {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    background-color: var(--gray-70);
+    color: var(--gray-10);
+    font: var(--body-sm);
+    padding: 10px 16px;
+    border-radius: 2px;
+  }
+}
+
+.dark {
+  p + * {
+    color: var(--gray-10);
+  }
+}
