@@ -1,0 +1,31 @@
+.service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 60px 0;
+  background-color: var(--gray-30);
+  gap: 48px;
+
+  h2 {
+    font: var(--title-lg);
+    max-width: 260px;
+  }
+
+  .separator {
+    width: 2px;
+    height: 72px;
+    border-radius: 72px;
+    background-color: var(--gray-40);
+  }
+
+  p {
+    max-width: 275px;
+
+    &::first-line {
+      font: var(--body-lg);
+      font-weight: 600;
+      line-height: 32px;
+    }
+  }
+}
