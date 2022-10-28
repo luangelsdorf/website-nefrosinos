@@ -3,10 +3,10 @@ import React from 'react';
 import { apiURL } from 'src/utils/env';
 import styles from './Banner.module.scss';
 
-export default function Banner({ content, children, height = 480, ...rest }) {
+export default function Banner({ cover, children, ...rest }) {
   return (
-    <section className={styles.banner} style={{ height: `${height}px` }} {...rest}>
-      <Image src={apiURL + content.cover.data.attributes.url} fill alt="" />
+    <section className={styles.banner} {...rest}>
+      <Image src={cover} fill alt="" priority />
       <div className="container">
         {
           children

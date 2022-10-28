@@ -14,7 +14,7 @@ const nextConfig = {
   },
 
   images: {
-    domains: ['static1.e621.net', 'localhost'],
+    domains: ['picsum.photos', 'localhost'],
   }
 }
 
