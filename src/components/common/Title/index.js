@@ -3,7 +3,7 @@ import styles from './Title.module.scss';
 
 export default function Title({ title, overline, align = 'center', spacing = 24, dark, children }) {
   return (
-    <hgroup
+    <header
       className={`${styles.title} ${dark ? styles.dark : ''}`}
       style={{
         gap: `${spacing}px`,
@@ -20,6 +20,6 @@ export default function Title({ title, overline, align = 'center', spacing = 24,
           </>
         )
       }
-    </hgroup>
+    </header>
   )
 }

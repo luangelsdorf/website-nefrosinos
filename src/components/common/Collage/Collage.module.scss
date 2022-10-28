@@ -1,0 +1,39 @@
+.collage {
+  --lg-img-width: 54.85%;
+  --md-img-width: 59.14%;
+  --sm-img-width: 19.42%;
+
+  position: relative;
+  display: flex;
+  height: 100%;
+
+  & > img {
+    position: relative;
+    display: block;
+    object-fit: cover;
+
+    &:not(:nth-child(2)) {
+      position: absolute;
+    }
+  }
+}
+
+.mdImage {
+  width: var(--lg-img-width);
+  height: 90%;
+  top: -19.43%;
+  z-index: -1;
+}
+
+.lgImage {
+  width: var(--md-img-width);
+  height: 100%;
+  margin-left: auto;
+}
+
+.smImage {
+  width: var(--sm-img-width);
+  height: auto;
+  bottom: 0;
+  right: calc(59.14% + 40px);
+}

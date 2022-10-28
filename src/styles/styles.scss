@@ -1,7 +1,8 @@
-@use 'scss/buttons';
-@use 'scss/colors';
-@use 'scss/bootstrap';
-@use 'scss/typography';
+@use "scss/buttons";
+@use "scss/colors";
+@use "scss/bootstrap";
+@use "scss/typography";
+@use "scss/mixins";
 
 :root {
   /* Shadows */
@@ -12,7 +13,25 @@
   --shadow-xxl: 0px 16px 32px rgba(11, 31, 77, 0.16);
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
 body {
   font: var(--body-md);
   color: var(--gray-70);
+}
+
+p {
+  white-space: break-spaces;
+
+  @include mixins.sm {
+    white-space: normal;
+  }
 }
