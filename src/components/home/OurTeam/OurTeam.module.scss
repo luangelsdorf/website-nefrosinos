@@ -1,0 +1,25 @@
+.section {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -96px;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    z-index: -2;
+    background-color: var(--gray-60);
+  }
+
+  header {
+    margin-bottom: 96px;
+  }
+
+  :global(.swiper-slide) {
+    width: calc((320 * 100%) / 1220);
+  }
+  :global(.swiper) {
+    overflow: visible;
+  }
+}
