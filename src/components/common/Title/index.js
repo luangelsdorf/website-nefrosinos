@@ -15,7 +15,7 @@ export default function Title({ title, overline, align = 'center', spacing = 24,
           children
         ) : (
           <>
-            <p>{overline}</p>
+            {overline && <p>{overline}</p>}
             <h2>{title}</h2>
           </>
         )
