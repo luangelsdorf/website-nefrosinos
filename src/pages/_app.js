@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import 'src/styles/styles.scss';
+import 'swiper/css';
 
 function MyApp({ Component, pageProps }) {
   return (
