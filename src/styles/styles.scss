@@ -29,11 +29,3 @@ body {
   font: var(--body-md);
   color: var(--gray-70);
 }
-
-p {
-  white-space: break-spaces;
-
-  @include mixins.sm {
-    white-space: normal;
-  }
-}
