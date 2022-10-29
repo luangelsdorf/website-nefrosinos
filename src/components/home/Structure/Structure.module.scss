@@ -1,0 +1,38 @@
+.section {
+  position: relative;
+
+  :global(.row) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  header {
+    margin-bottom: 64px;
+  }
+}
+
+.leftImage,
+.rightImage {
+  position: absolute;
+  max-width: 25vw;
+}
+
+.topImage,
+.bottomImage {
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+.leftImage {
+  left: 0;
+}
+.rightImage {
+  right: 0;
+}
