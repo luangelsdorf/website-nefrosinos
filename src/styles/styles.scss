@@ -3,6 +3,7 @@
 @use "scss/bootstrap";
 @use "scss/typography";
 @use "scss/mixins";
+@use "scss/forms";
 
 :root {
   /* Shadows */
@@ -28,4 +29,8 @@ body, html {
 body {
   font: var(--body-md);
   color: var(--gray-70);
+}
+
+figure {
+  margin: 0;
 }

@@ -1,0 +1,27 @@
+form {
+  --field-gap: 20px;
+  display: flex;
+  gap: var(--field-gap);
+  flex-wrap: wrap;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+  font: inherit;
+  padding: 16px;
+  font-weight: 400;
+  border: 1px solid;
+
+  color: inherit;
+  background-color: var(--gray-10);
+  border-color: var(--gray-20);
+
+  &::placeholder {
+    color: var(--gray-40);
+  }
+}
+
+input,
+textarea,
+select {
+  border-radius: 4px;
+}
