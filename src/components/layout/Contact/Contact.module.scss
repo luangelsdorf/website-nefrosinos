@@ -1,0 +1,132 @@
+.section {
+  :global {
+    .row {
+      position: relative;
+    }
+
+    .col-lg-3 {
+      position: absolute;
+      right: 0;
+      bottom: -108px;
+    }
+  }
+}
+
+.textContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+
+  & > p {
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  address {
+    font-style: normal;
+    margin-bottom: 32px;
+    span {
+      font-weight: 600;
+      &:last-child {
+        &::before {
+          content: "  |  ";
+          white-space: pre-wrap;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  form {
+    input {
+      &[name="name"],
+      &[name="phone"] {
+        width: calc(50% - var(--field-gap) / 2);
+      }
+      &[name="email"] {
+        width: 100%;
+      }
+    }
+
+    textarea {
+      width: 100%;
+    }
+  }
+}
+
+.map {
+  position: relative;
+  height: 640px;
+  background-color: var(--gray-20);
+  border-radius: 4px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(180deg, rgba(133, 143, 166, 0) 0%, #556282 116.46%);
+  }
+
+  figcaption {
+    font: var(--title-md);
+    color: var(--white);
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    max-width: 50%;
+    z-index: 2;
+
+    address {
+      font: var(--body-sm);
+      color: var(--gray-10);
+      line-height: 20px;
+      white-space: break-spaces;
+    }
+  }
+}
+
+.hours {
+  padding: 48px 32px;
+  background-color: var(--gray-50);
+
+  h3 {
+    font: var(--title-xs);
+    color: var(--white);
+    margin-bottom: 20px;
+
+    & ~ * {
+      color: var(--gray-10);
+    }
+  }
+
+  p {
+    font: var(--body-sm);
+    &:nth-of-type(2) {
+      margin-top: 16px;
+      margin-bottom: 20px;
+    }
+  }
+
+  a {
+    font: var(--body-sm);
+    display: inline-flex;
+    align-items: center;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-color: transparent;
+    transition: all 350ms;
+
+    &:hover {
+      text-decoration-color: inherit;
+    }
+
+    svg {
+      margin-left: 8px;
+    }
+  }
+}
