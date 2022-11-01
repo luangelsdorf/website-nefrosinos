@@ -1,0 +1,28 @@
+.section {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+  background-color: var(--gray-20);
+  padding: 48px 64px;
+
+  .text {
+    max-width: 40%;
+
+    h3 {
+      font: var(--title-lg);
+      margin-bottom: 8px;
+    }
+  }
+
+  .certificates {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    img {
+      max-width: 102px;
+      height: auto;
+    }
+  }
+}
