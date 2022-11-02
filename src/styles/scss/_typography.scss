@@ -60,3 +60,15 @@ h6 {
 h6 {
   font: var(--title-xs);
 }
+
+a:not(.btn) {
+  color: var(--gray-10);
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  transition: all 350ms;
+
+  &:hover {
+    text-decoration-color: var(--gray-10);
+    color: var(--white);
+  }
+}

@@ -8,7 +8,7 @@ export default function Certificates({ content }) {
     <div className="container">
       <div className={styles.section}>
         <div className={styles.text}>
-          <h3>{content.title}</h3>
+          <h2>{content.title}</h2>
           <p>{content.text}</p>
         </div>
         <div className={styles.certificates}>
