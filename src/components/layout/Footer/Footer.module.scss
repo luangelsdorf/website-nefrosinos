@@ -1,0 +1,36 @@
+.footer {
+  background-color: var(--gray-40);
+  padding-bottom: 56px;
+  padding-top: 200px;
+
+  img {
+    margin-bottom: 24px;
+    max-width: 260px;
+    height: auto;
+  }
+
+  .textContent {
+    p {
+      color: var(--gray-10);
+      max-width: 89%;
+    }
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+      color: var(--white);
+      font: var(--title-sm);
+    }
+
+    ul {
+      list-style: inside;
+      padding: 0;
+      margin-top: 16px;
+      margin-bottom: 0;
+      color: var(--gray-10);
+    }
+  }
+}
