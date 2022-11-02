@@ -1,0 +1,13 @@
+.section {
+  background-color: var(--gray-50);
+  padding: 36px 0;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    
+    small {
+      color: var(--gray-20);
+    }
+  }
+}
