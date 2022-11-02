@@ -10,4 +10,14 @@
       color: var(--gray-20);
     }
   }
+
+  .icons {
+    display: flex;
+    gap: 16px;
+
+    svg {
+      fill: var(--gray-70);
+      border-radius: 4px;
+    }
+  }
 }
