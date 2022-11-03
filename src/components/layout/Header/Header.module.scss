@@ -1,0 +1,82 @@
+@use "../../../styles/scss/mixins";
+
+.navbar {
+  background-color: var(--gray-20);
+  width: 100%;
+  position: fixed;
+  top: 0;
+
+  @include mixins.lg {
+    button {
+      order: 1;
+    }
+
+    .links {
+      order: 2;
+      flex-direction: column;
+      flex-basis: 100%;
+      align-items: center;
+      gap: 8px;
+
+      & > :first-child {
+        padding-top: 24px;
+      }
+    }
+
+    .navbarInner > a:last-child {
+      display: none;
+    }
+
+    .navbarInner > a:first-child {
+      margin-right: auto;
+    }
+  }
+}
+
+.navbarInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 32px 0;
+
+  @include mixins.lg {
+    justify-content: center;
+  }
+
+  & > a {
+    svg {
+      display: block;
+      max-width: 260px;
+      height: auto;
+
+      @include mixins.xl {
+        max-width: 180px;
+      }
+    }
+  }
+
+  button {
+    display: none;
+    @include mixins.lg {
+      display: inline-flex;
+    }
+  }
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+
+  a {
+    --link-fill-color: var(--gray-70) !important;
+  }
+
+  li:last-child > a {
+    display: none;
+
+    @include mixins.lg {
+      display: inline-block;
+    }
+  }
+}
