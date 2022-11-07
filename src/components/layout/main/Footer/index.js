@@ -19,7 +19,7 @@ export default function Footer({ content, contact }) {
           </Section>
         )
       }
-      <Section mt="-80" style={{ position: 'absolute', width: '100%', zIndex: '1' }}>
+      <Section mt="-80" className={styles.certSection}>
         <Certificates content={content.footer.certificates} />
       </Section>
       <FooterLinks content={content.footer.footer} />
