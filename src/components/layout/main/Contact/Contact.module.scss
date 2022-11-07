@@ -1,4 +1,8 @@
 .section {
+  background-color: var(--gray-10);
+  padding-top: 124px;
+  padding-bottom: 108px;
+
   :global {
     .row {
       position: relative;
@@ -51,6 +55,7 @@
     }
 
     textarea {
+      resize: none;
       width: 100%;
     }
   }

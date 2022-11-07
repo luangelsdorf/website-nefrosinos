@@ -3,13 +3,23 @@ import 'src/styles/styles.scss';
 import 'swiper/css';
 
 function MyApp({ Component, pageProps }) {
+  const Layout = Component.layout;
+
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <Component {...pageProps} />
+      {
+        Component.layout ? (
+          <Layout content={pageProps.layout}>
+            <Component {...pageProps} />
+          </Layout>
+        ) : (
+          <Component {...pageProps} />
+        )
+      }
     </>
   )
 }

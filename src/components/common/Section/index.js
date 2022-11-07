@@ -7,6 +7,7 @@ export default function Section({
   mb,
   pt,
   pb,
+  style,
   ...rest
 }) {
 
@@ -34,7 +35,7 @@ export default function Section({
   }, [isMobile]);
 
   return (
-    <section style={spacing[device]} {...rest}>
+    <section style={{ ...spacing[device], ...style }} {...rest}>
       {children}
     </section>
   )

@@ -4,3 +4,11 @@ export default async function fetchAPI(endpoint = '') {
   const { data: { attributes: data } } = result;
   return data;
 }
+
+export async function getLayoutContent() {
+  const footer = await fetchAPI('rodape');
+
+  const info = await fetchAPI('info');
+
+  return { footer, info };
+}
