@@ -1,0 +1,24 @@
+.section {
+  header {
+    margin-bottom: 69px;
+  }
+}
+
+.card {
+  background-color: var(--gray-10);
+  padding: 48px;
+  border-radius: 4px;
+
+  h3 {
+    margin: 24px 0;
+  }
+
+  p {
+    font: var(--body-sm);
+
+    span {
+      display: list-item;
+      list-style: inside;
+    }
+  }
+}
