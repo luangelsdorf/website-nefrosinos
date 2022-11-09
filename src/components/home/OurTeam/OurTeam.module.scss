@@ -2,7 +2,7 @@
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -96px;
     bottom: 20%;
@@ -14,12 +14,5 @@
 
   header {
     margin-bottom: 96px;
-  }
-
-  :global(.swiper-slide) {
-    width: calc((320 * 100%) / 1220);
-  }
-  :global(.swiper) {
-    overflow: visible;
   }
 }
