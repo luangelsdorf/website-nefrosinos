@@ -1,0 +1,8 @@
+.carousel {
+  :global(.swiper-slide) {
+    width: calc((320 * 100%) / 1220);
+  }
+  :global(.swiper) {
+    overflow: visible;
+  }
+}
