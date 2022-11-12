@@ -69,7 +69,9 @@ a:not(.btn):not(.link-image) {
   --link-fill-color: var(--gray-10);
 
   color: var(--link-fill-color);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   position: relative;
   transition: all 350ms;
   text-decoration: none;
@@ -88,9 +90,14 @@ a:not(.btn):not(.link-image) {
   }
 
   &:hover {
-    --link-fill-color: var(--white) !important;
+    --link-fill-color: var(--white);
     &::after {
       transform: scaleX(1);
     }
+  }
+
+  svg {
+    height: 0.75em;
+    width: 0.75em;
   }
 }
