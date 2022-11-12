@@ -1,0 +1,29 @@
+.section {
+}
+
+.collage {
+  & > div {
+    position: relative;
+
+    &:first-child {
+      max-width: 85%;
+      height: 480px;
+    }
+    &:last-child {
+      max-width: 60%;
+      height: 320px;
+      margin-top: -200px;
+      margin-left: auto;
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.textContent {
+  & > p {
+    margin: 32px 0;
+  }
+}
