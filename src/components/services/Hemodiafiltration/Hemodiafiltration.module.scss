@@ -1,0 +1,44 @@
+.section {
+}
+
+.info {
+  margin-bottom: 80px;
+
+  .about {
+    header {
+      margin-bottom: 32px;
+    }
+  }
+
+  .note {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+    gap: 32px;
+
+    strong {
+      font: var(--body-sm);
+      text-align: right;
+      font-weight: 500;
+      max-width: 400px;
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.benefits {
+  h3 {
+    font: 500 18px/28px var(--body);
+    max-width: 180px;
+  }
+
+  .card {
+    display: flex;
+    gap: 24px;
+  }
+}
