@@ -1,0 +1,28 @@
+@use '../../../styles/scss/mixins';
+
+.section {
+  background-color: var(--gray-10);
+  padding: 160px 0;
+
+  .textContent {
+    header {
+      margin-bottom: 32px;
+    }
+
+    & > p {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+
+      @include mixins.md {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
