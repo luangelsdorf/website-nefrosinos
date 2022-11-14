@@ -8,7 +8,7 @@ export default function Structure({ content }) {
   const [{ image: leftImage }, { image: topImage }, { image: bottomImage }, { image: rightImage }] = content.images;
   return (
     <div className={styles.section}>
-      <Title title={content.title.title} overline={content.title.overline} />
+      <Title content={content.title} />
       <div className="container">
         <div className="row align-items-center gy-4">
           <div className={styles.leftImage}>

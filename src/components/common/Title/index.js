@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './Title.module.scss';
 
-export default function Title({ title, overline, align = 'center', spacing = 24, variant, children }) {
+export default function Title({ content, align = 'center', spacing = 24, variant, children }) {
+  const { title, overline } = content;
+
   return (
     <header
       className={`${styles.title} ${styles[variant]}`}

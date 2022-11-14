@@ -14,7 +14,7 @@ export default function Hemodialysis({ content }) {
           </div>
           <div className="col-12 col-lg-4 offset-lg-1">
             <div className={styles.textContent}>
-              <Title title={content.title.title} overline={content.title.overline} align="flex-start" variant="dark" />
+              <Title content={content.title} align="flex-start" variant="dark" />
               <p>{content.text}</p>
             </div>
           </div>

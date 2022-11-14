@@ -5,7 +5,7 @@ import styles from './OurTeam.module.scss';
 export default function OurTeam({ content, team }) {
   return (
     <div className={styles.section}>
-      <Title title={content.title.title} overline={content.title.overline} variant="dark" />
+      <Title content={content.title} variant="dark" />
       <TeamCarousel team={team} />
     </div>
   )

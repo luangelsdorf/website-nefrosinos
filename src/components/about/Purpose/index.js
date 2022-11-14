@@ -29,7 +29,7 @@ export default function Purpose({ content }) {
 
   return (
     <div className={styles.section}>
-      <Title title={content.title.title} overline={content.title.overline} align="center" />
+      <Title content={content.title} align="center" />
       <div className="container">
         <div className="row">
           {

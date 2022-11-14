@@ -24,7 +24,7 @@ export default function Hemodiafiltration({ content }) {
           <div className="row">
             <div className="col-12 col-lg-7">
               <div className={styles.about}>
-                <Title title={content.title.title} overline={content.title.overline} align="flex-start" />
+                <Title content={content.title} align="flex-start" />
                 <p>{content.text}</p>
               </div>
             </div>

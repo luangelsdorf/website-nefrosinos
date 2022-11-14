@@ -10,7 +10,7 @@ export default function Hero({ content }) {
     <section className={styles.hero}>
       <Banner cover={apiURL + content.cover.data.attributes.url}>
         <div className={styles.bannerContent}>
-          <Title title={content.title.title} overline={content.title.overline} align="center" />
+          <Title content={content.title} align="center" />
           <Link href="/contato">
             <a className="btn secondary icon">Agendar Consulta</a>
           </Link>

@@ -10,7 +10,7 @@ export default function ConservativeTreatment({ content }) {
         <div className="row">
           <div className="col-12 col-lg-8 mx-auto">
             <div className={styles.textContent}>
-              <Title title={content.title.title} overline={content.title.overline} align="center" variant="light" />
+              <Title content={content.title} align="center" variant="light" />
               <p>{content.text}</p>
               <div className={styles.links}>
                 <Link href="/">

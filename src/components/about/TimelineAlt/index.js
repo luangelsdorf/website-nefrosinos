@@ -8,7 +8,7 @@ export default function TimelineAlt({ content }) {
   return (
     <div className={styles.section}>
       {/* <div className={styles.headingSection}>
-        <Title title={content.title.title} overline={content.title.overline} variant="dark" />
+        <Title content={content.title} variant="dark" />
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-10 mx-auto">

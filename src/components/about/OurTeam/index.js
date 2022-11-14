@@ -27,7 +27,7 @@ export default function OurTeam({ content, team }) {
 
   return (
     <div className={styles.section}>
-      <Title title={content.title.title} overline={content.title.overline} variant="dark" />
+      <Title content={content.title} variant="dark" />
       <div className={styles.mainSection}>
         <div className="container">
           <div className="row">
