@@ -1,0 +1,32 @@
+.section {
+  header {
+    margin-bottom: 72px;
+  }
+}
+
+.logo {
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 100px;
+  background-color: var(--gray-10);
+  border-radius: 4px;
+}
+
+.finalText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
+  h3 {
+    margin-bottom: 24px;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  a {
+    --link-fill-color: var(--gray-70) !important;
+  }
+}
