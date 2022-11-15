@@ -1,0 +1,23 @@
+.section {
+  img {
+    width: 100%;
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.imgContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .smallImage {
+    height: 296px;
+  }
+  .largeImage {
+    height: 540px;
+  }
+}
