@@ -1,0 +1,18 @@
+.section {
+  position: relative;
+  padding: 120px 0;
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+
+  header {
+    margin-bottom: 32px;
+  }
+
+  & > p {
+    color: var(--gray-80);
+  }
+}
