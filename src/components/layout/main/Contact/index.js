@@ -12,7 +12,7 @@ export default function Contact({ content, info }) {
         <div className="row">
           <div className="col-12 col-lg-5">
             <div className={styles.textContent}>
-              <Title title={content.contact.title.title} overline={content.contact.title.overline} align="start" spacing="16" />
+              <Title content={content.contact.title} align="start" spacing="16" />
               <p>{content.contact.text}</p>
               <address>
                 <span>Telefone: </span>{info.phone}
