@@ -1,0 +1,30 @@
+.section {
+  & > header {
+    margin-bottom: 72px;
+  }
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  article {
+    background-color: var(--gray-10);
+    padding: 30px 40px;
+
+    h3 {
+      font: var(--title-sm);
+    }
+
+    p {
+      margin-top: 24px;
+    }
+  }
+}
