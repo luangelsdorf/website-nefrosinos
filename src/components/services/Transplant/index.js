@@ -11,7 +11,7 @@ export default function Transplant({ content }) {
         <div className="row">
           <div className="col-12 col-lg-5">
             <div className={styles.textContent}>
-              <Title content={content.title} align="flex-start" />
+              <Title content={content.title} align="start" />
               <p>{content.text}</p>
             </div>
           </div>

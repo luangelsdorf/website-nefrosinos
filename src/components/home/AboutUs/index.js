@@ -34,7 +34,7 @@ export default function AboutUs({ content }) {
           </div>
           <div className="col-12 col-lg-5">
             <div className={styles.textContent}>
-              <Title overline={content.title.overline} title={content.title.title} align="flex-start" />
+              <Title overline={content.title.overline} title={content.title.title} align="start" />
               <p>{content.text}</p>
               <Link href="/sobre-nos">
                 <a className="btn secondary">Sobre Nós</a>

@@ -12,7 +12,7 @@ export default function AboutUs({ content }) {
         <div className="row">
           <div className="col-12 col-lg-5">
             <div className={styles.text}>
-              <Title content={content.title} align="flex-start" />
+              <Title content={content.title} align="start" />
               <p>{content.text}</p>
               <Link href="/contato">
                 <a className="btn icon">Fale Conosco</a>

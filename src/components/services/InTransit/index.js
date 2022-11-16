@@ -22,7 +22,7 @@ export default function InTransit({ content }) {
           </div>
           <div className="col-12 col-lg-6 offset-xl-1">
             <div className={styles.textContent}>
-              <Title content={content.title} align="flex-start" />
+              <Title content={content.title} align="start" />
               <p>{content.text}</p>
               <Link href="#">
                 <a className="btn">Saiba Mais</a>
