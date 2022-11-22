@@ -6,7 +6,7 @@ import styles from './Banner.module.scss';
 export default function Banner({ cover, children, ...rest }) {
   return (
     <section className={styles.banner} {...rest}>
-      <Image src={cover} fill alt="" priority />
+      {cover && <Image src={cover} fill alt="" priority />}
       <div className="container">
         {
           children

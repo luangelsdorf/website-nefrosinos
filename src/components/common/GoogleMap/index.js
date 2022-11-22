@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import styles from './GoogleMap.module.scss';
 
-export default function GoogleMap({ address }) {
+export default function GoogleMap({ address, params = {} }) {
   const frame = useRef(null);
 
   const frameParams = {
@@ -9,14 +9,19 @@ export default function GoogleMap({ address }) {
     z: '15',
     ie: 'UTF8',
     output: 'embed',
+    ...params,
   }
 
-  useEffect(() => {
-    const queryString = new URLSearchParams(frameParams).toString();
-    frame.current.src = `https://maps.google.com/maps?${queryString}`
-  }, []);
+  const getParams = () => new URLSearchParams(frameParams).toString();
 
   return (
-    <iframe title="Localização da NefroSinos" className={styles.frame} ref={frame} />
+    <div className={styles.wrapper}>
+      <iframe
+        title="Localização da NefroSinos"
+        src={`https://maps.google.com/maps?${getParams()}`}
+        className={styles.frame}
+        ref={frame}
+      />
+    </div>
   )
 }

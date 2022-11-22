@@ -1,0 +1,24 @@
+.hero {
+  height: 640px;
+  position: relative;
+
+  &::after, &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &::before {
+    background: linear-gradient(90deg, #9EA5B8 20.31%, rgba(158, 165, 184, 0) 51.56%, #9EA5B8 75.52%);
+  }
+  &::after {
+    background: linear-gradient(180deg, rgba(133, 143, 166, 0) 0%, rgba(85, 98, 130, 0.5) 116.46%);
+    height: 240px;
+    top: auto;
+    bottom: 0;
+  }
+}
