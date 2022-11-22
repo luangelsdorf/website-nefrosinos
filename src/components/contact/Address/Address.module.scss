@@ -27,10 +27,6 @@
       font: var(--body-lg);
       font-weight: 700;
     }
-
-    address {
-      font-style: normal;
-    }
   }
 
   @include mixins.md {
