@@ -9,9 +9,11 @@ export default function Title({ content, align = 'center', spacing = 24, variant
     case 'start':
       alignment.flex = 'flex-start';
       alignment.text = 'left';
+      break;
     case 'end':
       alignment.flex = 'flex-end';
       alignment.text = 'right';
+      break;
   }
 
   return (

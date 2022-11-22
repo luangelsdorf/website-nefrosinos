@@ -4,6 +4,7 @@ import Title from 'src/components/common/Title';
 import styles from './Contact.module.scss';
 import Arrow from 'public/images/icons/arrow-right.svg';
 import GoogleMap from 'src/components/common/GoogleMap';
+import ContactForm from 'src/components/common/ContactForm';
 
 export default function Contact({ content, info }) {
   return (
@@ -18,13 +19,7 @@ export default function Contact({ content, info }) {
                 <span>Telefone: </span>{info.phone}
                 <span>WhatsApp: </span>{info.whatsapp}
               </address>
-              <form>
-                <input name="name" type="text" placeholder="Nome" />
-                <input name="phone" type="tel" placeholder="Telefone" />
-                <input name="email" type="email" placeholder="E-mail para Contato" />
-                <textarea name="message" rows="4" placeholder="Mensagem" />
-                <button className="btn icon" type="submit">Enviar Mensagem</button>
-              </form>
+              <ContactForm />
             </div>
           </div>
 

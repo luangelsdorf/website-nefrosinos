@@ -1,0 +1,16 @@
+.form {
+  input {
+    &[name="name"],
+    &[name="phone"] {
+      width: calc(50% - var(--field-gap) / 2);
+    }
+    &[name="email"] {
+      width: 100%;
+    }
+  }
+
+  textarea {
+    resize: none;
+    width: 100%;
+  }
+}

@@ -1,5 +1,5 @@
 .section {
-  background-color: var(--gray-10);
+  position: relative;
   padding-top: 124px;
   padding-bottom: 108px;
 
@@ -40,23 +40,6 @@
           font-weight: normal;
         }
       }
-    }
-  }
-
-  form {
-    input {
-      &[name="name"],
-      &[name="phone"] {
-        width: calc(50% - var(--field-gap) / 2);
-      }
-      &[name="email"] {
-        width: 100%;
-      }
-    }
-
-    textarea {
-      resize: none;
-      width: 100%;
     }
   }
 }
