@@ -2,6 +2,7 @@
   /* Grayscale */
   --white: #ffffff;
   --gray-10: #e7e9ed;
+  --gray-10_50: #e7e9ed80;
   --gray-20: #ced2db;
   --gray-30: #b6bcc9;
   --gray-40: #9ea5b8;
@@ -23,4 +24,8 @@
   --support-03: #ffad0d;
   --support-04: #f03d3d;
   --support-05: #3c4c70;
+}
+
+.bg-gray {
+  background-color: var(--gray-10_50) !important;
 }
