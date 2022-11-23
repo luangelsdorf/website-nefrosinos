@@ -34,6 +34,7 @@ export default function SobreNos({ about, team }) {
 }
 
 SobreNos.layout = MainLayout;
+SobreNos.showContact = true;
 
 export async function getStaticProps() {
   const about = await fetchAPI('sobre-nos');

@@ -3,7 +3,6 @@ import { apiURL } from 'src/utils/env';
 import styles from './AboutOurTeam.module.scss';
 
 export default function AboutOurTeam({ content }) {
-  console.log(content.specialistCards[0]);
 
   const sizes = [
     'col-lg-6 col-xl-5',
@@ -22,11 +21,6 @@ export default function AboutOurTeam({ content }) {
       <p>{props.text}</p>
     </article>
   );
-
-  useEffect(() => {
-    const headings = document.querySelectorAll(`.${styles.card} h3`);
-    console.log(headings);
-  }, []);
 
   return (
     <div className={styles.section}>

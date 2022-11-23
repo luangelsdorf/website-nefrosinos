@@ -29,6 +29,7 @@ export default function Home({ home, partners, team }) {
 }
 
 Home.layout = MainLayout;
+Home.showContact = true;
 
 export async function getStaticProps() {
   const home = await fetchAPI('home-site');

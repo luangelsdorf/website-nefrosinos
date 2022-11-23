@@ -61,6 +61,7 @@ export default function Services({ services, faq, partners }) {
 }
 
 Services.layout = MainLayout;
+Services.showContact = true;
 
 export async function getStaticProps() {
   const services = await fetchAPI('servico');

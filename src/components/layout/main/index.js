@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from './Footer';
 import Header from './Header';
 
-export default function MainLayout({ children, content }) {
+export default function MainLayout({ children, content, contact }) {
   return (
     <>
       <Header />
@@ -13,7 +13,7 @@ export default function MainLayout({ children, content }) {
         }
       </div>
 
-      <Footer content={content} contact />
+      <Footer content={content} contact={contact} />
     </>
   )
 }

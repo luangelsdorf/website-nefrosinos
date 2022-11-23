@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
 
       {
         Component.layout ? (
-          <Layout content={pageProps.layout}>
+          <Layout content={pageProps.layout} contact={Component.showContact}>
             <Component {...pageProps} />
           </Layout>
         ) : (
