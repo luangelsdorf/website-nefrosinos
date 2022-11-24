@@ -7,6 +7,7 @@ import styles from './PostCard.module.scss';
 import Arrow from 'public/images/icons/arrow-right.svg';
 
 export default function PostCard(props) {
+  const category = props.categories.data[0].attributes;
 
   const first = props.nthChild === 0;
 
@@ -14,8 +15,8 @@ export default function PostCard(props) {
     <div className={`col-12 ${first ? '' : 'col-lg-6'}`}>
       <article className={styles.card} data-first={first || undefined}>
         <div className={styles.badge}>
-          <Link href={`/categorias/${'props.category.slug'}`}>
-            <a className="btn small">{'props.category.name'}</a>
+          <Link href={`/categorias/${category.slug}`}>
+            <a className="btn small">{category.name}</a>
           </Link>
         </div>
 
