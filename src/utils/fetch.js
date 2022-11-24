@@ -1,8 +1,16 @@
 export default async function fetchAPI(endpoint = '') {
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/${endpoint}?populate=deep`);
   const result = await response.json();
-  const { data: { attributes: data } } = result;
-  return data;
+
+  if (result.data.attributes) {
+    let { data: { attributes: data } } = result;
+    return data;
+  }
+  
+  else {
+    let { data: data } = result;
+    return data;
+  }
 }
 
 export async function getLayoutContent() {
