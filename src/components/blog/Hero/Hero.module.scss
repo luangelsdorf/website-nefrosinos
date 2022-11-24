@@ -1,0 +1,49 @@
+@use '../../../styles/scss/mixins';
+
+.section {
+  section {
+    height: 480px;
+  }
+}
+
+.bannerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  h1 {
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    font: var(--body-lg);
+    max-width: 390px;
+
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--gray-40);
+  }
+
+  @include mixins.sm {
+    text-align: center;
+    align-items: center;
+
+  }
+}
+
+.categories {
+  display: flex;
+  gap: 24px;
+
+  a {
+    background-color: var(--gray-60);
+    padding: 10px 16px !important;
+    line-height: 24px !important;
+  }
+
+  @include mixins.sm {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
