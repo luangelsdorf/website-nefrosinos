@@ -1,0 +1,27 @@
+.section {
+  section {
+    height: 532px;
+  }
+}
+
+.bannerContent {
+  text-align: center;
+
+  h1 {
+    margin-bottom: 24px;
+  }
+
+  p {
+    span {
+      &:not(:last-child) {
+        &::after {
+          content: ", ";
+        }
+      }
+
+      a {
+        --link-fill-color: var(--gray-80);
+      }
+    }
+  }
+}
