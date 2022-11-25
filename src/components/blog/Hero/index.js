@@ -6,26 +6,24 @@ import styles from './Hero.module.scss';
 
 export default function Hero({ content, categories }) {
   return (
-    <section className={styles.section}>
-      <Banner cover={apiURL + content.cover.data.attributes.url}>
-        <div className="row">
-          <div className="col-12 col-xl-10 mx-auto">
-            <div className={styles.bannerContent}>
-              <h1>{content.title}</h1>
-              <h2>{content.text}</h2>
-              <div className={styles.categories}>
-                {
-                  categories.map(cat => (
-                    <Link href="/categorias" key={cat.id}>
-                      <a className="btn small">{cat.attributes.name}</a>
-                    </Link>
-                  ))
-                }
-              </div>
+    <Banner cover={apiURL + content.cover.data.attributes.url} className={styles.section}>
+      <div className="row">
+        <div className="col-12 col-xl-10 mx-auto">
+          <div className={styles.bannerContent}>
+            <h1>{content.title}</h1>
+            <h2>{content.text}</h2>
+            <div className={styles.categories}>
+              {
+                categories.map(cat => (
+                  <Link href="/categorias" key={cat.id}>
+                    <a className="btn small">{cat.attributes.name}</a>
+                  </Link>
+                ))
+              }
             </div>
           </div>
         </div>
-      </Banner>
-    </section>
+      </div>
+    </Banner>
   )
 }

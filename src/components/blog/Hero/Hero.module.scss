@@ -1,9 +1,7 @@
-@use '../../../styles/scss/mixins';
+@use "../../../styles/scss/mixins";
 
 .section {
-  section {
-    height: 480px;
-  }
+  height: 480px;
 }
 
 .bannerContent {
@@ -28,7 +26,6 @@
   @include mixins.sm {
     text-align: center;
     align-items: center;
-
   }
 }
 
