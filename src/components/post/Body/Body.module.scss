@@ -1,0 +1,28 @@
+.body {
+  margin-top: 120px;
+  margin-bottom: 80px;
+
+  p {
+    --lh: 32px;
+    line-height: var(--lh);
+    margin-bottom: var(--lh);
+  }
+
+  h2 {
+    font: var(--title-lg);
+    color: var(--gray-80);
+    margin: 48px 0;
+  }
+
+  blockquote {
+    margin: 48px 0;
+    margin-left: 4.45em;
+    font-style: italic;
+
+    &,
+    & > p {
+      font-size: 18px;
+      line-height: 36px;
+    }
+  }
+}
