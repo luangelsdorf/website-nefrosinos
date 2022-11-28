@@ -1,0 +1,34 @@
+.section {
+  p,
+  h3 {
+    color: var(--white);
+  }
+
+  h2 {
+    color: var(--white);
+  }
+
+  header {
+    a {
+      &:global(.btn) {
+        border-color: var(--white);
+        color: var(--white);
+        --label-color: var(--white);
+      }
+    }
+  }
+
+  a {
+    --link-fill-color: var(--white);
+
+    h3 {
+      transition: color 350ms;
+    }
+
+    &:hover {
+      h3 {
+        color: var(--gray-100);
+      }
+    }
+  }
+}
