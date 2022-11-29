@@ -25,8 +25,12 @@
     opacity: 1;
   }
 }
+
 // ===================================================== //
+
 .slider {
+  transform-style: preserve-3d;
+  
   section {
     height: 880px;
 

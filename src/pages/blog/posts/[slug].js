@@ -12,13 +12,15 @@ export default function Post({ singlePost, recentPosts }) {
   return (
     <main>
       <Hero content={singlePost} />
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-xl-8 mx-auto">
-            <Body content={singlePost.body} />
-            <Section mt="80" mb="160">
-              <Share content={singlePost} />
-            </Section>
+      <div style={{ backgroundColor: 'var(--white)' }}>
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-xl-8 mx-auto">
+              <Body content={singlePost.body} />
+              <Section mt="80" mb="160">
+                <Share content={singlePost} />
+              </Section>
+            </div>
           </div>
         </div>
       </div>

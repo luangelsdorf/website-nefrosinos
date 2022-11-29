@@ -7,11 +7,11 @@ export default function MainLayout({ children, content, contact }) {
     <>
       <Header />
 
-      <div id="LAYOUT__MAIN">
+      <>
         {
           children
         }
-      </div>
+      </>
 
       <Footer content={content} contact={contact} />
     </>
