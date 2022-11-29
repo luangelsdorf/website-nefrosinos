@@ -1,7 +1,6 @@
 import React from 'react'
 import AboutOurTeam from 'src/components/about/AboutOurTeam';
 import AboutUs from 'src/components/about/AboutUs';
-import Hero from 'src/components/about/Hero';
 import OurTeam from 'src/components/about/OurTeam';
 import Purpose from 'src/components/about/Purpose';
 import Timeline from 'src/components/about/Timeline';

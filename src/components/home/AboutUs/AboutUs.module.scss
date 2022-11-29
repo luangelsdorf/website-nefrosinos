@@ -12,6 +12,8 @@
     display: block;
     object-fit: cover;
 
+    outline: 1px solid var(--gray-60);
+
     &:not(:nth-child(2)) {
       position: absolute;
     }
@@ -22,7 +24,6 @@
   width: var(--lg-img-width);
   height: 90%;
   top: -19.43%;
-  z-index: -1;
 }
 
 .lgImage {

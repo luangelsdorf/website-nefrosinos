@@ -15,8 +15,8 @@ export default function Hero({ content }) {
               Categoria(s): &nbsp;
               {
                 content.categories.data.map(cat => (
-                  <span>
-                    <Link key={cat.id} href={`/categorias`}>
+                  <span key={cat.id}>
+                    <Link href={`/categorias`}>
                       <a>{cat.attributes.name}</a>
                     </Link>
                   </span>

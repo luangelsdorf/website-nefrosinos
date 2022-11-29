@@ -8,11 +8,12 @@
     bottom: 20%;
     left: 0;
     right: 0;
-    z-index: -2;
     background-color: var(--gray-60);
   }
 
   header {
+    position: relative;
+    z-index: 1;
     margin-bottom: 96px;
   }
 }

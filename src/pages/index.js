@@ -1,29 +1,36 @@
 import Head from 'next/head';
 import fetchAPI, { getLayoutContent } from 'src/utils/fetch';
 import MainLayout from 'src/components/layout/Main';
+import Section from 'src/components/common/Section';
+import HeroSlider from 'src/components/home/HeroSlider';
+import Service from 'src/components/home/Service';
+import AboutUs from 'src/components/home/AboutUs';
+import OurTeam from 'src/components/home/OurTeam';
+import Partners from 'src/components/home/Partners';
+import Structure from 'src/components/home/Structure';
 
 export default function Home({ home, partners, team }) {
 
   return (
     <main>
-      <h1 style={{ height: '300vh' }}>Homepage</h1>
-      {/* <Header /> */}
-      {/* <HeroSlider content={home.bannerSlider} height={880} /> */}
-      {/* <Section>
+      <HeroSlider content={home.bannerSlider} height={880} />
+      <div style={{ backgroundColor: 'var(--white)' }}>
+        <Section mt="-100">
           <Service content={home.service} />
-        </Section> */}
-      {/* <Section>
+        </Section>
+        <Section mt="140">
           <AboutUs content={home.aboutUs} />
-        </Section> */}
-      {/* <Section pt="96" >
+        </Section>
+        <Section pt="96" mt="184">
           <OurTeam content={home.ourTeam} team={team} />
-        </Section> */}
-      {/* <Section>
+        </Section>
+        <Section mt="200">
           <Partners content={home.partners} partners={partners} length={6} />
-        </Section> */}
-      {/* <Section>
+        </Section>
+        <Section mt="200">
           <Structure content={home.structure} />
-        </Section> */}
+        </Section>
+      </div>
     </main>
   )
 }

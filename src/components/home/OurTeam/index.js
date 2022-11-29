@@ -1,5 +1,6 @@
 import React from 'react';
 import TeamCarousel from 'src/components/common/TeamCarousel';
+import Title from 'src/components/common/Title';
 import styles from './OurTeam.module.scss';
 
 export default function OurTeam({ content, team }) {
