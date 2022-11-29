@@ -30,9 +30,13 @@
 
 .slider {
   transform-style: preserve-3d;
-  
+
   section {
     height: 880px;
+
+    & > div {
+      margin-top: -100px;
+    }
 
     .bannerContent {
       display: flex;

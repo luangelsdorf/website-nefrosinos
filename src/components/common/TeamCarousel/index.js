@@ -23,7 +23,7 @@ export default function TeamCarousel({ team }) {
         >
           {
             team.team.map(member => (
-              <SwiperSlide>
+              <SwiperSlide key={member.id}>
                 <div>
                   <MemberCard photo={member.photo} name={member.name} speciality={member.speciality} />
                 </div>

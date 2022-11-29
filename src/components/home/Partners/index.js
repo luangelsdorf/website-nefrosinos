@@ -6,7 +6,6 @@ import { apiURL } from 'src/utils/env';
 import styles from './Partners.module.scss';
 
 export default function Partners({ content, partners, length = 6 }) {
-  console.log(content);
   const numberOfPartners = [...Array(length).keys()];
   return (
     <div className={styles.section}>
@@ -14,7 +13,7 @@ export default function Partners({ content, partners, length = 6 }) {
         <div className="row gy-4">
           <div className="col-12 col-lg-4">
             <div className={styles.textContent}>
-              <Title content={{ title: content.title }} />
+              <Title content={{ title: content.title }} align="start" />
               <p>{content.text}</p>
               <Link href="/services#convenios">
                 <a className="btn">Lista de Convênios</a>

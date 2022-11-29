@@ -8,8 +8,9 @@ import AboutUs from 'src/components/home/AboutUs';
 import OurTeam from 'src/components/home/OurTeam';
 import Partners from 'src/components/home/Partners';
 import Structure from 'src/components/home/Structure';
+import RecentPosts from 'src/components/home/RecentPosts';
 
-export default function Home({ home, partners, team }) {
+export default function Home({ home, partners, team, recentPosts }) {
 
   return (
     <main>
@@ -30,6 +31,9 @@ export default function Home({ home, partners, team }) {
         <Section mt="200">
           <Structure content={home.structure} />
         </Section>
+        <Section mt="160" mb="200">
+          <RecentPosts content={home.blog} posts={recentPosts} />
+        </Section>
       </div>
     </main>
   )
@@ -42,6 +46,8 @@ export async function getStaticProps() {
   const home = await fetchAPI('home-site');
   const partners = await fetchAPI('parceiro');
   const team = await fetchAPI('equipe');
+  const posts = await fetchAPI('posts', '&sort=createdAt:DESC');
+  const recentPosts = [posts[0], posts[1], posts[2]];
 
   const layout = await getLayoutContent();
 
@@ -50,6 +56,7 @@ export async function getStaticProps() {
       home,
       partners,
       team,
+      recentPosts,
 
       layout, // will only be used in `_app.js`
     }
