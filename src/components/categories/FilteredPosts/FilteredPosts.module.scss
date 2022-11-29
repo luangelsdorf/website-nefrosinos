@@ -1,0 +1,9 @@
+.section {
+  h1 {
+    text-align: center;
+    margin: 0 calc(var(--bs-gutter-x) / 2);
+    margin-bottom: 80px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid var(--gray-10);
+  }
+}

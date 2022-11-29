@@ -14,11 +14,11 @@ export default function PostCard(props) {
   return (
     <div className={`col-12 ${first ? '' : `col-lg-${props.size ?? 6}`}`}>
       <article className={styles.card} data-first={first || undefined}>
-        <div className={styles.badge}>
+        {/* <div className={styles.badge}>
           <Link href={`/categorias/${category.slug}`}>
             <a className="btn small">{category.name}</a>
           </Link>
-        </div>
+        </div> */}
 
         <Link href={props.slug}>
           <a className={`link-image ${styles.thumbnail}`}>
