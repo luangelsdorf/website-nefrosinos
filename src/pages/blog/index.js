@@ -1,7 +1,6 @@
 import React from 'react';
 import Hero from 'src/components/blog/Hero';
 import MainPosts from 'src/components/blog/MainPosts';
-import PostCard from 'src/components/blog/PostCard';
 import PostList from 'src/components/blog/PostList';
 import Section from 'src/components/common/Section';
 import MainLayout from 'src/components/layout/Main';
@@ -14,22 +13,21 @@ export default function Blog({ blog, posts, categories }) {
 
   return (
     <main>
-      <h1 style={{ height: '300vh' }}>Blog Page</h1>
-      {/* <Hero content={blog.banner} categories={categories} /> */}
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-xl-10 mx-auto">
-
-            {/* <Section>
-              <MainPosts posts={posts} />
-            </Section> */}
-            {/* <Section mt="150" pt="120" style={{ borderTop: '1px solid var(--gray-10)' }}>
-              <PostList posts={newsAndArticles} title="Artigos e Notícias" />
-            </Section> */}
-            {/* <Section mt="160" pt="120" style={{ borderTop: '1px solid var(--gray-10)' }}>
-              <PostList posts={mediaPosts} title="Saiu na Mídia" />
-            </Section> */}
-
+      <Hero content={blog.banner} categories={categories} />
+      <div style={{backgroundColor: 'var(--white)'}}>
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-xl-10 mx-auto">
+              <Section mt="160">
+                <MainPosts posts={posts} />
+              </Section>
+              <Section mt="150" pt="120" style={{ borderTop: '1px solid var(--gray-10)' }}>
+                <PostList posts={newsAndArticles} title="Artigos e Notícias" />
+              </Section>
+              <Section mb="200" mt="160" pt="120" style={{ borderTop: '1px solid var(--gray-10)' }}>
+                <PostList posts={mediaPosts} title="Saiu na Mídia" />
+              </Section>
+            </div>
           </div>
         </div>
       </div>
