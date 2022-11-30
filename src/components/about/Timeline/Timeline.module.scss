@@ -168,7 +168,8 @@
         padding: 60px 0;
 
         & > * {
-          opacity: 0;
+          /* opacity: 0; */
+          display: none;
         }
 
         &::before {
@@ -178,6 +179,8 @@
       }
 
       &:first-child {
+        padding: 72px 0;
+
         &::before {
           top: -1px;
           bottom: -12px;
@@ -189,10 +192,30 @@
       }
 
       &:last-child {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 100px 0;
+
         &::before {
           top: -10px;
           border-top-right-radius: 400px 760px;
           border-bottom-right-radius: 0;
+          border-bottom: 0;
+        }
+
+        & > time,
+        & > div {
+          /* opacity: 1; */
+          display: block;
+        }
+
+        & > div {
+          margin-right: 0 !important;
+          text-align: center !important;
+        }
+
+        & > time {
+          margin-bottom: 40px;
         }
       }
 

@@ -5,29 +5,31 @@ import OurTeam from 'src/components/about/OurTeam';
 import Purpose from 'src/components/about/Purpose';
 import Timeline from 'src/components/about/Timeline';
 import Section from 'src/components/common/Section';
-import TeamCarousel from 'src/components/common/TeamCarousel';
 import MainLayout from 'src/components/layout/Main'
 import fetchAPI, { getLayoutContent } from 'src/utils/fetch';
 
 export default function SobreNos({ about, team }) {
   return (
     <main>
-      <h1 style={{ height: '300vh' }}>About Page</h1>
-      {/* <Section>
+      <Section mt="120">
         <AboutUs content={about.aboutUs} />
-      </Section> */}
-      {/* <Section>
+      </Section>
+
+      <Section mt="200">
         <Purpose content={about.purpose} />
-      </Section> */}
-      {/* <Section pt="147">
+      </Section>
+
+      <Section pt="147" mt="214">
         <Timeline content={about.timeline} />
-      </Section> */}
-      {/* <Section>
+      </Section>
+
+      <Section mt="200">
         <OurTeam content={about.ourTeam} team={team} />
-      </Section> */}
-      {/* <Section>
+      </Section>
+
+      <Section mt="200" mb="200">
         <AboutOurTeam content={about.aboutOurTeam} />
-      </Section> */}
+      </Section>
     </main>
   )
 }

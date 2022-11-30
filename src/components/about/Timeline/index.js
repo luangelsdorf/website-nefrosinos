@@ -12,7 +12,7 @@ export default function Timeline({ content }) {
     return (
       <li className={styles.card}>
         <Point />
-        <time dateTime={props.year}>{props.year}</time>
+        <time dateTime={props.last ? `${new Date().getFullYear()}-${new Date().getMonth()}` : props.year}>{props.year}</time>
         <div className={styles.info}>
           <h3>{props.title}</h3>
           <p>{props.text}</p>
@@ -45,11 +45,14 @@ export default function Timeline({ content }) {
         <ol>
           <Card />
           {
-            content.milestones.map(card => (
-              <Card key={card.id} {...card} />
-            ))
+            content.milestones.map((card, index) => {
+              const isLast = index - content.milestones.length === -1;
+              return (
+                <Card key={card.id} {...card} last={isLast} />
+              );
+            })
           }
-          <Card />
+          {/* <Card /> */}
         </ol>
         <Point className={styles.point} />
       </div>
