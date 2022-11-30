@@ -10,15 +10,15 @@ export default function Header() {
   const links = [
     {
       name: 'Início',
-      url: '#',
+      url: '/',
     },
     {
       name: 'Sobre Nós',
-      url: '#',
+      url: 'sobre-nos',
     },
     {
       name: 'Serviços',
-      url: '#',
+      url: 'servicos',
     },
     {
       name: 'Estrutura',
@@ -34,7 +34,7 @@ export default function Header() {
     },
     {
       name: 'Blog',
-      url: '#',
+      url: '/blog',
     },
   ];
 
@@ -61,7 +61,7 @@ export default function Header() {
                 ))
               }
               <li>
-                <Link href="#contato">
+                <Link href="/contato">
                   <a className="btn">Fale Conosco</a>
                 </Link>
               </li>
@@ -69,7 +69,7 @@ export default function Header() {
             <button className="btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
               |||
             </button>
-            <Link href="#contato">
+            <Link href="/contato">
               <a className="btn">Fale Conosco</a>
             </Link>
           </div>
