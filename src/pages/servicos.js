@@ -18,44 +18,53 @@ import fetchAPI, { getLayoutContent } from 'src/utils/fetch';
 export default function Services({ services, faq, partners }) {
   return (
     <main>
-      <h1 style={{height: '300vh'}}>Services Page</h1>
-      {/* <Hero content={services.banner} /> */}
-      {/* <Section>
-        <HighlightedServices content={services.highlighted} />
-      </Section> */}
-      {/* <Section>
-        <InTransit content={services.inTransit} />
-      </Section> */}
-      {/* <Section>
-        <PeritonealDialysis content={services.peritonealDialysis} />
-      </Section> */}
-      {/* <Section>
-        <Hemodiafiltration content={services.hemodiafiltration} />
-      </Section> */}
-      {/* <Section>
-        <Hemodialysis content={services.hemodialysis} />
-      </Section> */}
-      {/* <Section>
-        <ConservativeTreatment content={services.conservative} />
-      </Section> */}
-      {/* <Section>
-        <ConservativeTreatment content={services.conservative} />
-      </Section> */}
-      {/* <Section>
-        <Transplant content={services.transplant} />
-      </Section> */}
-      {/* <Section>
-        <Partners content={services.partners} partners={partners.partners} />
-      </Section> */}
-      {/* <Section>
-        <Structure content={services.structure} />
-      </Section> */}
-      {/* <Section>
-        <WaterTreatment content={services.waterTreatment} />
-      </Section> */}
-      {/* <Section>
-        <FAQ content={faq} />
-      </Section> */}
+      <Hero content={services.banner} />
+
+      <div style={{ backgroundColor: 'var(--white)' }}>
+        <Section mb="-164">
+          <HighlightedServices content={services.highlighted} />
+        </Section>
+
+        <Section mt="160">
+          <InTransit content={services.inTransit} />
+        </Section>
+
+        <Section mt="160">
+          <PeritonealDialysis content={services.peritonealDialysis} />
+        </Section>
+
+        <Section mt="160">
+          <Hemodiafiltration content={services.hemodiafiltration} />
+        </Section>
+
+        <Section mt="200">
+          <Hemodialysis content={services.hemodialysis} />
+        </Section>
+
+        <Section>
+          <ConservativeTreatment content={services.conservative} />
+        </Section>
+
+        <Section mt="200">
+          <Transplant content={services.transplant} />
+        </Section>
+
+        <Section mt="200">
+          <Partners content={services.partners} partners={partners.partners} />
+        </Section>
+
+        <Section mt="200">
+          <Structure content={services.structure} />
+        </Section>
+
+        <Section mt="200">
+          <WaterTreatment content={services.waterTreatment} />
+        </Section>
+
+        <Section mt="200" mb="200">
+          <FAQ content={faq} />
+        </Section>
+      </div>
     </main>
   )
 }
