@@ -5,7 +5,7 @@ import OurTeam from 'src/components/about/OurTeam';
 import Purpose from 'src/components/about/Purpose';
 import Timeline from 'src/components/about/Timeline';
 import Section from 'src/components/common/Section';
-import MainLayout from 'src/components/layout/Main'
+import MainLayout from 'src/components/layout/main'
 import fetchAPI, { getLayoutContent } from 'src/utils/fetch';
 
 export default function SobreNos({ about, team }) {

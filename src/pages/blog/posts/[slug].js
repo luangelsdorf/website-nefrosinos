@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from 'src/components/common/Section';
-import MainLayout from 'src/components/layout/Main';
+import MainLayout from 'src/components/layout/main';
 import Body from 'src/components/post/Body';
 import Hero from 'src/components/post/Hero';
 import RecentPosts from 'src/components/post/RecentPosts';

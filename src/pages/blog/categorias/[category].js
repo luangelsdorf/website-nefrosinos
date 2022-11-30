@@ -1,7 +1,7 @@
 import React from 'react';
 import FilteredPosts from 'src/components/categories/FilteredPosts';
 import Section from 'src/components/common/Section';
-import MainLayout from 'src/components/layout/Main';
+import MainLayout from 'src/components/layout/main';
 import fetchAPI, { getLayoutContent } from 'src/utils/fetch';
 
 export default function Category({ posts, category }) {

@@ -3,7 +3,7 @@ import Hero from 'src/components/blog/Hero';
 import MainPosts from 'src/components/blog/MainPosts';
 import PostList from 'src/components/blog/PostList';
 import Section from 'src/components/common/Section';
-import MainLayout from 'src/components/layout/Main';
+import MainLayout from 'src/components/layout/main';
 import fetchAPI, { getLayoutContent } from 'src/utils/fetch';
 import { hasCategory } from 'src/utils/helpers';
 

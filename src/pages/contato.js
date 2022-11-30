@@ -5,7 +5,7 @@ import Address from 'src/components/contact/Address';
 import ContactInfo from 'src/components/contact/ContactInfo';
 import Hero from 'src/components/contact/Hero';
 import Hours from 'src/components/contact/Hours';
-import MainLayout from 'src/components/layout/Main';
+import MainLayout from 'src/components/layout/main';
 import fetchAPI, { getLayoutContent } from 'src/utils/fetch';
 
 export default function Contato({ contact, faq, layout: { info } }) {

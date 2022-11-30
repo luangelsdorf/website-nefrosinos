@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import fetchAPI, { getLayoutContent } from 'src/utils/fetch';
-import MainLayout from 'src/components/layout/Main';
+import MainLayout from 'src/components/layout/main';
 import Section from 'src/components/common/Section';
 import HeroSlider from 'src/components/home/HeroSlider';
 import Service from 'src/components/home/Service';
