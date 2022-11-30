@@ -20,7 +20,7 @@ export default function PostCard(props) {
           </Link>
         </div> */}
 
-        <Link href={props.slug}>
+        <Link href={`/blog/posts/${props.slug}`}>
           <a className={`link-image ${styles.thumbnail}`}>
             <div>
               <Image fill src={apiURL + props.cover.data.attributes.url} alt="Thumbnail" />
@@ -37,7 +37,7 @@ export default function PostCard(props) {
           <p>
             {props.body ? getExcerpt(props.body) : null}
           </p>
-          <Link href={props.slug}>
+          <Link href={`/blog/posts/${props.slug}`}>
             <a>
               Ler Mais <Arrow />
             </a>
