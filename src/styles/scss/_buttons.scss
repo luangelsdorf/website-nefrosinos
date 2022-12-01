@@ -14,7 +14,7 @@
   transition: all 350ms;
   text-decoration: none;
 
-  background-color: var(--gray-80);
+  background-color: var(--pink);
   border-color: transparent;
   color: var(--white);
   --label-color: var(--white);
@@ -22,9 +22,9 @@
   // variants
   &.secondary {
     background-color: transparent;
-    border-color: var(--gray-80);
-    color: var(--gray-80);
-    --label-color: var(--gray-80);
+    border-color: var(--gray-90);
+    color: var(--gray-90);
+    --label-color: var(--gray-90);
   }
 
   &.icon {
