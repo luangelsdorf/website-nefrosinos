@@ -9,12 +9,13 @@ import OurTeam from 'src/components/home/OurTeam';
 import Partners from 'src/components/home/Partners';
 import Structure from 'src/components/home/Structure';
 import RecentPosts from 'src/components/home/RecentPosts';
+import Calculator from 'src/components/home/Calculator';
 
 export default function Home({ home, partners, team, recentPosts }) {
 
   return (
     <main>
-      <HeroSlider content={home.bannerSlider} height={880} />
+      {/* <HeroSlider content={home.bannerSlider} height={880} />
       <div style={{ backgroundColor: 'var(--white)' }}>
         <Section mt="-100">
           <Service content={home.service} />
@@ -34,12 +35,16 @@ export default function Home({ home, partners, team, recentPosts }) {
         <Section mt="160" mb="200">
           <RecentPosts content={home.blog} posts={recentPosts} />
         </Section>
-      </div>
+      </div> */}
+
+      <Section>
+        <Calculator />
+      </Section>
     </main>
   )
 }
 
-Home.layout = MainLayout;
+Home.layout = null /* MainLayout */;
 Home.showContact = true;
 
 export async function getStaticProps() {

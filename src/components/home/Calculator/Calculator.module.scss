@@ -1,0 +1,56 @@
+.section {
+}
+
+.calc {
+  padding: 80px 104px;
+  background-color: var(--blue);
+  text-align: center;
+
+  header {
+    margin-bottom: 24px;
+  }
+
+  & > p {
+    font: var(--body-sm);
+    color: white;
+    margin-bottom: 40px;
+  }
+
+  form {
+    margin-bottom: 32px;
+    
+    input[type="number"] {
+      width: 160px;
+
+      &::placeholder {
+        color: var(--gray-70);
+      }
+    }
+
+    select {
+      flex-grow: 1;
+    }
+
+    button[type="submit"] {
+      background-color: var(--pink);
+    }
+  }
+}
+
+.result {
+  display: inline-flex;
+  flex-grow: 1;
+  align-items: center;
+  padding: 16px 20px;
+  border: 1px solid var(--gray-20);
+  border-radius: 4px;
+  color: var(--white);
+
+  span {
+    font-weight: 700;
+
+    span {
+      font-weight: 500;
+    }
+  }
+}
