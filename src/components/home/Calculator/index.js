@@ -19,7 +19,7 @@ export default function Calculator() {
         <div className="row">
           <div className="col-12 col-lg-9 mx-auto">
             <div className={styles.calc}>
-              <Title content={{ title: 'Calculadora de Função Renal', overline: 'Calculadora Nefrologica CKD-EPI 2021' }} />
+              <Title content={{ title: 'Calculadora de Função Renal', overline: 'Calculadora Nefrologica CKD-EPI 2021' }} variant="dark" />
               <p>
                 É fundamental que o resultado seja avaliado por um especialista da área para garantir o melhor uso dessa informação.&nbsp;
                 <Link href="/contato">

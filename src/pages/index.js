@@ -10,41 +10,48 @@ import Partners from 'src/components/home/Partners';
 import Structure from 'src/components/home/Structure';
 import RecentPosts from 'src/components/home/RecentPosts';
 import Calculator from 'src/components/home/Calculator';
+import Title from 'src/components/common/Title';
 
 export default function Home({ home, partners, team, recentPosts }) {
 
   return (
     <main>
-      {/* <HeroSlider content={home.bannerSlider} height={880} />
+      <HeroSlider content={home.bannerSlider} height={880} />
       <div style={{ backgroundColor: 'var(--white)' }}>
+
         <Section mt="-100">
           <Service content={home.service} />
         </Section>
+
         <Section mt="140">
           <AboutUs content={home.aboutUs} />
         </Section>
+
         <Section pt="96" mt="184">
           <OurTeam content={home.ourTeam} team={team} />
         </Section>
+
         <Section mt="200">
           <Partners content={home.partners} partners={partners} length={6} />
         </Section>
+
         <Section mt="200">
           <Structure content={home.structure} />
         </Section>
+
+        <Section mt="160">
+          <Calculator />
+        </Section>
+
         <Section mt="160" mb="200">
           <RecentPosts content={home.blog} posts={recentPosts} />
         </Section>
-      </div> */}
-
-      <Section>
-        <Calculator />
-      </Section>
+      </div>
     </main>
   )
 }
 
-Home.layout = null /* MainLayout */;
+Home.layout = MainLayout;
 Home.showContact = true;
 
 export async function getStaticProps() {

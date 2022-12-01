@@ -3,17 +3,21 @@
   flex-direction: column;
 
   p {
-    background-color: var(--gray-10);
-    color: var(--gray-70);
+    background-color: #FFEEF1;
+    color: var(--pink);
     font: var(--body-sm);
     padding: 10px 16px;
     border-radius: 2px;
+
+    & + * {
+      color: var(--blue);
+    }
   }
 }
 
 .dark {
   p {
-    background-color: var(--gray-70);
+    background-color: var(--pink);
     color: var(--gray-10);
 
     & + * {
@@ -24,7 +28,7 @@
 
 .light {
   p {
-    background-color: var(--gray-70);
+    background-color: var(--pink);
     color: var(--gray-10);
 
     & + * {
