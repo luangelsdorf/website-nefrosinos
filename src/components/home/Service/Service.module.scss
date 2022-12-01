@@ -8,27 +8,31 @@
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  padding: 60px 0;
-  background-color: var(--gray-30);
+  padding: 60px 48px;
+  background-color: var(--blue);
   gap: 48px;
+  flex-wrap: wrap;
 
   h2 {
     font: var(--title-lg);
     max-width: 260px;
+    color: var(--white);
   }
 
   .separator {
     width: 2px;
     height: 72px;
     border-radius: 72px;
-    background-color: var(--gray-40);
+    background-color: #24365e;
   }
 
   p {
     max-width: 275px;
+    color: var(--gray-20);
 
     &::first-line {
       font: var(--body-lg);
+      color: var(--white);
       font-weight: 600;
       line-height: 32px;
     }

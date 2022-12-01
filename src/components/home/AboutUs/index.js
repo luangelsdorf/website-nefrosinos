@@ -9,7 +9,7 @@ export default function AboutUs({ content }) {
   return (
     <div className={styles.section}>
       <div className="container">
-        <div className="row">
+        <div className="row gy-5">
           <div className="col-12 col-lg-7">
             <div className={styles.collage}>
               <Image
