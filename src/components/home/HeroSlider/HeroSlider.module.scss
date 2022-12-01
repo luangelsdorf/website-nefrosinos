@@ -34,19 +34,21 @@
   section {
     height: 880px;
 
-    & > div {
-      margin-top: -200px;
-    }
-
     .bannerContent {
       display: flex;
       flex-direction: column;
       gap: 32px;
+      color: var(--white);
     }
 
     .buttons {
       display: flex;
       gap: 20px;
+
+      & > :last-child {
+        border-color: white;
+        color: white;
+      }
     }
 
     &:not(:global(.active)) {
@@ -55,12 +57,12 @@
 
     &:global(.swipe-left) {
       & > div {
-        animation: fade-left 1.2s;
+        animation: fade-left 1.2s both;
       }
     }
     &:global(.swipe-right) {
       & > div {
-        animation: fade-right 1.2s;
+        animation: fade-right 1.2s both;
       }
     }
   }

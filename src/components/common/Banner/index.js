@@ -7,10 +7,12 @@ export default function Banner({ cover, children, className, ...rest }) {
   return (
     <section className={`${styles.banner} ${className ?? ''}`} {...rest}>
       {cover && <Image src={cover} fill alt="" priority />}
-      <div className="container">
-        {
-          children
-        }
+      <div>
+        <div className="container">
+          {
+            children
+          }
+        </div>
       </div>
     </section>
   )

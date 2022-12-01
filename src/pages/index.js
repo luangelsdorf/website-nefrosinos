@@ -19,7 +19,7 @@ export default function Home({ home, partners, team, recentPosts }) {
       <HeroSlider content={home.bannerSlider} height={880} />
       <div style={{ backgroundColor: 'var(--white)' }}>
 
-        <Section mt="-100">
+        <Section>
           <Service content={home.service} />
         </Section>
 

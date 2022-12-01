@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import styles from './Header.module.scss';
 import Logo from 'public/images/header-logo.svg';
 import Link from 'next/link';
-import Image from 'next/future/image';
 import useMediaQuery from 'src/hooks/useMediaQuery';
 
 export default function Header() {

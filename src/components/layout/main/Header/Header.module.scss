@@ -1,11 +1,15 @@
 @use "../../../../styles/scss/mixins";
 
 .navbar {
-  background-color: var(--gray-20);
+  background-color: transparent;
   width: 100%;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
+
+  :global(.container) {
+    border-bottom: 1px solid rgba(182, 188, 201, 0.4);
+  }
 
   @include mixins.lg {
     button {
@@ -68,10 +72,6 @@
 .links {
   display: flex;
   gap: 24px;
-
-  a {
-    --link-fill-color: var(--gray-70) !important;
-  }
 
   li:last-child > a {
     display: none;
