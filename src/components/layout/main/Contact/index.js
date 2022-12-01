@@ -35,8 +35,14 @@ export default function Contact({ content, info }) {
 
           <div className="col-12 col-lg-3">
             <div className={styles.hours}>
-              <h3>Horários de Atendimento</h3>
-              <p>{info.openingHours}</p>
+              <div>
+                <h3>Horários de Funcionamento</h3>
+                <p>{info.openingHours}</p>
+              </div>
+              <div>
+                <h3>Horários de Atendimento</h3>
+                <p>{info.serviceHours}</p>
+              </div>
               <p>{content.contact.hoursText}</p>
               <Link href="/contato">
                 <a>

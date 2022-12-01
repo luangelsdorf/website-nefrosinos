@@ -79,24 +79,23 @@
 
 .hours {
   padding: 48px 32px;
-  background-color: var(--gray-50);
+  background-color: var(--blue);
+  color: var(--gray-10);
+  border-radius: 4px;
+
+  & > div {
+    margin-bottom: 16px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray-60);
+  }
 
   h3 {
     font: var(--title-xs);
     color: var(--white);
-    margin-bottom: 20px;
-
-    & ~ * {
-      color: var(--gray-10);
-    }
   }
 
   p {
     font: var(--body-sm);
-    &:nth-of-type(2) {
-      margin-top: 16px;
-      margin-bottom: 20px;
-    }
   }
 
   a {
@@ -104,9 +103,8 @@
     display: inline-flex;
     align-items: center;
     line-height: normal;
-    text-decoration-line: underline;
-    text-decoration-color: transparent;
     transition: all 350ms;
+    margin-top: 8px;
 
     &:hover {
       text-decoration-color: inherit;

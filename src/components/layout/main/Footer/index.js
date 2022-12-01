@@ -23,7 +23,7 @@ export default function Footer({ content, contact }) {
         <Certificates content={content.footer.certificates} />
       </Section>
       <FooterLinks content={content.footer.footer} />
-      <Copyright content={content.footer.footer} />
+      <Copyright content={content.footer.footer} info={content.info} />
     </footer>
   )
 }
