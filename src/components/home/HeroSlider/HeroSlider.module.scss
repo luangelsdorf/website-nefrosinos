@@ -36,7 +36,12 @@
   section {
     position: relative;
     height: 100%;
-    
+
+    & > div {
+      background: linear-gradient(90deg, #193e72 -11.28%, #193e72 -11.27%, rgba(25, 62, 114, 0) 69.86%),
+        linear-gradient(180deg, rgba(25, 62, 114, 0.25) 0%, rgba(25, 62, 114, 0) 28.65%);
+    }
+
     .bannerContent {
       display: flex;
       flex-direction: column;
