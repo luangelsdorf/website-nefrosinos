@@ -48,6 +48,7 @@
   height: 640px;
   background-color: var(--gray-20);
   border-radius: 4px;
+  pointer-events: none;
 
   &::before {
     content: "";
