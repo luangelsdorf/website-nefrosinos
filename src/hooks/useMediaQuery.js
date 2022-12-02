@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import breakpoints from 'src/utils/breakpoints';
+import { breakpoints } from 'src/utils/breakpoints';
 
 export default function useMediaQuery(breakpoint) {
   const [matches, setMatches] = useState(null);

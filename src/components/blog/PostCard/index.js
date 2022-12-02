@@ -23,7 +23,15 @@ export default function PostCard(props) {
         <Link href={`/blog/posts/${props.slug}`}>
           <a className={`link-image ${styles.thumbnail}`}>
             <div>
-              <Image fill src={apiURL + props.cover.data.attributes.url} alt="Thumbnail" />
+              <Image
+                fill
+                src={apiURL + props.cover.data.attributes.url}
+                alt="Thumbnail"
+                sizes="
+                (max-width: 576px) 100vw,
+                (max-width: 992px) 50vw, 33vw
+                "
+              />
             </div>
           </a>
         </Link>
