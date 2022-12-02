@@ -15,7 +15,8 @@ export default function Calculator() {
 
   return (
     <div className={styles.section}>
-      <div className="container">
+      <div className="container" style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+        <div className={styles.decoration} />
         <div className="row">
           <div className="col-12 col-lg-9 mx-auto">
             <div className={styles.calc}>
