@@ -13,7 +13,7 @@ export default function Partners({ content, partners, length = 6 }) {
         <div className="row gy-4">
           <div className="col-12 col-lg-4">
             <div className={styles.textContent}>
-              <Title content={{ title: content.title }} align="start" />
+              <Title content={{ title: content.title, overline: 'Convênios' }} align="start" />
               <p>{content.text}</p>
               <Link href="/services#convenios">
                 <a className="btn">Lista de Convênios</a>
