@@ -27,7 +27,7 @@ export default function Home({ home, partners, team, recentPosts }) {
           <AboutUs content={home.aboutUs} />
         </Section>
 
-        <Section pt="96" mt="184">
+        <Section pt="96" mt="184 120">
           <OurTeam content={home.ourTeam} team={team} />
         </Section>
 

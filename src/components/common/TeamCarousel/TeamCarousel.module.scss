@@ -1,6 +1,20 @@
+@use "../../../styles/scss/mixins";
+
 .carousel {
   :global(.swiper-slide) {
-    width: calc((320 * 100%) / 1220);
+    width: calc((320 * 100%) / 1220) !important;
+
+    @include mixins.lg {
+      width: calc((480 * 100%) / 1220) !important;
+    }
+
+    @include mixins.md {
+      width: calc((640 * 100%) / 1220) !important;
+    }
+
+    @include mixins.sm {
+      width: 95vw !important;
+    }
   }
   :global(.swiper) {
     overflow: visible;
