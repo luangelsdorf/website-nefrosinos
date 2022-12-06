@@ -23,7 +23,7 @@ export default function Home({ home, partners, team, recentPosts }) {
           <Service content={home.service} />
         </Section>
 
-        <Section mt="140">
+        <Section mt="140 80">
           <AboutUs content={home.aboutUs} />
         </Section>
 

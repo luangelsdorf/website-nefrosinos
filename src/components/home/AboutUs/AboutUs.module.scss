@@ -1,5 +1,13 @@
 @use '../../../styles/scss/mixins';
 
+.section {
+  @include mixins.lg {
+    :global(.row) {
+      gap: 96px;
+    }
+  }
+}
+
 .collage {
   --lg-img-width: 54.85%;
   --md-img-width: 59.14%;

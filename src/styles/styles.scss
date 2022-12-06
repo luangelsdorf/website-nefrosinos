@@ -68,6 +68,15 @@ main {
   transform-style: preserve-3d;
 }
 
+@include mixins.lg {
+  [class*="col-lg"] {
+    & > div {
+      text-align: center;
+      align-items: center;
+    }
+  }
+}
+
 @include mixins.sm {
   .col-12 {
     padding: 0 30px;
