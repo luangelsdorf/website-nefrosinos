@@ -31,7 +31,7 @@ export default function Home({ home, partners, team, recentPosts }) {
           <OurTeam content={home.ourTeam} team={team} />
         </Section>
 
-        <Section mt="200">
+        <Section mt="200 120">
           <Partners content={home.partners} partners={partners} length={6} />
         </Section>
 

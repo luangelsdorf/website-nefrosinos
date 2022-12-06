@@ -10,7 +10,7 @@ export default function Partners({ content, partners, length = 6 }) {
   return (
     <div className={styles.section}>
       <div className="container">
-        <div className="row gy-4">
+        <div className="row">
           <div className="col-12 col-lg-4">
             <div className={styles.textContent}>
               <Title content={{ title: content.title, overline: 'Convênios' }} align="start" />
@@ -26,7 +26,7 @@ export default function Partners({ content, partners, length = 6 }) {
                 numberOfPartners.map(partner => {
                   let currentPartner = partners.partners[partner].image.data.attributes;
                   return (
-                    <div className="col-12 col-lg-4" key={partners.partners[partner].id}>
+                    <div className="col-12 col-md-6 col-lg-4" key={partners.partners[partner].id}>
                       <div className={styles.partnerLogo}>
                         <Image
                           src={apiURL + currentPartner.url}

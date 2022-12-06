@@ -1,4 +1,11 @@
+@use "../../../styles/scss/mixins";
+
 .section {
+  @include mixins.lg {
+    & > div > :global(.row) {
+      gap: 80px;
+    }
+  }
 }
 
 .textContent {
@@ -22,7 +29,7 @@
 .partnerLogo {
   position: relative;
   height: 248px;
-  padding: 0 28px;
+  padding: 28px;
   background-color: var(--white);
   border: 1px solid var(--gray-10);
   background-clip: content-box;
@@ -34,6 +41,7 @@
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
   }
 }
