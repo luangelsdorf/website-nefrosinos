@@ -1,3 +1,5 @@
+@use "../../../styles/scss/mixins";
+
 .section {
   position: relative;
   top: -100px;
@@ -36,5 +38,15 @@
       font-weight: 600;
       line-height: 32px;
     }
+  }
+}
+
+@include mixins.lg {
+  .section {
+    text-align: center;
+  }
+
+  .separator {
+    display: none;
   }
 }
