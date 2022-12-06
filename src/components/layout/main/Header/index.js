@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './Header.module.scss';
 import Logo from 'public/images/header-logo.svg';
 import Link from 'next/link';
 import useMediaQuery from 'src/hooks/useMediaQuery';
 
 export default function Header() {
+  const nav = useRef();
 
   const links = [
     {
@@ -37,40 +38,76 @@ export default function Header() {
     },
   ];
 
-  const isMobile = useMediaQuery('lg');
+  useEffect(() => {
+    require('bootstrap/js/dist/collapse');
+
+    function handleCollapse(e) {
+      if (e.type === 'show.bs.collapse') {
+        nav.current?.classList.add(styles.active);
+      } else {
+        nav.current?.classList.remove(styles.active);
+      }
+    }
+
+    nav.current?.addEventListener('show.bs.collapse', handleCollapse);
+    nav.current?.addEventListener('hide.bs.collapse', handleCollapse);
+
+    return () => {
+      nav.current?.removeEventListener('show.bs.collapse', handleCollapse);
+      nav.current?.removeEventListener('hide.bs.collapse', handleCollapse);
+    }
+  }, []);
+
+  useEffect(() => {
+    function handleScroll(e) {
+      if (window.scrollY > 48) {
+        nav.current?.classList.add(styles.active);
+      } else {
+        nav.current?.classList.remove(styles.active);
+      }
+    }
+
+    document.addEventListener('scroll', handleScroll);
+
+    return () => document.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <header className={styles.navbar}>
-      <nav>
+      <nav ref={nav}>
         <div className="container">
-          <div className={styles.navbarInner}>
-            <Link href="/#">
-              <a className="link-image">
-                <Logo />
-              </a>
-            </Link>
-            <ul className={`${styles.links} collapse ${isMobile ? '' : 'show'}`} id="navbar">
-              {
-                links.map(link => (
-                  <li key={link.name} onClick={() => document.querySelector('[data-bs-target="#navbar"]').click()}>
-                    <Link href={link.url}>
-                      <a>{link.name}</a>
+          <div className="row">
+            <div className="col-12">
+              <div className={styles.navbarInner}>
+                <Link href="/#">
+                  <a className="link-image">
+                    <Logo />
+                  </a>
+                </Link>
+                <ul className={`${styles.links} collapse`} id="navbar">
+                  {
+                    links.map(link => (
+                      <li key={link.name} onClick={() => document.querySelector('[data-bs-target="#navbar"]').click()}>
+                        <Link href={link.url}>
+                          <a>{link.name}</a>
+                        </Link>
+                      </li>
+                    ))
+                  }
+                  <li>
+                    <Link href="/contato">
+                      <a className="btn">Fale Conosco</a>
                     </Link>
                   </li>
-                ))
-              }
-              <li>
+                </ul>
+                <button className="btn small" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                  |||
+                </button>
                 <Link href="/contato">
                   <a className="btn">Fale Conosco</a>
                 </Link>
-              </li>
-            </ul>
-            <button className="btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
-              |||
-            </button>
-            <Link href="/contato">
-              <a className="btn">Fale Conosco</a>
-            </Link>
+              </div>
+            </div>
           </div>
         </div>
       </nav>

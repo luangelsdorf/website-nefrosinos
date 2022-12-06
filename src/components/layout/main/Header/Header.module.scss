@@ -7,8 +7,18 @@
   top: 0;
   z-index: 1000;
 
+  nav {
+    transition: background-color 350ms;
+  }
+
   :global(.container) {
     border-bottom: 1px solid rgba(182, 188, 201, 0.4);
+  }
+
+  @media (min-width: 992px) {
+    .links {
+      display: flex;
+    }
   }
 
   @include mixins.lg {
@@ -44,6 +54,7 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 32px 0;
+  transition: padding 350ms;
 
   @include mixins.lg {
     justify-content: center;
@@ -56,7 +67,7 @@
       height: auto;
 
       @include mixins.xl {
-        max-width: 180px;
+        max-width: 160px;
       }
     }
   }
@@ -73,11 +84,33 @@
   display: flex;
   gap: 24px;
 
-  li:last-child > a {
+  li:last-child {
     display: none;
 
     @include mixins.lg {
       display: inline-block;
     }
+  }
+}
+
+.active {
+  background-color: var(--white);
+
+  :global(#logotype) {
+    & > path {
+      fill: var(--blue);
+    }
+  }
+
+  a {
+    --link-fill-color: var(--blue);
+
+    &:hover {
+      --link-fill-color: var(--dark-blue);
+    }
+  }
+
+  .navbarInner {
+    padding: 16px 0px;
   }
 }

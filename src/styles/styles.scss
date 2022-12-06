@@ -58,12 +58,18 @@ menu {
   list-style: none;
 }
 
-#__next {
+/* #__next {
   height: 100vh;
   overflow-x: hidden;
   perspective: 100px;
-}
+} */
 
 main {
   transform-style: preserve-3d;
+}
+
+@include mixins.sm {
+  .col-12 {
+    padding: 0 30px;
+  }
 }

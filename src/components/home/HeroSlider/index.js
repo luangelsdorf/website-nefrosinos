@@ -5,7 +5,7 @@ import { apiURL } from 'src/utils/env';
 import styles from './HeroSlider.module.scss';
 
 export default function HeroSlider({ content }) {
-  const [active, setActive] = useState(content[0]);
+  const [active, setActive] = useState(null);
   const [direction, setDirection] = useState('left');
 
   function nextSlide() {
@@ -35,6 +35,8 @@ export default function HeroSlider({ content }) {
   }
 
   useEffect(() => {
+    if (!active) return;
+
     document.querySelectorAll(`.${styles.slider} section`).forEach(banner => {
       banner.classList.remove('active');
       banner.classList.remove('swipe-right');
@@ -50,35 +52,35 @@ export default function HeroSlider({ content }) {
     }, 10100);
 
     return () => clearInterval(interval);
-  }, [active]) */;
+  }, [active]); */
 
   return (
     <section className={styles.slider}>
       {
-        content.map(banner => (
-          <Banner id={banner.id} key={banner.id} cover={apiURL + banner.cover.data.attributes.url}>
-            <div className="row">
-              <div className="col-12 col-xl-10 mx-auto">
-                <div className={styles.bannerContent}>
-                  <h1>{banner.title}</h1>
-                  <p>{banner.text}</p>
-                  <div className={styles.buttons}>
-                    <Link href={banner.button1.url}>
-                      <a className="btn icon">{banner.button1.text}</a>
-                    </Link>
-                    {
-                      banner.button2.url && banner.button2.text && (
+        content.map((banner, index) => {
+          return (
+            <Banner id={banner.id} key={banner.id} cover={apiURL + banner.cover.data.attributes.url} className={index === 0 ? 'active' : undefined}>
+              <div className="row">
+                <div className="col-12 col-xl-10 mx-auto">
+                  <div className={styles.bannerContent}>
+                    <h1>{banner.title}</h1>
+                    <p>{banner.text}</p>
+                    <div className={styles.buttons}>
+                      <Link href={banner.button1.url}>
+                        <a className="btn icon">{banner.button1.text}</a>
+                      </Link>
+                      {banner.button2.url && banner.button2.text && (
                         <Link href={banner.button2.url}>
                           <a className="btn secondary">{banner.button2.text}</a>
                         </Link>
-                      )
-                    }
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Banner>
-        ))
+            </Banner>
+          );
+        })
       }
       {/* <div>
         <button className="btn left" onClick={() => prevSlide()}>{'<-'}</button>

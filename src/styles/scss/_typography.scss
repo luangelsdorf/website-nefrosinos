@@ -5,17 +5,21 @@
   --body: Poppins, sans-serif;
 
   /* Headings */
-  --title-display: 500 56px/72px var(--heading);
-  --title-xl: 500 44px/56px var(--heading);
-  --title-lg: 500 32px/40px var(--heading);
-  --title-md: 600 24px/32px var(--heading);
-  --title-sm: 500 20px/32px var(--heading);
-  --title-xs: 600 16px/24px var(--heading);
+  --title-display: 500 3.5rem/4.5rem var(--heading);
+  --title-xl: 500 2.75rem/3.5rem var(--heading);
+  --title-lg: 500 2rem/2.5rem var(--heading);
+  --title-md: 600 1.5rem/2rem var(--heading);
+  --title-sm: 500 1.25rem/2rem var(--heading);
+  --title-xs: 600 1rem/1.5rem var(--heading);
 
   /* Body Text */
-  --body-lg: 500 18px/28px var(--body);
-  --body-md: 500 16px/28px var(--body);
-  --body-sm: 500 14px/24px var(--body);
+  --body-lg: 500 1.125rem/1.75rem var(--body);
+  --body-md: 500 1rem/1.75rem var(--body);
+  --body-sm: 500 0.875rem/1.5rem var(--body);
+
+  @include mixins.lg {
+    font-size: 14px;
+  }
 }
 
 p,

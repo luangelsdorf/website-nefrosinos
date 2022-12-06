@@ -1,3 +1,5 @@
+@use '../../../styles/scss/mixins';
+
 @keyframes fade-right {
   0% {
     transform: translateX(-250px);
@@ -29,18 +31,12 @@
 // ===================================================== //
 
 .slider {
-  transform-style: preserve-3d;
   height: 880px;
-  background-color: var(--blue);
+  background-image: linear-gradient(90deg, #193e72 -11.28%, #193e72 -11.27%, rgba(25, 62, 114, 0) 69.86%), linear-gradient(180deg, rgba(25, 62, 114, 0.25) 0%, rgba(25, 62, 114, 0) 28.65%);
 
   section {
     position: relative;
     height: 100%;
-
-    & > div {
-      background: linear-gradient(90deg, #193e72 -11.28%, #193e72 -11.27%, rgba(25, 62, 114, 0) 69.86%),
-        linear-gradient(180deg, rgba(25, 62, 114, 0.25) 0%, rgba(25, 62, 114, 0) 28.65%);
-    }
 
     .bannerContent {
       display: flex;
@@ -65,13 +61,20 @@
 
     &:global(.swipe-left) {
       & > div {
-        animation: fade-left 1.2s both;
+        animation: fade-left 1.2s forwards;
       }
     }
     &:global(.swipe-right) {
       & > div {
-        animation: fade-right 1.2s both;
+        animation: fade-right 1.2s forwards;
       }
+    }
+  }
+
+  @include mixins.sm {
+    background-color: var(--dark-blue);
+    img {
+      display: none;
     }
   }
 }

@@ -3,11 +3,11 @@
 
   cursor: pointer;
   font: var(--body-md);
-  line-height: 18px;
+  line-height: 1.125rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 32px;
+  padding: 1rem 1.3rem;
   border: 1.5px solid;
   border-radius: 4px;
   gap: 12px;
@@ -30,9 +30,11 @@
   &.icon {
     &::after {
       content: "";
-      height: 12px;
-      width: 12px;
+      height: 0.75rem;
+      width: 0.75rem;
       mask-image: url("/images/icons/arrow-right.svg");
+      mask-repeat: no-repeat;
+      mask-position: center;
       background-color: var(--label-color);
     }
   }
@@ -51,6 +53,5 @@
 
   &:hover {
     filter: brightness(1.25);
-    
   }
 }
