@@ -1,9 +1,14 @@
+@use "../../../styles/scss/mixins";
+
 .title {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
 
   p {
-    background-color: #FFEEF1;
+    background-color: #ffeef1;
     color: var(--pink);
     font: var(--body-sm);
     padding: 10px 16px;
@@ -34,5 +39,25 @@
     & + * {
       color: var(--gray-80);
     }
+  }
+}
+
+.start {
+  align-items: flex-start;
+  text-align: left;
+
+  @include mixins.lg {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.end {
+  align-items: flex-end;
+  text-align: right;
+
+  @include mixins.lg {
+    align-items: center;
+    text-align: center;
   }
 }
