@@ -8,7 +8,7 @@
     flex-wrap: nowrap;
     align-items: center;
 
-    @include mixins.lg {
+    @include mixins.md {
       flex-wrap: wrap;
     }
   }
