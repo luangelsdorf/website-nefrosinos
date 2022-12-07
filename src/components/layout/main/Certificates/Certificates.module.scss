@@ -1,3 +1,5 @@
+@use "../../../../styles/scss/mixins";
+
 .section {
   display: flex;
   align-items: center;
@@ -22,9 +24,38 @@
     justify-content: space-between;
     flex-grow: 1;
 
+    & > div {
+      width: 140px;
+      padding: 16px;
+    }
+
     img {
-      max-width: 102px;
+      width: 100%;
       height: auto;
+      object-fit: contain;
+    }
+  }
+
+  @include mixins.xl {
+    .text {
+      max-width: none;
+    }
+
+    .certificates {
+      flex-wrap: wrap;
+    }
+  }
+
+  @include mixins.lg {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  @include mixins.md {
+    gap: 48px;
+
+    .certificates {
+      justify-content: space-around;
     }
   }
 }

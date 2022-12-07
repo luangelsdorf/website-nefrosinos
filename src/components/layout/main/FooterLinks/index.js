@@ -9,7 +9,7 @@ export default function FooterLinks({ content }) {
     <div className={styles.section}>
       <div className="container">
         <div className="row">
-          <div className="col-12 col-lg-5">
+          <div className="col-12 col-lg-4 col-xl-5">
             <div className={styles.textContent}>
               <Image
                 src={apiURL + content.logo.data.attributes.url}
@@ -20,7 +20,7 @@ export default function FooterLinks({ content }) {
               <p>{content.text}</p>
             </div>
           </div>
-          <div className="col-12 col-lg-7">
+          <div className="col-12 col-lg-8 col-xl-7">
             <div className={styles.links}>
               <div>
                 <h2>Sobre Nós</h2>

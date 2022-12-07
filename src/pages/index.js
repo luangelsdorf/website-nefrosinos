@@ -43,7 +43,7 @@ export default function Home({ home, partners, team, recentPosts }) {
           <Calculator />
         </Section>
 
-        <Section mt="160" mb="200">
+        <Section mt="160" mb="200 120">
           <RecentPosts content={home.blog} posts={recentPosts} />
         </Section>
       </div>

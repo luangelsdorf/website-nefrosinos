@@ -1,3 +1,5 @@
+@use "../../../../styles/scss/mixins";
+
 .section {
   background-color: var(--blue);
   padding-bottom: 56px;
@@ -11,9 +13,9 @@
   }
 
   .textContent {
+    max-width: 89%;
     p {
       color: var(--gray-10);
-      max-width: 89%;
     }
   }
 
@@ -30,6 +32,34 @@
       list-style: inside;
       margin-top: 16px;
       color: var(--gray-10);
+    }
+  }
+
+  @include mixins.xl {
+    padding-top: calc(280px + 72px);
+  }
+
+  @include mixins.lg {
+    padding-top: 56px;
+
+    :global(.row) {
+      gap: 32px;
+    }
+
+    .textContent {
+      max-width: none;
+    }
+  }
+
+  @include mixins.sm {
+    .links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 48px;
+    }
+
+    img {
+      max-width: 100%;
     }
   }
 }

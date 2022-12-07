@@ -1,11 +1,22 @@
+@use "../../../../styles/scss/mixins";
+
 .footer {
   position: relative;
   background-color: var(--gray-10_50);
 }
 
 .certSection {
-  margin-top: -80px;
   position: absolute;
   width: 100%;
   z-index: 1;
+
+  @include mixins.lg {
+    position: relative;
+  }
+
+  @include mixins.sm {
+    :global(.container) {
+      padding: 0 30px;
+    }
+  }
 }

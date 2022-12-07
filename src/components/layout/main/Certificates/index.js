@@ -14,13 +14,14 @@ export default function Certificates({ content }) {
         <div className={styles.certificates}>
           {
             content.certificates.map(cert => (
-              <Image
-                src={apiURL + cert.image.data.attributes.url}
-                width={cert.image.data.attributes.width}
-                height={cert.image.data.attributes.height}
-                alt="Certificado"
-                key={cert.id}
-              />
+              <div key={cert.id}>
+                <Image
+                  src={apiURL + cert.image.data.attributes.url}
+                  width={cert.image.data.attributes.width}
+                  height={cert.image.data.attributes.height}
+                  alt="Certificado"
+                />
+              </div>
             ))
           }
         </div>
