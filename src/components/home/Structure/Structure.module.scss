@@ -1,9 +1,16 @@
+@use '../../../styles/scss/mixins';
+
 .section {
   position: relative;
 
   :global(.row) {
-    flex-direction: column;
     justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    @include mixins.lg {
+      flex-wrap: wrap;
+    }
   }
 
   img {
@@ -16,23 +23,13 @@
   }
 }
 
-.leftImage,
-.rightImage {
-  position: absolute;
-  max-width: 25vw;
-}
-
 .topImage,
 .bottomImage {
   img {
-    width: 100%;
     aspect-ratio: 16 / 10;
   }
 }
 
-.leftImage {
-  left: 0;
-}
-.rightImage {
-  right: 0;
+.topImage {
+  margin-bottom: 24px;
 }
