@@ -39,7 +39,7 @@ export default function Home({ home, partners, team, recentPosts }) {
           <Structure content={home.structure} />
         </Section>
 
-        <Section mt="160">
+        <Section mt="160 120">
           <Calculator />
         </Section>
 

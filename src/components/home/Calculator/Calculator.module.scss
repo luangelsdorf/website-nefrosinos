@@ -1,3 +1,5 @@
+@use "../../../styles/scss/mixins";
+
 .section {
   position: relative;
   z-index: 1;
@@ -9,6 +11,10 @@
   text-align: center;
   border-radius: 4px;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+
+  @include mixins.sm {
+    padding: 40px 24px;
+  }
 
   header {
     margin-bottom: 24px;
@@ -26,6 +32,11 @@
     input[type="number"] {
       width: 160px;
 
+      @include mixins.lg {
+        width: auto;
+        flex-grow: 1;
+      }
+
       &::placeholder {
         color: var(--gray-70);
       }
@@ -37,6 +48,10 @@
 
     button[type="submit"] {
       background-color: var(--pink);
+    }
+
+    @include mixins.md {
+      justify-content: center;
     }
   }
 }
@@ -50,11 +65,19 @@
   border-radius: 4px;
   color: var(--white);
 
+  @include mixins.sm {
+    justify-content: center;
+  }
+
   span {
     font-weight: 700;
 
     span {
       font-weight: 500;
+
+      @include mixins.sm {
+        display: block;
+      }
     }
   }
 }
