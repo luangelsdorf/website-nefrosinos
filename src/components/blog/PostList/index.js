@@ -11,7 +11,7 @@ export default function PostList({ posts, title }) {
           <header>
             <h2>{title}</h2>
             <Link href="/categorias">
-              <a className="btn secondary large icon">
+              <a className="btn dark large icon">
                 Ver Lista Completa
               </a>
             </Link>

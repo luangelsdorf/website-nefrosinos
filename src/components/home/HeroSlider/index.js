@@ -71,7 +71,7 @@ export default function HeroSlider({ content }) {
                       </Link>
                       {banner.button2.url && banner.button2.text && (
                         <Link href={banner.button2.url}>
-                          <a className="btn secondary">{banner.button2.text}</a>
+                          <a className="btn light">{banner.button2.text}</a>
                         </Link>
                       )}
                     </div>

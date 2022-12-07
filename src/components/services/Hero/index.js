@@ -11,7 +11,7 @@ export default function Hero({ content }) {
       <div className={styles.bannerContent}>
         <Title content={content.title} align="center" />
         <Link href="/contato">
-          <a className="btn secondary icon">Agendar Consulta</a>
+          <a className="btn dark icon">Agendar Consulta</a>
         </Link>
       </div>
     </Banner>

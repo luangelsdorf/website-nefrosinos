@@ -37,7 +37,7 @@ export default function AboutUs({ content }) {
               <Title content={content.title} align="start" />
               <p>{content.text}</p>
               <Link href="/sobre-nos">
-                <a className="btn secondary">Sobre Nós</a>
+                <a className="btn dark">Sobre Nós</a>
               </Link>
             </div>
           </div>

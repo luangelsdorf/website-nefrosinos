@@ -48,11 +48,6 @@
     .buttons {
       display: flex;
       gap: 20px;
-
-      & > :last-child {
-        border-color: white;
-        color: white;
-      }
     }
 
     &:not(:global(.active)) {

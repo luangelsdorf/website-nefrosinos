@@ -14,7 +14,7 @@ export default function ConservativeTreatment({ content }) {
               <p>{content.text}</p>
               <div className={styles.links}>
                 <Link href="/">
-                  <a className="btn secondary">Conheça Nossa Equipe</a>
+                  <a className="btn dark">Conheça Nossa Equipe</a>
                 </Link>
                 <Link href="/">
                   <a className="btn icon">Fale Conosco</a>
