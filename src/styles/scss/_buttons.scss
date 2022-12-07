@@ -1,5 +1,19 @@
+$filled-buttons: (
+  "light-blue": #3678d3,
+  "blue": #193e72,
+  "dark-blue": #0a2156,
+  "light-pink": #e07ba2,
+  "pink": #da3372,
+  "dark-pink": #8a1944,
+);
+
+$outlined-buttons: (
+  "light": #fff,
+  "dark": #24365e,
+);
+
 .btn {
-  --label-color: inherit;
+  --label-color: var(--white);
 
   cursor: pointer;
   font: var(--body-md);
@@ -16,16 +30,7 @@
 
   background-color: var(--pink);
   border-color: transparent;
-  color: var(--white);
-  --label-color: var(--white);
-
-  // variants
-  &.secondary {
-    background-color: transparent;
-    border-color: var(--gray-90);
-    color: var(--gray-90);
-    --label-color: var(--gray-90);
-  }
+  color: var(--label-color);
 
   &.icon {
     &::after {
@@ -53,5 +58,19 @@
 
   &:hover {
     filter: brightness(1.25);
+  }
+
+  @each $color, $hex in $filled-buttons {
+    &.#{$color} {
+      background-color: $hex;
+    }
+  }
+
+  @each $color, $hex in $outlined-buttons {
+    &.#{$color} {
+      background-color: transparent;
+      color: $hex;
+      border-color: $hex;
+    }
   }
 }
