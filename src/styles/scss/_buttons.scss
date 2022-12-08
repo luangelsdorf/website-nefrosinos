@@ -1,15 +1,45 @@
 $filled-buttons: (
-  "light-blue": #3678d3,
-  "blue": #193e72,
-  "dark-blue": #0a2156,
-  "light-pink": #e07ba2,
-  "pink": #da3372,
-  "dark-pink": #8a1944,
+  "blue": (
+    "default": #193e72,
+    "hover": #3678d3,
+    "selected": #0a2156,
+  ),
+  "pink": (
+    "default": #da3372,
+    "hover": #e07ba2,
+    "selected": #8a1944,
+  ),
 );
 
 $outlined-buttons: (
-  "light": #fff,
-  "dark": #24365e,
+  "light": (
+    "default": (
+      "outline": #fff,
+      "bg": transparent,
+    ),
+    "hover": (
+      "outline": #fff,
+      "bg": #ffffff80,
+    ),
+    "selected": (
+      "outline": #9ea5b8,
+      "bg": #fff,
+    ),
+  ),
+  "dark": (
+    "default": (
+      "outline": #24365e,
+      "bg": transparent,
+    ),
+    "hover": (
+      "outline": #24365e,
+      "bg": #b6bcc980,
+    ),
+    "selected": (
+      "outline": #fff,
+      "bg": #24365e,
+    ),
+  ),
 );
 
 .btn {
@@ -28,9 +58,18 @@ $outlined-buttons: (
   transition: all 350ms;
   text-decoration: none;
 
-  background-color: var(--pink);
-  border-color: transparent;
+  // default: pink
+  background-color: #{map-get($filled-buttons, "pink", "default")};
   color: var(--label-color);
+  border-color: transparent;
+
+  &:hover {
+    background-color: #{map-get($filled-buttons, "pink", "hover")};
+  }
+
+  &:focus {
+    background-color: #{map-get($filled-buttons, "pink", "selected")};
+  }
 
   &.icon {
     &::after {
@@ -56,21 +95,37 @@ $outlined-buttons: (
     padding: 20px 40px;
   }
 
-  &:hover {
-    filter: brightness(1.25);
-  }
-
-  @each $color, $hex in $filled-buttons {
+  @each $color, $state in $filled-buttons {
     &.#{$color} {
-      background-color: $hex;
+      background-color: #{map-get($state, "default")};
+
+      &:hover {
+        background-color: #{map-get($state, "hover")};
+      }
+
+      &:focus {
+        background-color: #{map-get($state, "selected")};
+      }
     }
   }
 
-  @each $color, $hex in $outlined-buttons {
+  @each $color, $state in $outlined-buttons {
     &.#{$color} {
-      background-color: transparent;
-      color: $hex;
-      border-color: $hex;
+      background-color: #{map-get($state, "default", "bg")};
+      border-color: #{map-get($state, "default", "outline")};
+      color: #{map-get($state, "default", "outline")};
+
+      &:hover {
+        background-color: #{map-get($state, "hover", "bg")};
+        border-color: #{map-get($state, "hover", "outline")};
+        color: #{map-get($state, "hover", "outline")};
+      }
+
+      &:focus {
+        background-color: #{map-get($state, "selected", "bg")};
+        border-color: #{map-get($state, "selected", "outline")};
+        color: #{map-get($state, "selected", "outline")};
+      }
     }
   }
 }
