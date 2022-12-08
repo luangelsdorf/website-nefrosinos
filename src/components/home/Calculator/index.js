@@ -1,17 +1,20 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import Arrow from 'public/images/icons/arrow-right.svg';
 import Title from 'src/components/common/Title';
 import styles from './Calculator.module.scss';
+import { useForm } from 'react-hook-form';
+import { calculate } from 'src/utils/helpers';
 
 export default function Calculator() {
+  const [result, setResult] = useState('');
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log(e);
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+
+  function onSubmit(data) {
+    const result = calculate(data);
+    setResult(result)
   }
-
-  const result = '90ml/min x 1,73m 2'
 
   return (
     <div className={styles.section}>
@@ -28,17 +31,23 @@ export default function Calculator() {
                 </Link>
               </p>
 
-              <form className={styles.form} onSubmit={handleSubmit}>
-                <input placeholder="Creatinina" type="number" />
-                <input placeholder="Idade" type="number" />
-                <select>
+              <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+                <input type="number" step="0.01" placeholder="Creatinina" {...register('creatinina', { required: true })} />
+
+                <input type="number" placeholder="Idade" {...register('idade', { required: true })} />
+
+                <select {...register('sexo', { required: true })}>
                   <option value="">Selecione seu Sexo</option>
                   <option value="f">Feminino</option>
                   <option value="m">Masculino</option>
                 </select>
+
                 <button className="btn" type="submit">Calcular Valores <Arrow /></button>
+
                 <div className={styles.result}>
-                  <span>Resultado: <span>{result}</span></span>
+                  <span key={result} data-result={result}>
+                    Resultado: <span>{result} mL/min/1.73m<sup>2</sup></span>
+                  </span>
                 </div>
               </form>
 

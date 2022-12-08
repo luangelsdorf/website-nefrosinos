@@ -1,5 +1,14 @@
 @use "../../../styles/scss/mixins";
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .section {
   position: relative;
   z-index: 1;
@@ -46,10 +55,6 @@
       flex-grow: 1;
     }
 
-    button[type="submit"] {
-      background-color: var(--pink);
-    }
-
     @include mixins.md {
       justify-content: center;
     }
@@ -71,6 +76,10 @@
 
   span {
     font-weight: 700;
+
+    &[data-result] {
+      animation: fadein 1.5s both;
+    }
 
     span {
       font-weight: 500;
