@@ -31,7 +31,7 @@ export default function Purpose({ content }) {
     <div className={styles.section}>
       <Title content={content.title} align="center" />
       <div className="container">
-        <div className="row">
+        <div className="row gy-4">
           {
             content.purposeCards.map(card => (
               <div className="col-12 col-lg-4" key={card.id}>

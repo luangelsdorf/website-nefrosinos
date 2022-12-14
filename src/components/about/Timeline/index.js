@@ -24,7 +24,11 @@ export default function Timeline({ content }) {
   return (
     <div className={styles.section}>
       <div className={styles.headingSection}>
-        <Title content={content.title} variant="dark" />
+        <div className="row">
+          <div className="col-12">
+            <Title content={content.title} variant="dark" />
+          </div>
+        </div>
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-10 mx-auto">

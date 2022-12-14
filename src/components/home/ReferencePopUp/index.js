@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './ReferencePopUp.module.scss';
 
 export default function ReferencePopUp({ content }) {
-  console.log(content);
 
   const keyframes = [
     { opacity: 0, transform: 'scale(0.90)' },

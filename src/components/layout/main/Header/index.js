@@ -3,6 +3,7 @@ import styles from './Header.module.scss';
 import Logo from 'public/images/header-logo.svg';
 import Link from 'next/link';
 import useMediaQuery from 'src/hooks/useMediaQuery';
+import { useRouter } from 'next/router';
 
 export default function Header() {
   const nav = useRef();
@@ -39,6 +40,8 @@ export default function Header() {
   ];
 
   useEffect(() => {
+    if (router.route !== '/') return;
+
     require('bootstrap/js/dist/collapse');
 
     function handleCollapse(e) {
@@ -58,8 +61,15 @@ export default function Header() {
     }
   }, []);
 
+  const router = useRouter();
+
   useEffect(() => {
-    function handleScroll(e) {
+    if (router.route !== '/') {
+      nav.current?.classList.add(styles.active);
+      return;
+    }
+
+    function handleScroll() {
       if (window.scrollY > 48) {
         nav.current?.classList.add(styles.active);
       } else {

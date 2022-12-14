@@ -15,19 +15,19 @@ export default function SobreNos({ about, team }) {
         <AboutUs content={about.aboutUs} />
       </Section>
 
-      <Section mt="200">
+      <Section mt="200 120">
         <Purpose content={about.purpose} />
       </Section>
 
-      <Section pt="147" mt="214">
+      <Section pt="147 104" mt="214 120">
         <Timeline content={about.timeline} />
       </Section>
 
-      <Section mt="200">
+      <Section mt="200 180">
         <OurTeam content={about.ourTeam} team={team} />
       </Section>
 
-      <Section mt="200" mb="200">
+      <Section mt="200 136" mb="200 136">
         <AboutOurTeam content={about.aboutOurTeam} />
       </Section>
     </main>

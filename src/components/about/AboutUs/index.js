@@ -15,7 +15,7 @@ export default function AboutUs({ content }) {
               <Title content={content.title} align="start" />
               <p>{content.text}</p>
               <Link href="/contato">
-                <a className="btn icon">Fale Conosco</a>
+                <a className="btn blue icon">Fale Conosco</a>
               </Link>
             </div>
           </div>

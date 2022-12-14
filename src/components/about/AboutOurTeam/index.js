@@ -5,11 +5,13 @@ import styles from './AboutOurTeam.module.scss';
 export default function AboutOurTeam({ content }) {
 
   const sizes = [
-    'col-lg-6 col-xl-5',
-    'col-lg-6 col-xl-7',
+    'col-xl-6',
+    'col-xl-6',
     'col-xl-4',
     'col-xl-4',
-    'col-xl-4'
+    'col-xl-4',
+    'col-xl-6',
+    'col-xl-6',
   ];
 
   const Card = props => (

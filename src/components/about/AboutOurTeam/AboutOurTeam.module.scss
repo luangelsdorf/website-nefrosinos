@@ -1,27 +1,18 @@
 @use "../../../styles/scss/mixins";
 
 .section {
-  :global(.col-xl-4) {
-    header {
-      gap: 24px;
-    }
-
-    article {
-      padding-right: 40px;
-    }
-  }
 }
 
 .card {
   background-color: var(--gray-10);
-  padding: 66px 56px 44px 48px;
+  padding: 48px 40px;
   height: 100%;
 
   header {
     display: flex;
-    gap: 40px;
+    gap: 24px;
     align-items: center;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 
     h3 {
       font: var(--title-lg);
@@ -30,10 +21,6 @@
       @include mixins.xxl {
         font: var(--title-md);
       }
-
-      /* &::first-line {
-        font: var(--title-sm);
-      } */
     }
   }
 }

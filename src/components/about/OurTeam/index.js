@@ -41,7 +41,7 @@ export default function OurTeam({ content, team }) {
               </div>
             </div>
 
-            <div className="col-12 col-lg-4">
+            <div className="col-12 col-lg-4 d-none d-lg-block">
               <div className={styles.centerImage}>
                 <Image
                   src={apiURL + content.image.data.attributes.url}

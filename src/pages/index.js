@@ -52,7 +52,7 @@ export default function Home({ home, partners, team, recentPosts }) {
   )
 }
 
-Home.layout = null //MainLayout;
+Home.layout = MainLayout;
 Home.showContact = true;
 
 export async function getStaticProps() {
