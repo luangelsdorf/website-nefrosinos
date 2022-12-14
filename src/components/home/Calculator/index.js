@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Arrow from 'public/images/icons/arrow-right.svg';
 import Title from 'src/components/common/Title';
 import styles from './Calculator.module.scss';
 import { useForm } from 'react-hook-form';
 import { calculate } from 'src/utils/helpers';
+import ReferencePopUp from '../ReferencePopUp';
 
 export default function Calculator() {
   const [result, setResult] = useState('');
@@ -50,8 +51,8 @@ export default function Calculator() {
                   </span>
                 </div>
               </form>
-
-              <a href="#">Confira aqui a tabela completa com valores de referência.</a>
+              
+              <ReferencePopUp />
             </div>
           </div>
         </div>

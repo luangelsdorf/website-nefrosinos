@@ -53,6 +53,7 @@ svg {
 
 ul,
 ol,
+dl,
 menu {
   padding: 0;
   margin: 0;
@@ -60,11 +61,25 @@ menu {
 }
 
 dialog {
+  width: 100vw;
+  height: 100vh;
   border-width: 0;
+  padding: 0;
+  margin: 0;
+  max-width: none;
+  max-height: none;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+
+  &[open] {
+    display: flex;
+  }
 
   &::backdrop {
     background-color: black;
-    opacity: .5;
+    opacity: 0.5;
     animation: fade-bd 400ms ease-out both normal;
   }
 }

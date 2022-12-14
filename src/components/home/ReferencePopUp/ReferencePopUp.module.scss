@@ -1,0 +1,61 @@
+@use "../../../styles/scss/keyframes";
+
+.dialogContent {
+  position: relative;
+  background-color: #fff;
+  padding: 72px 104px;
+
+  h3 {
+    font: var(--body-md);
+    font-weight: 700;
+    color: var(--gray-90);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  dl {
+    font: var(--body-sm);
+    text-align: left;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+
+    .item {
+      background-color: var(--gray-10);
+      color: var(--gray-80);
+      padding: 12px;
+    }
+
+    dt, dd {
+      display: inline;
+    }
+  }
+
+  dt {
+    font-weight: 700;
+
+    &::after {
+      content: ': ';
+    }
+  }
+
+  dd {
+    margin: 0;
+  }
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: 0;
+  padding: 16px;
+}
+
+.backdropFade {
+  &::backdrop {
+    animation: fade-bd 400ms ease-in both reverse;
+  }
+}
