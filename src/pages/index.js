@@ -41,7 +41,7 @@ export default function Home({ home, partners, team, recentPosts }) {
         </Section>
 
         <Section mt="160">
-          <Calculator />
+          <Calculator content={home.referenceTable} />
         </Section>
 
         <Section mt="160" mb="200 120">

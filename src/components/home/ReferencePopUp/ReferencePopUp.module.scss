@@ -1,9 +1,14 @@
 @use "../../../styles/scss/keyframes";
+@use "../../../styles/scss/mixins";
 
 .dialogContent {
   position: relative;
   background-color: #fff;
   padding: 72px 104px;
+
+  @include mixins.md {
+    padding: 40px 32px;
+  }
 
   h3 {
     font: var(--body-md);
@@ -17,6 +22,7 @@
     font: var(--body-sm);
     text-align: left;
     display: flex;
+    justify-content: center;
     gap: 24px;
     flex-wrap: wrap;
 
@@ -24,9 +30,15 @@
       background-color: var(--gray-10);
       color: var(--gray-80);
       padding: 12px;
+      width: calc((100% / 3) - (16px));
+
+      @include mixins.md {
+        width: auto;
+      }
     }
 
-    dt, dd {
+    dt,
+    dd {
       display: inline;
     }
   }
@@ -35,7 +47,7 @@
     font-weight: 700;
 
     &::after {
-      content: ': ';
+      content: ": ";
     }
   }
 

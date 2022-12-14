@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 import { calculate } from 'src/utils/helpers';
 import ReferencePopUp from '../ReferencePopUp';
 
-export default function Calculator() {
+export default function Calculator({ content }) {
   const [result, setResult] = useState('');
 
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -52,7 +52,7 @@ export default function Calculator() {
                 </div>
               </form>
               
-              <ReferencePopUp />
+              <ReferencePopUp content={content} />
             </div>
           </div>
         </div>

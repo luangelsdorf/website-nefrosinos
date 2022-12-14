@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './ReferencePopUp.module.scss';
 
 export default function ReferencePopUp({ content }) {
+  console.log(content);
 
   const keyframes = [
     { opacity: 0, transform: 'scale(0.90)' },
@@ -34,32 +35,16 @@ export default function ReferencePopUp({ content }) {
             <div className="col-12 col-xl-10 mx-auto">
               <div className={styles.dialogContent}>
                 <button type="button" className={styles.close} onClick={hideDialog}>X</button>
-                <h3>Valores de Referência para a TFG estimada pelo CKD-EPI</h3>
+                <h3>{content.title}</h3>
                 <dl>
-                  <div className={styles.item}>
-                    <dt>Normal</dt>
-                    <dd>90 ml/min x 1,73m 2 (Estádio G1)</dd>
-                  </div>
-                  <div className={styles.item}>
-                    <dt>Normal</dt>
-                    <dd>90 ml/min x 1,73m 2 (Estádio G1)</dd>
-                  </div>
-                  <div className={styles.item}>
-                    <dt>Normal</dt>
-                    <dd>90 ml/min x 1,73m 2 (Estádio G1)</dd>
-                  </div>
-                  <div className={styles.item}>
-                    <dt>Normal</dt>
-                    <dd>90 ml/min x 1,73m 2 (Estádio G1)</dd>
-                  </div>
-                  <div className={styles.item}>
-                    <dt>Normal</dt>
-                    <dd>90 ml/min x 1,73m 2 (Estádio G1)</dd>
-                  </div>
-                  <div className={styles.item}>
-                    <dt>Normal</dt>
-                    <dd>90 ml/min x 1,73m 2 (Estádio G1)</dd>
-                  </div>
+                  {
+                    content.referenceValues.map(val => (
+                      <div className={styles.item} key={val.id}>
+                        <dt>{val.title}</dt>
+                        <dd>{val.text}</dd>
+                      </div>
+                    ))
+                  }
                 </dl>
               </div>
             </div>
