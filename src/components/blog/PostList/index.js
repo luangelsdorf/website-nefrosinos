@@ -11,7 +11,7 @@ export default function PostList({ posts, title }) {
           <header>
             <h2>{title}</h2>
             <Link href="/categorias">
-              <a className="btn dark large icon">
+              <a className="btn dark icon">
                 Ver Lista Completa
               </a>
             </Link>
@@ -19,7 +19,7 @@ export default function PostList({ posts, title }) {
         )
       }
 
-      <div className="row">
+      <div className="row" style={{ rowGap: '80px' }}>
         {
           posts.map(post => (
             <PostCard key={post.id} {...post.attributes} />

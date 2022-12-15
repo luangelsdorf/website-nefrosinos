@@ -97,6 +97,7 @@ $outlined-buttons: (
 
   @each $color, $state in $filled-buttons {
     &.#{$color} {
+      --label-color: #{map-get($state, "default")};
       background-color: #{map-get($state, "default")};
 
       &:hover {
@@ -111,6 +112,7 @@ $outlined-buttons: (
 
   @each $color, $state in $outlined-buttons {
     &.#{$color} {
+      --label-color: #{map-get($state, "default", "outline")};
       background-color: #{map-get($state, "default", "bg")};
       border-color: #{map-get($state, "default", "outline")};
       color: #{map-get($state, "default", "outline")};

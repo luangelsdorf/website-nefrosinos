@@ -17,14 +17,14 @@ export default function Blog({ blog, posts, categories }) {
       <div style={{backgroundColor: 'var(--white)'}}>
         <div className="container">
           <div className="row">
-            <div className="col-12 col-xl-10 mx-auto">
+            <div className="col-xl-10 mx-auto">
               <Section mt="160">
                 <MainPosts posts={posts} />
               </Section>
-              <Section mt="150" pt="120" style={{ borderTop: '1px solid var(--gray-10)' }}>
+              <Section mt="150 80" pt="120 80" style={{ borderTop: '1px solid var(--gray-10)' }}>
                 <PostList posts={newsAndArticles} title="Artigos e Notícias" />
               </Section>
-              <Section mb="200" mt="160" pt="120" style={{ borderTop: '1px solid var(--gray-10)' }}>
+              <Section mb="200 120" mt="160 96" pt="120 96" style={{ borderTop: '1px solid var(--gray-10)' }}>
                 <PostList posts={mediaPosts} title="Saiu na Mídia" />
               </Section>
             </div>

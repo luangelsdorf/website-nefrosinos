@@ -12,7 +12,7 @@ export default function PostCard(props) {
   const first = props.nthChild === 0;
 
   return (
-    <div className={`col-12 ${first ? '' : `col-md-6 col-xl-${props.size ?? 6}`}`}>
+    <div className={`${first ? '' : `col-md-6 col-xl-${props.size ?? 6}`}`}>
       <article className={styles.card} data-first={first || undefined}>
         {/* <div className={styles.badge}>
           <Link href={`/categorias/${category.slug}`}>

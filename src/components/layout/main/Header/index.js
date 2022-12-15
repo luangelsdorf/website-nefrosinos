@@ -40,9 +40,9 @@ export default function Header() {
   ];
 
   useEffect(() => {
-    if (router.route !== '/') return;
-
     require('bootstrap/js/dist/collapse');
+
+    if (router.route !== '/') return;
 
     function handleCollapse(e) {
       if (e.type === 'show.bs.collapse') {
