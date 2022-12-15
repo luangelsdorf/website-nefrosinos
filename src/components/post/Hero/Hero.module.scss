@@ -1,5 +1,11 @@
 .section {
+  --v-grad: linear-gradient(180deg, rgba(25, 62, 114, 0.25) 0%, rgba(25, 62, 114, 0) 28.65%);
+  --h-grad: linear-gradient(90deg, #193e72 -11.28%, #193e72 -11.27%, rgba(25, 62, 114, 0) 69.86%);
+
   height: 532px;
+  position: relative;
+
+  background-image: var(--v-grad), var(--h-grad);
 }
 
 .bannerContent {
@@ -7,9 +13,12 @@
 
   h1 {
     margin-bottom: 24px;
+    color: var(--white);
   }
 
   p {
+    color: var(--gray-10);
+    
     span {
       &:not(:last-child) {
         &::after {
@@ -18,7 +27,7 @@
       }
 
       a {
-        --link-fill-color: var(--gray-80);
+        --link-fill-color: var(--white);
       }
     }
   }

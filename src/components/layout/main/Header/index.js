@@ -107,7 +107,7 @@ export default function Header() {
                   }
                   <li>
                     <Link href="/contato">
-                      <a className="btn">Fale Conosco</a>
+                      <a className="btn blue">Fale Conosco</a>
                     </Link>
                   </li>
                 </ul>
@@ -115,7 +115,7 @@ export default function Header() {
                   |||
                 </button>
                 <Link href="/contato">
-                  <a className="btn">Fale Conosco</a>
+                  <a className="btn blue">Fale Conosco</a>
                 </Link>
               </div>
             </div>
