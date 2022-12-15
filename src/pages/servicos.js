@@ -36,7 +36,7 @@ export default function Services({ services, faq, partners }) {
         <Hemodiafiltration content={services.hemodiafiltration} />
       </Section>
 
-      <Section mt="200">
+      <Section mt="200 136">
         <Hemodialysis content={services.hemodialysis} />
       </Section>
 
@@ -44,23 +44,23 @@ export default function Services({ services, faq, partners }) {
         <ConservativeTreatment content={services.conservative} />
       </Section>
 
-      <Section mt="200">
+      <Section mt="200 136">
         <Transplant content={services.transplant} />
       </Section>
 
-      <Section mt="200">
+      <Section mt="200 136">
         <Partners content={services.partners} partners={partners.partners} />
       </Section>
 
-      <Section mt="200">
+      <Section mt="200 136">
         <Structure content={services.structure} />
       </Section>
 
-      <Section mt="200">
+      <Section mt="200 136">
         <WaterTreatment content={services.waterTreatment} />
       </Section>
 
-      <Section mt="200" mb="200">
+      <Section mt="200 136" mb="200 136">
         <FAQ content={faq} />
       </Section>
     </main>
