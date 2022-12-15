@@ -65,7 +65,8 @@ export default function Header() {
 
   useEffect(() => {
     if (router.route !== '/') {
-      nav.current?.classList.add(styles.active);
+      nav.current.classList.add(styles.active);
+      nav.current.closest('header').style.position = 'sticky';
       return;
     }
 

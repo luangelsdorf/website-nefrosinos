@@ -1,3 +1,5 @@
+@use '../../../styles/scss/mixins';
+
 .form {
   input {
     &[name="name"],
@@ -12,5 +14,11 @@
   textarea {
     resize: none;
     width: 100%;
+  }
+
+  @include mixins.lg {
+    button[type=submit] {
+      width: 100%;
+    }
   }
 }

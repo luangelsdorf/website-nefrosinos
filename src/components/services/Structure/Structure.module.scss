@@ -1,3 +1,5 @@
+@use '../../../styles/scss/mixins';
+
 .section {
   img {
     width: 100%;
@@ -19,5 +21,20 @@
   }
   .largeImage {
     height: 540px;
+  }
+
+  @include mixins.md {
+    .smallImage {
+      height: 420px;
+    }
+  }
+
+  @include mixins.sm {
+    .smallImage {
+      height: 240px;
+    }
+    .largeImage {
+      height: 360px;
+    }
   }
 }

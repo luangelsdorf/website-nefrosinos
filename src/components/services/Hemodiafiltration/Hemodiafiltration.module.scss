@@ -1,3 +1,5 @@
+@use "../../../styles/scss/mixins";
+
 .section {
 }
 
@@ -29,6 +31,19 @@
       }
     }
   }
+
+  @include mixins.lg {
+    :global(.row) {
+      gap: 64px;
+    }
+    
+    .note {
+      align-items: center;
+      strong {
+        text-align: center;
+      }
+    }
+  }
 }
 
 .benefits {
@@ -40,5 +55,17 @@
   .card {
     display: flex;
     gap: 24px;
+    text-align: left;
+  }
+
+  @include mixins.lg {
+    :global(.row) {
+      gap: 24px;
+    }
+
+    h3 {
+      max-width: none;
+      text-align: center;
+    }
   }
 }

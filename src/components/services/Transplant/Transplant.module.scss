@@ -1,3 +1,13 @@
+@use "../../../styles/scss/mixins";
+
+.section {
+  @include mixins.lg {
+    :global(.row) {
+      gap: 96px;
+    }
+  }
+}
+
 .textContent {
   height: 100%;
   display: flex;
@@ -27,6 +37,17 @@
       height: 320px;
       position: absolute;
       right: 0;
+    }
+  }
+
+  @include mixins.sm {
+    img {
+      &:first-child {
+        height: 320px;
+      }
+      &:last-child {
+        height: 180px;
+      }
     }
   }
 }

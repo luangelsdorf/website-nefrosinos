@@ -1,6 +1,14 @@
+@use "../../../styles/scss/mixins";
+
 .section {
   & > header {
     margin-bottom: 72px;
+  }
+
+  @include mixins.sm {
+    :global(.col-12) {
+      padding: 0 12px;
+    }
   }
 }
 
@@ -13,11 +21,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 24px;
   }
 
   article {
     background-color: var(--gray-10);
-    padding: 30px 40px;
+    padding: 32px 40px;
 
     h3 {
       font: var(--title-sm);
@@ -25,6 +34,16 @@
 
     p {
       margin-top: 24px;
+      white-space: break-spaces;
+    }
+  }
+
+  @include mixins.lg {
+    align-items: stretch !important;
+
+    article {
+      text-align: left;
+      padding: 24px 32px;
     }
   }
 }

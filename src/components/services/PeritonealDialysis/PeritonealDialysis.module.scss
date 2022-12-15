@@ -1,3 +1,5 @@
+@use "../../../styles/scss/mixins";
+
 .bgWrapper {
   position: relative;
   padding: 120px 0;
@@ -20,13 +22,31 @@
   &::after {
     background-color: var(--gray-50);
     right: 0;
+
+    @include mixins.xl {
+      background-color: var(--gray-10);
+    }
   }
 }
 
 .section {
   display: flex;
+  flex-wrap: wrap;
   gap: 64px;
   align-items: center;
+
+  @include mixins.xxl {
+    justify-content: space-between;
+  }
+  @include mixins.xl {
+    justify-content: center;
+  }
+  @include mixins.lg {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .textContent {
@@ -38,8 +58,18 @@
 
   strong {
     display: inline-flex;
+    align-items: center;
     gap: 24px;
     font-weight: 500;
+    text-align: left;
+  }
+
+  @include mixins.xl {
+    text-align: center;
+
+    header {
+      align-items: center;
+    }
   }
 }
 
@@ -64,5 +94,31 @@
   p {
     font: var(--body-sm);
     color: var(--gray-10);
+  }
+
+  @include mixins.xxl {
+    flex-direction: row;
+    max-width: 45%;
+    gap: 24px;
+    
+    h3 {
+      color: var(--gray-80);
+    }
+    p {
+      color: var(--gray-70);
+    }
+  }
+
+  @include mixins.xl {
+    flex-direction: column;
+    max-width: 256px;
+  }
+
+  @include mixins.lg {
+    flex-direction: row;
+    max-width: none;
+    gap: 16px;
+    text-align: center;
+    justify-content: center;
   }
 }

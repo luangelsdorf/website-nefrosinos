@@ -1,5 +1,11 @@
 .hero {
+  --v-grad: linear-gradient(180deg, rgba(25, 62, 114, 0.25) 0%, rgba(25, 62, 114, 0) 28.65%);
+  --h-grad: linear-gradient(90deg, #193E72 -11.28%, #193E72 -11.27%, rgba(25, 62, 114, 0) 69.86%);
+  
   height: 720px;
+  position: relative;
+
+  background-image: var(--v-grad), var(--h-grad);
 }
 
 .bannerContent {

@@ -11,7 +11,7 @@ export default function Structure({ content }) {
   return (
     <div className={styles.section}>
       <div className="container">
-        <div className="row">
+        <div className="row gy-4">
           <div className="col-12 col-lg-6 offset-lg-3">
             <div className={styles.title}>
               <Title content={content.title} />
@@ -24,7 +24,7 @@ export default function Structure({ content }) {
           <div className="col-12 col-lg-6">
             <div className={styles.imgContainer}>
               <Image className={styles.largeImage} src={apiURL + top.image.data.attributes.url} height="540" width="540" />
-              <div className="row">
+              <div className="row gy-4">
                 <div className="col-12 col-md-6">
                   <Image className={styles.smallImage} src={apiURL + bottomLeft.image.data.attributes.url} height="296" width="296" />
                 </div>
@@ -36,7 +36,7 @@ export default function Structure({ content }) {
           </div>
           <div className="col-12 col-lg-6">
             <div className={styles.imgContainer}>
-              <div className="row">
+              <div className="row gy-4">
                 <div className="col-12 col-md-6">
                   <Image className={styles.smallImage} src={apiURL + topLeft.image.data.attributes.url} height="296" width="296" />
                 </div>

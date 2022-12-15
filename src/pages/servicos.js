@@ -20,51 +20,49 @@ export default function Services({ services, faq, partners }) {
     <main>
       <Hero content={services.banner} />
 
-      <div style={{ backgroundColor: 'var(--white)' }}>
-        <Section mb="-164">
-          <HighlightedServices content={services.highlighted} />
-        </Section>
+      <Section mb="-164">
+        <HighlightedServices content={services.highlighted} />
+      </Section>
 
-        <Section mt="160">
-          <InTransit content={services.inTransit} />
-        </Section>
+      <Section mt="160 120">
+        <InTransit content={services.inTransit} />
+      </Section>
 
-        <Section mt="160">
-          <PeritonealDialysis content={services.peritonealDialysis} />
-        </Section>
+      <Section mt="160">
+        <PeritonealDialysis content={services.peritonealDialysis} />
+      </Section>
 
-        <Section mt="160">
-          <Hemodiafiltration content={services.hemodiafiltration} />
-        </Section>
+      <Section mt="160">
+        <Hemodiafiltration content={services.hemodiafiltration} />
+      </Section>
 
-        <Section mt="200">
-          <Hemodialysis content={services.hemodialysis} />
-        </Section>
+      <Section mt="200">
+        <Hemodialysis content={services.hemodialysis} />
+      </Section>
 
-        <Section>
-          <ConservativeTreatment content={services.conservative} />
-        </Section>
+      <Section>
+        <ConservativeTreatment content={services.conservative} />
+      </Section>
 
-        <Section mt="200">
-          <Transplant content={services.transplant} />
-        </Section>
+      <Section mt="200">
+        <Transplant content={services.transplant} />
+      </Section>
 
-        <Section mt="200">
-          <Partners content={services.partners} partners={partners.partners} />
-        </Section>
+      <Section mt="200">
+        <Partners content={services.partners} partners={partners.partners} />
+      </Section>
 
-        <Section mt="200">
-          <Structure content={services.structure} />
-        </Section>
+      <Section mt="200">
+        <Structure content={services.structure} />
+      </Section>
 
-        <Section mt="200">
-          <WaterTreatment content={services.waterTreatment} />
-        </Section>
+      <Section mt="200">
+        <WaterTreatment content={services.waterTreatment} />
+      </Section>
 
-        <Section mt="200" mb="200">
-          <FAQ content={faq} />
-        </Section>
-      </div>
+      <Section mt="200" mb="200">
+        <FAQ content={faq} />
+      </Section>
     </main>
   )
 }

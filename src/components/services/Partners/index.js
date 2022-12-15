@@ -13,12 +13,12 @@ export default function Partners({ content, partners }) {
         <div className="row gy-4">
           {
             partners.map(partner => (
-              <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={partner.id}>
+              <div className="col-12 col-sm-6 col-lg-4 col-xl-3" key={partner.id}>
                 <Image className={styles.logo} src={apiURL + partner.image.data.attributes.url} width="300" height="300" alt="" />
               </div>
             ))
           }
-          <div className="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div className="col-12 col-md-4 col-lg-3">
             <div className={styles.finalText}>
               <h3>{content.finalText.title}</h3>
               <p>{content.finalText.text}</p>

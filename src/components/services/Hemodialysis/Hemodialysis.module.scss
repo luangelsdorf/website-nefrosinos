@@ -53,4 +53,16 @@
       color: var(--gray-10);
     }
   }
+
+  @include mixins.lg {
+    padding: 72px 0;
+
+    :global(.row) {
+      gap: 72px;
+    }
+
+    img {
+      height: 420px;
+    }
+  }
 }

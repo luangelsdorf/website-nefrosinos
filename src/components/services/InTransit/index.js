@@ -9,7 +9,7 @@ export default function InTransit({ content }) {
   return (
     <div className={styles.section}>
       <div className="container">
-        <div className="row gy-4">
+        <div className="row">
           <div className="col-12 col-lg-6 col-xl-5">
             <div className={styles.collage}>
               <div>

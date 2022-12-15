@@ -1,4 +1,11 @@
+@use "../../../styles/scss/mixins";
+
 .section {
+  @include mixins.lg {
+    :global(.row) {
+      gap: 96px;
+    }
+  }
 }
 
 .collage {
@@ -18,6 +25,16 @@
 
     img {
       object-fit: cover;
+    }
+
+    @include mixins.sm {
+      &:first-child {
+        height: 360px;
+      }
+
+      &:last-child {
+        height: 240px;
+      }
     }
   }
 }
