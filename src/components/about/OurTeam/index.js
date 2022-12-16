@@ -16,7 +16,6 @@ export default function OurTeam({ content, team }) {
   const Specialist = props => {
     return (
       <div className={styles.spec}>
-        <Image src={apiURL + props.icon.data.attributes.url} width="80" height="80" alt="" />
         <div className={styles.info}>
           <h3>{props.title}</h3>
           <p>{props.text}</p>
@@ -32,7 +31,7 @@ export default function OurTeam({ content, team }) {
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-4">
-              <div className={styles.specList}>
+              <div className={`${styles.specList} ${styles.first}`}>
                 {
                   firstHalf.map(card => (
                     <Specialist {...card} key={card.id} />
@@ -54,7 +53,7 @@ export default function OurTeam({ content, team }) {
             </div>
 
             <div className="col-12 col-lg-4">
-              <div className={styles.specList}>
+              <div className={`${styles.specList} ${styles.second}`}>
                 {
                   secondHalf.map(card => (
                     <Specialist {...card} key={card.id} />

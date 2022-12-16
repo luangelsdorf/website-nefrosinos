@@ -1,13 +1,17 @@
-@use '../../../styles/scss/mixins';
+@use "../../../styles/scss/mixins";
 
 .section {
   position: relative;
   padding-top: 147px;
-  --spacing: 80px;
+  --spacing: 72px;
+
+  @include mixins.xl {
+    --spacing: 56px;
+  }
 
   @include mixins.lg {
     padding-top: 96px;
-    --spacing: 64px;
+    --spacing: 48px;
 
     :global(.row) {
       gap: var(--spacing);
@@ -49,19 +53,10 @@
     justify-content: center;
 
     .spec {
-      position: relative;
-      display: flex;
-      gap: 24px;
-      align-items: center;
-
-      img {
-        width: 80px;
-        height: 80px;
-      }
-
       .info {
         h3 {
-          font: var(--title-sm);
+          font: var(--body-lg);
+          margin-bottom: 16px;
           color: var(--white);
         }
 
@@ -69,6 +64,29 @@
           font: var(--body-sm);
           color: var(--gray-20);
         }
+      }
+    }
+
+    &.first {
+      margin-right: 40px;
+    }
+    &.second {
+      margin-left: 40px;
+    }
+
+    @include mixins.xl {
+      &.first {
+        margin-right: 20px;
+      }
+      &.second {
+        margin-left: 20px;
+      }
+    }
+
+    @include mixins.lg {
+      &.first,
+      &.second {
+        margin: 0;
       }
     }
   }
@@ -81,6 +99,10 @@
     img {
       width: 100%;
       object-fit: cover;
+
+      @include mixins.xl {
+        height: 480px;
+      }
     }
   }
 }
