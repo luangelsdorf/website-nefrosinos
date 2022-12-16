@@ -11,7 +11,7 @@ import fetchAPI, { getLayoutContent } from 'src/utils/fetch';
 export default function SobreNos({ about, team }) {
   return (
     <main>
-      <Section mt="120">
+      <Section pt="116" mt="116">
         <AboutUs content={about.aboutUs} />
       </Section>
 

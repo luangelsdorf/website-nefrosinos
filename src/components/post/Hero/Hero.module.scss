@@ -2,7 +2,8 @@
   --v-grad: linear-gradient(180deg, rgba(25, 62, 114, 0.25) 0%, rgba(25, 62, 114, 0) 28.65%);
   --h-grad: linear-gradient(90deg, #193e72 -11.28%, #193e72 -11.27%, rgba(25, 62, 114, 0) 69.86%);
 
-  height: 532px;
+  height: 645px;
+  padding-top: 116px;
   position: relative;
 
   background-image: var(--v-grad), var(--h-grad);
