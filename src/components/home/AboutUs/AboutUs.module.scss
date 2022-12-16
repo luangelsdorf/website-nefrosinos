@@ -22,8 +22,6 @@
     display: block;
     object-fit: cover;
 
-    outline: 1px solid var(--gray-60);
-
     &:not(:nth-child(2)) {
       position: absolute;
     }

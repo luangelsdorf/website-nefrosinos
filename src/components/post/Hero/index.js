@@ -12,7 +12,7 @@ export default function Hero({ content }) {
           <header className={styles.bannerContent}>
             <h1>{content.title}</h1>
             <p>
-              Categoria(s): &nbsp;
+              Categoria: &nbsp;
               {
                 content.categories.data.map(cat => (
                   <span key={cat.id}>

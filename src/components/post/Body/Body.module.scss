@@ -3,9 +3,10 @@
   margin-bottom: 80px;
 
   p {
-    --lh: 32px;
+    --lh: 36px;
     line-height: var(--lh);
     margin-bottom: var(--lh);
+    font-size: 1.125rem; // 18px
   }
 
   h2 {
@@ -16,13 +17,13 @@
 
   blockquote {
     margin: 48px 0;
-    margin-left: 4.45em;
+    margin-left: 4em;
     font-style: italic;
 
     &,
     & > p {
-      font-size: 18px;
-      line-height: 36px;
+      font-size: 1.25rem; // 20px
+      line-height: 2.5rem; //40px
     }
   }
 }
