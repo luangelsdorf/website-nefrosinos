@@ -10,7 +10,7 @@ export default function HighlightedServices({ content }) {
     <article className={styles.card}>
       <header>
         <div>
-          <img src={apiURL + props.icon.data.attributes.url} width="40" height="40" />
+          <img src={apiURL + props.icon.data.attributes.url} width="56" height="56" />
           <h2>{props.title}</h2>
         </div>
         <p>{props.subtitle}</p>

@@ -8,13 +8,13 @@
   --title-display: 500 3.5rem/4.5rem var(--heading);
   --title-xl: 500 2.75rem/3.5rem var(--heading);
   --title-lg: 500 2rem/2.5rem var(--heading);
-  --title-md: 600 1.5rem/2rem var(--heading);
+  --title-md: 600 1.75rem/2rem var(--heading);
   --title-sm: 500 1.25rem/2rem var(--heading);
   --title-xs: 600 1rem/1.5rem var(--heading);
 
   /* Body Text */
   --body-lg: 500 1.125rem/1.75rem var(--body);
-  --body-md: 500 1rem/1.75rem var(--body);
+  --body-md: 500 1rem/1.5rem var(--body);
   --body-sm: 500 0.875rem/1.5rem var(--body);
 
   @include mixins.lg {
@@ -58,7 +58,7 @@ h3 {
 h4 {
   font: var(--title-md);
 }
-h6 {
+h5 {
   font: var(--title-sm);
 }
 h6 {
@@ -75,7 +75,7 @@ a:not(.btn) {
   color: var(--link-fill-color);
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
   position: relative;
   transition: all 350ms;
   text-decoration: none;
