@@ -20,7 +20,7 @@ export default function Purpose({ content }) {
   const Card = props => {
     return (
       <div className={styles.card}>
-        <img src={apiURL + props.icon.data.attributes.url} alt="" />
+        <img src={apiURL + props.icon.data.attributes.url} alt="" width="64" height="64" />
         <h3>{props.title}</h3>
         <p>{splitLineBreaks(props.text)}</p>
       </div>
