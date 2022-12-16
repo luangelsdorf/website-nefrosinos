@@ -30,9 +30,12 @@
   }
 
   & > p {
-    font: var(--body-sm);
-    color: white;
+    color: var(--gray-20);
     margin-bottom: 40px;
+
+    a {
+      --link-fill-color: var(--white);
+    }
   }
 
   form {

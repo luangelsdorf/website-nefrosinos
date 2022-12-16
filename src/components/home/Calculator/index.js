@@ -14,7 +14,7 @@ export default function Calculator({ content }) {
 
   function onSubmit(data) {
     const result = calculate(data);
-    setResult(result)
+    setResult(result + 'mL/min/1.73m²')
   }
 
   return (
@@ -43,11 +43,11 @@ export default function Calculator({ content }) {
                   <option value="m">Masculino</option>
                 </select>
 
-                <button className="btn" type="submit">Calcular Valores <Arrow /></button>
+                <button className="btn pink icon" type="submit">Calcular Valores</button>
 
                 <div className={styles.result}>
-                  <span key={result} data-result={result}>
-                    Resultado: <span>{result} mL/min/1.73m<sup>2</sup></span>
+                  <span key={result}>
+                    Resultado: <span data-result={result}>{result}</span>
                   </span>
                 </div>
               </form>

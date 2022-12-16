@@ -20,6 +20,14 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="number"]
   }
 }
 
+select {
+  appearance: none;
+  background-image: url("/images/icons/angle-down.svg");
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: calc(100% - 1rem) 50%;
+}
+
 input,
 textarea,
 select {

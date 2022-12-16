@@ -25,7 +25,7 @@ export default function InTransit({ content }) {
               <Title content={content.title} align="start" />
               <p>{content.text}</p>
               <Link href="#">
-                <a className="btn">Saiba Mais</a>
+                <a className="btn pink">Saiba Mais</a>
               </Link>
             </div>
           </div>
