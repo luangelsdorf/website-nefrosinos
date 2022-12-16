@@ -15,15 +15,15 @@ export default function Header() {
     },
     {
       name: 'Sobre Nós',
-      url: 'sobre-nos',
+      url: '/sobre-nos',
     },
     {
       name: 'Serviços',
-      url: 'servicos',
+      url: '/servicos',
     },
     {
       name: 'Estrutura',
-      url: '#',
+      url: '/#estrutura',
     },
     {
       name: 'Equipe',
@@ -108,7 +108,7 @@ export default function Header() {
                   }
                   <li>
                     <Link href="/contato">
-                      <a className="btn">Fale Conosco</a>
+                      <a className="btn pink">Fale Conosco</a>
                     </Link>
                   </li>
                 </ul>
@@ -116,7 +116,7 @@ export default function Header() {
                   |||
                 </button>
                 <Link href="/contato">
-                  <a className="btn">Fale Conosco</a>
+                  <a className="btn pink">Fale Conosco</a>
                 </Link>
               </div>
             </div>

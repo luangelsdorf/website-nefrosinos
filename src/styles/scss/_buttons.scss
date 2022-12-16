@@ -1,12 +1,12 @@
 $filled-buttons: (
   "blue": (
     "default": #193e72,
-    "hover": #3678d3,
+    "hover": #0a2156,
     "selected": #0a2156,
   ),
   "pink": (
     "default": #da3372,
-    "hover": #e07ba2,
+    "hover": #8a1944,
     "selected": #8a1944,
   ),
 );
@@ -14,37 +14,41 @@ $filled-buttons: (
 $outlined-buttons: (
   "light": (
     "default": (
-      "outline": #fff,
+      "outline": #ffffff,
       "bg": transparent,
+      "color": #ffffff,
     ),
     "hover": (
-      "outline": #fff,
-      "bg": #ffffff80,
+      "outline": #ffffff,
+      "bg": #ffffff,
+      "color": #0a2156,
     ),
     "selected": (
-      "outline": #9ea5b8,
-      "bg": #fff,
+      "outline": #ffffff,
+      "bg": #ffffff,
+      "color": #0a2156,
     ),
   ),
   "dark": (
     "default": (
       "outline": #24365e,
       "bg": transparent,
+      "color": #24365e,
     ),
     "hover": (
       "outline": #24365e,
-      "bg": #b6bcc980,
+      "bg": #24365e,
+      "color": #ffffff,
     ),
     "selected": (
-      "outline": #fff,
+      "outline": #24365e,
       "bg": #24365e,
+      "color": #ffffff,
     ),
   ),
 );
 
 .btn {
-  --label-color: var(--white);
-
   cursor: pointer;
   font: var(--body-md);
   line-height: 1.125rem;
@@ -60,7 +64,7 @@ $outlined-buttons: (
 
   // default: pink
   background-color: #{map-get($filled-buttons, "pink", "default")};
-  color: var(--label-color);
+  color: var(--white);
   border-color: transparent;
 
   &:hover {
@@ -79,7 +83,7 @@ $outlined-buttons: (
       mask-image: url("/images/icons/arrow-right.svg");
       mask-repeat: no-repeat;
       mask-position: center;
-      background-color: var(--label-color);
+      background-color: currentColor;
     }
   }
 
@@ -97,7 +101,6 @@ $outlined-buttons: (
 
   @each $color, $state in $filled-buttons {
     &.#{$color} {
-      --label-color: var(--white);
       background-color: #{map-get($state, "default")};
 
       &:hover {
@@ -106,27 +109,28 @@ $outlined-buttons: (
 
       &:focus {
         background-color: #{map-get($state, "selected")};
+        box-shadow: #{map-get($state, "selected")}80 0px 0px 0px 0.25rem;
       }
     }
   }
 
   @each $color, $state in $outlined-buttons {
     &.#{$color} {
-      --label-color: #{map-get($state, "default", "outline")};
       background-color: #{map-get($state, "default", "bg")};
       border-color: #{map-get($state, "default", "outline")};
-      color: #{map-get($state, "default", "outline")};
+      color: #{map-get($state, "default", "color")};
 
       &:hover {
         background-color: #{map-get($state, "hover", "bg")};
         border-color: #{map-get($state, "hover", "outline")};
-        color: #{map-get($state, "hover", "outline")};
+        color: #{map-get($state, "hover", "color")};
       }
 
       &:focus {
         background-color: #{map-get($state, "selected", "bg")};
         border-color: #{map-get($state, "selected", "outline")};
-        color: #{map-get($state, "selected", "outline")};
+        color: #{map-get($state, "selected", "color")};
+        box-shadow: #{map-get($state, "selected", "outline")}80 0px 0px 0px 0.25rem;
       }
     }
   }
