@@ -73,8 +73,7 @@
     color: var(--pink);
   }
 
-  & > svg:first-child,
-  & > svg:last-child {
+  & > svg:first-child {
     color: var(--dark-blue);
   }
 
@@ -94,6 +93,7 @@
         font-weight: 500;
         padding: 10px 16px;
         background-color: var(--soft-pink);
+        color: var(--pink);
         border-radius: 2px;
       }
 
@@ -104,7 +104,7 @@
         max-width: 390px;
 
         h3 {
-          color: var(--gray-90);
+          color: var(--dark-blue);
           margin-bottom: 16px;
         }
 
@@ -119,25 +119,6 @@
         width: var(--wave-ampl);
         border: dashed var(--gray-40);
         z-index: -1;
-      }
-
-      &:nth-child(2), &:last-child {
-        svg {
-          color: var(--dark-blue);
-        }
-
-        time {
-          background-color: var(--blue);
-          color: var(--white);
-        }
-
-        .info {
-          background-color: var(--blue);
-          color: var(--gray-30);
-          h3 {
-            color: var(--white);
-          }
-        }
       }
 
       &:nth-child(odd) {
@@ -237,11 +218,6 @@
           border-top-right-radius: 400px 760px;
           border-bottom-right-radius: 0;
           border-bottom: 0;
-        }
-
-        & > time {
-          background-color: var(--soft-pink);
-          color: var(--pink);
         }
 
         & > time,
