@@ -6,6 +6,7 @@
   position: fixed;
   top: 0;
   z-index: 1000;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
 
   nav {
     transition: background-color 350ms;
@@ -115,6 +116,6 @@
   }
 
   .navbarInner {
-    padding: 16px 0px;
+    padding: 28px 0px;
   }
 }

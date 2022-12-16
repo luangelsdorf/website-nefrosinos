@@ -66,7 +66,6 @@ export default function Header() {
   useEffect(() => {
     if (router.route !== '/') {
       nav.current.classList.add(styles.active);
-      nav.current.closest('header').style.position = 'sticky';
       return;
     }
 
@@ -78,10 +77,12 @@ export default function Header() {
       }
     }
 
+    handleScroll();
+
     document.addEventListener('scroll', handleScroll);
 
     return () => document.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [router.route]);
 
   return (
     <header className={styles.navbar}>
@@ -107,7 +108,7 @@ export default function Header() {
                   }
                   <li>
                     <Link href="/contato">
-                      <a className="btn blue">Fale Conosco</a>
+                      <a className="btn">Fale Conosco</a>
                     </Link>
                   </li>
                 </ul>
@@ -115,7 +116,7 @@ export default function Header() {
                   |||
                 </button>
                 <Link href="/contato">
-                  <a className="btn blue">Fale Conosco</a>
+                  <a className="btn">Fale Conosco</a>
                 </Link>
               </div>
             </div>
