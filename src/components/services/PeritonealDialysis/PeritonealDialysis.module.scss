@@ -15,16 +15,16 @@
   }
 
   &::before {
-    background-color: var(--gray-10);
+    background-color: var(--off-white);
     left: 0;
   }
 
   &::after {
-    background-color: var(--gray-50);
+    background-color: var(--blue);
     right: 0;
 
     @include mixins.xl {
-      background-color: var(--gray-10);
+      background-color: var(--off-white);
     }
   }
 }

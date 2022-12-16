@@ -17,7 +17,7 @@ export default function ConservativeTreatment({ content }) {
                   <a className="btn dark">Conheça Nossa Equipe</a>
                 </Link>
                 <Link href="/">
-                  <a className="btn icon">Fale Conosco</a>
+                  <a className="btn icon blue">Fale Conosco</a>
                 </Link>
               </div>
             </div>

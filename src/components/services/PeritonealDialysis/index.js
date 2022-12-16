@@ -12,7 +12,7 @@ export default function PeritonealDialysis({ content }) {
           <div className="col-12">
             <div className={styles.section}>
               <div className={styles.textContent}>
-                <Title content={content.title} align="start" />
+                <Title content={content.title} align="start" variant="light" />
                 <p>{content.text}</p>
                 <strong>
                   <img src={apiURL + content.warning.icon.data.attributes.url} width="56" height="56" />
