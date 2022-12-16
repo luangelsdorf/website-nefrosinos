@@ -48,7 +48,9 @@
   address {
     margin-bottom: 32px;
     span {
-      font-weight: 600;
+      font-weight: 700;
+      color: var(--dark-blue);
+      
       &:last-child {
         &::before {
           content: "  |  ";
@@ -107,7 +109,7 @@
   & > div {
     margin-bottom: 16px;
     padding-bottom: 20px;
-    border-bottom: 1px solid var(--gray-60);
+    border-bottom: 1px solid var(--dark-blue);
   }
 
   h3 {
