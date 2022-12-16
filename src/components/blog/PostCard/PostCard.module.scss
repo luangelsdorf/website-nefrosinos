@@ -40,7 +40,7 @@
     &::after {
       content: "";
       display: block;
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.35), transparent 75%);
+      background-image: linear-gradient(0deg, rgba(25, 62, 114, .5), transparent 75%);
       background-repeat: no-repeat;
       height: 100%;
       width: 100%;
@@ -68,10 +68,9 @@
 .badge {
   position: absolute;
   top: 0;
+  right: 0;
   margin: 24px;
   z-index: 1;
-  background-color: var(--gray-60);
-  color: var(--white);
 }
 
 .body {
@@ -88,11 +87,16 @@
   }
 
   a {
-    font: var(--body-sm);
-    --link-fill-color: var(--gray-80);
+    &:first-child {
+      --link-fill-color: var(--blue);
+      
+      &:hover {
+        --link-fill-color: var(--dark-blue);
+      }
+    }
 
-    &:hover {
-      --link-fill-color: var(--gray-100);
+    &:last-child {
+      --link-fill-color: var(--pink);
     }
   }
 }
