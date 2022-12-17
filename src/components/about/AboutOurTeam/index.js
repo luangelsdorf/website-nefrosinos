@@ -14,11 +14,31 @@ export default function AboutOurTeam({ content }) {
     'col-xl-6',
   ];
 
+  function formatTitle(title = '') {
+    if (title.toLowerCase().startsWith('equipe')) {
+      let article = title.slice(6, 10).toLowerCase().trim();
+      if (article === 'de' || article === 'do' || article === 'da') {
+        return (
+          <span className={styles.multiLine}>
+            {title.slice(0, 10) + '\n' + title.slice(10)}
+          </span>
+        )
+      } else {
+        return (
+          <span className={styles.multiLine}>
+            {title.slice(0, 7) + '\n' + title.slice(7)}
+          </span>
+        )
+      }
+    }
+    return title;
+  }
+
   const Card = props => (
     <article className={styles.card}>
       <header>
-        <img src={apiURL + props.icon.data.attributes.url} alt="" height="80" width="80" />
-        <h3>{props.title}</h3>
+        <img src={apiURL + props.icon.data.attributes.url} alt="" height="64" width="64" />
+        <h3>{formatTitle(props.title)}</h3>
       </header>
       <p>{props.text}</p>
     </article>
