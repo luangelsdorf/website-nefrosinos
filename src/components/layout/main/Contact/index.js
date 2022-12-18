@@ -27,7 +27,7 @@ export default function Contact({ content, info }) {
             <figure className={styles.map}>
               <GoogleMap address={info.address} />
               <figcaption>
-                Nefrosinos
+                NefroSinos
                 <address>{info.address}</address>
               </figcaption>
             </figure>

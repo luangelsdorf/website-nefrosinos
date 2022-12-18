@@ -50,10 +50,10 @@ export default function FAQ({ content }) {
 
   return (
     <div className={styles.section}>
-      <Title content={content.title} align="center" />
       <div className="container">
         <div className="row">
           <div className="col-12 col-lg-10 offset-lg-1">
+            <Title content={content.title} align="center" variant="light" />
             <div className={styles.questions} ref={faq}>
               {
                 content.questions.map(q => (

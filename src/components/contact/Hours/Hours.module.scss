@@ -22,9 +22,8 @@
 
     strong {
       font: var(--body-lg);
-      font-family: var(--heading);
-      font-weight: 700;
       color: var(--white);
+      display: block;
       margin-bottom: 12px;
     }
 
@@ -33,13 +32,13 @@
     }
 
     &:first-child {
-      background-color: var(--gray-60);
+      background-color: var(--dark-blue);
       border-radius: 4px 0px 0px 4px;
       padding: 40px 80px;
     }
 
     &:last-child {
-      background-color: var(--gray-50);
+      background-color: var(--blue);
       border-radius: 0px 4px 4px 0px;
       padding: 40px 48px;
     }

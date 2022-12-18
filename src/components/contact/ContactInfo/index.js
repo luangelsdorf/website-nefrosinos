@@ -7,7 +7,7 @@ export default function ContactInfo({ content, info }) {
   
   const InfoCard = props => (
     <div className={styles.infoCard}>
-      <img width="56" height="56" src={props.icon} alt="" />
+      <img width="48" height="48" src={props.icon} alt="" />
       <div>
         <p>{props.name}</p>
         <p>{props.phone}</p>

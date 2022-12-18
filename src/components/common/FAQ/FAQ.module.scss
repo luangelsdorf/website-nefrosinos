@@ -1,14 +1,8 @@
 @use "../../../styles/scss/mixins";
 
 .section {
-  & > header {
-    margin-bottom: 72px;
-  }
-
-  @include mixins.sm {
-    :global(.col-12) {
-      padding: 0 12px;
-    }
+  :global(.col-12) > header {
+    margin-bottom: 64px;
   }
 }
 
@@ -27,6 +21,10 @@
     margin-bottom: 8px;
     background-color: var(--gray-10_25);
     transition: all 350ms;
+
+    @include mixins.md {
+      padding: 16px 32px;
+    }
 
     &:hover {
       background-color: var(--gray-10_50);
@@ -73,6 +71,10 @@
     .answer {
       padding: 32px 40px;
       background-color: var(--off-white);
+
+      @include mixins.md {
+        padding: 16px 32px;
+      }
     }
   }
 
@@ -81,7 +83,6 @@
 
     article {
       text-align: left;
-      padding: 24px 32px;
     }
   }
 }
