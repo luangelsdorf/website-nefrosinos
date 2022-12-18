@@ -31,17 +31,19 @@ export default function FAQ({ content }) {
   }, []);
 
   const Question = props => (
-    <article>
+    <article data-bs-toggle="collapse" data-bs-target={`#faq-collapse-${props.id}`}>
       <header>
         <h3>{props.title}</h3>
-        <button className="btn pink small" type="button" data-bs-toggle="collapse" data-bs-target={`#faq-collapse-${props.id}`}>
+        <button className="btn pink small" type="button">
           <span>
             <AngleDown />
           </span>
         </button>
       </header>
       <div className="collapse" id={`faq-collapse-${props.id}`}>
-        <p>{props.text}</p>
+        <div className={styles.answer}>
+          <p>{props.text}</p>
+        </div>
       </div>
     </article>
   )

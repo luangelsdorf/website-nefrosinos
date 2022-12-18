@@ -16,7 +16,7 @@ export default function Hero({ content, categories }) {
               {
                 categories.map(cat => (
                   <Link href="/categorias" key={cat.id}>
-                    <a className="btn small">{cat.attributes.name}</a>
+                    <a className="btn pink">{cat.attributes.name}</a>
                   </Link>
                 ))
               }

@@ -18,13 +18,13 @@ export default function Post({ singlePost, recentPosts }) {
             <div className="col-12 col-xl-8 mx-auto">
               <Body content={singlePost.body} />
               <Section mt="80" mb="160">
-                <Share content={singlePost} />
+                <Share slug={singlePost.slug} postTitle={singlePost.title} />
               </Section>
             </div>
           </div>
         </div>
       </div>
-      <Section pt="120" pb="120" style={{ backgroundColor: 'var(--gray-70_50)' }}>
+      <Section pt="120" pb="120" style={{ backgroundColor: 'var(--blue)' }}>
         <RecentPosts posts={recentPosts} />
       </Section>
     </main>

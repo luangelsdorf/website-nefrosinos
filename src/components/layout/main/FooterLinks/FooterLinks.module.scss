@@ -32,6 +32,22 @@
       list-style: inside;
       margin-top: 16px;
       color: var(--gray-10);
+
+      li {
+        line-height: 2rem;
+        transition: all 350ms;
+
+        a::after {
+          display: none;
+        }
+
+        &:hover {
+          color: var(--pink);
+          a {
+            color: var(--pink);
+          }
+        }
+      }
     }
   }
 

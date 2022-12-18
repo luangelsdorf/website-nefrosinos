@@ -108,13 +108,15 @@
 
   & > div {
     margin-bottom: 16px;
-    padding-bottom: 20px;
+    padding-bottom: 16px;
     border-bottom: 1px solid var(--dark-blue);
   }
 
   h3 {
     font: var(--title-xs);
+    font-family: var(--body);
     color: var(--white);
+    margin-bottom: 8px;
   }
 
   p {

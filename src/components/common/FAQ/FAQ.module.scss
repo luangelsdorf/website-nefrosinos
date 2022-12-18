@@ -18,16 +18,26 @@
   gap: 32px;
 
   header {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 24px;
+    padding: 32px 40px;
+    margin-bottom: 8px;
+    background-color: var(--gray-10_25);
+    transition: all 350ms;
+
+    &:hover {
+      background-color: var(--gray-10_50);
+      color: var(--pink);
+      path {
+        fill: var(--pink);
+      }
+    }
   }
 
   article {
-    background-color: var(--gray-10);
-    padding: 32px 40px;
-
     h3 {
       font: var(--title-sm);
     }
@@ -59,6 +69,11 @@
         background-color: transparent !important;
       }
     }
+
+    .answer {
+      padding: 32px 40px;
+      background-color: var(--off-white);
+    }
   }
 
   @include mixins.lg {
@@ -72,6 +87,15 @@
 }
 
 .active {
+  header {
+    background-color: var(--gray-10);
+    color: var(--pink);
+
+    path {
+      fill: var(--pink);
+    }
+  }
+
   button > span {
     transform: rotate(180deg);
   }

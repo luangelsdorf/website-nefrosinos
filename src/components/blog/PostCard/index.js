@@ -14,15 +14,15 @@ export default function PostCard(props) {
   return (
     <div className={`${first ? '' : `col-md-6 col-xl-${props.size ?? 6}`}`}>
       <article className={styles.card} data-first={first || undefined}>
-        <div className={styles.badge}>
-          <Link href={`/categorias/${category.slug}`}>
-            <a className="btn small">{category.name}</a>
-          </Link>
-        </div>
 
         <Link href={`/blog/posts/${props.slug}`}>
           <a className={`link-image ${styles.thumbnail}`}>
             <div>
+              <div className={styles.badge}>
+                <Link href={`/categorias/${category.slug}`}>
+                  <a className="btn small">{category.name}</a>
+                </Link>
+              </div>
               <Image
                 fill
                 src={apiURL + props.cover.data.attributes.url}

@@ -99,6 +99,12 @@ $outlined-buttons: (
     padding: 20px 40px;
   }
 
+  &.icon-only {
+    padding: 0;
+    height: 2rem;
+    width: 2rem;
+  }
+
   @each $color, $state in $filled-buttons {
     &.#{$color} {
       background-color: #{map-get($state, "default")};
