@@ -8,7 +8,13 @@ import { apiURL } from 'src/utils/env';
 export default function Partners({ content, partners }) {
   return (
     <div className={styles.section}>
-      <Title content={content.title} />
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <Title content={content.title} />
+          </div>
+        </div>
+      </div>
       <div className="container">
         <div className="row">
           <div className="col-12">

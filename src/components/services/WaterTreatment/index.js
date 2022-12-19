@@ -11,14 +11,12 @@ export default function WaterTreatment({ content }) {
         <div className="row">
           <div className="col-12 col-md-6 mx-auto">
             <div className={styles.content}>
-              <Title content={content.title} variant="light" />
+              <Title content={content.title} variant="dark" />
               <p>{content.text}</p>
             </div>
           </div>
         </div>
       </div>
-
-      <Image src={apiURL + content.background.data.attributes.url} fill alt="" />
     </div>
   )
 }

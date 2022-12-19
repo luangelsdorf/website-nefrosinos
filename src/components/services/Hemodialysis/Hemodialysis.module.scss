@@ -58,7 +58,9 @@
     padding: 72px 0;
 
     :global(.row) {
-      gap: 72px;
+      & > :first-child {
+        margin-bottom: 48px;
+      }
     }
 
     img {

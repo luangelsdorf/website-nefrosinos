@@ -8,11 +8,15 @@ import styles from './Hero.module.scss';
 export default function Hero({ content }) {
   return (
     <Banner cover={apiURL + content.cover.data.attributes.url} className={styles.hero}>
-      <div className={styles.bannerContent}>
-        <Title content={content.title} align="center" variant="dark" />
-        <Link href="/contato">
-          <a className="btn light icon">Agendar Consulta</a>
-        </Link>
+      <div className="row">
+        <div className="col-12">
+          <div className={styles.bannerContent}>
+            <Title content={content.title} align="center" variant="dark" />
+            <Link href="/contato">
+              <a className="btn light icon">Agendar Consulta</a>
+            </Link>
+          </div>
+        </div>
       </div>
     </Banner>
   )

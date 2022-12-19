@@ -3,6 +3,10 @@
 .section {
   header {
     margin-bottom: 72px;
+
+    @include mixins.lg {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -43,6 +47,6 @@
   }
 
   @include mixins.md {
-    margin-top: 40px;
+    margin-top: 32px;
   }
 }

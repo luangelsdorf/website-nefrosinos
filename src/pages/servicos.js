@@ -28,15 +28,15 @@ export default function Services({ services, faq, partners }) {
         <InTransit content={services.inTransit} />
       </Section>
 
-      <Section mt="160">
+      <Section mt="160 80">
         <PeritonealDialysis content={services.peritonealDialysis} />
       </Section>
 
-      <Section mt="160">
+      <Section mt="160 80">
         <Hemodiafiltration content={services.hemodiafiltration} />
       </Section>
 
-      <Section mt="200 136">
+      <Section mt="200 96">
         <Hemodialysis content={services.hemodialysis} />
       </Section>
 
@@ -44,11 +44,11 @@ export default function Services({ services, faq, partners }) {
         <ConservativeTreatment content={services.conservative} />
       </Section>
 
-      <Section mt="200 136">
+      <Section mt="200 80">
         <Transplant content={services.transplant} />
       </Section>
 
-      <Section mt="200 136">
+      <Section mt="200 120">
         <Partners content={services.partners} partners={partners.partners} />
       </Section>
 
@@ -60,7 +60,7 @@ export default function Services({ services, faq, partners }) {
         <WaterTreatment content={services.waterTreatment} />
       </Section>
 
-      <Section mt="200 136" mb="200 136">
+      <Section mt="200 120" mb="200 120">
         <FAQ content={faq} />
       </Section>
     </main>

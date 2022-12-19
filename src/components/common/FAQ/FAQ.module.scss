@@ -23,7 +23,8 @@
     transition: all 350ms;
 
     @include mixins.md {
-      padding: 16px 32px;
+      padding: 16px;
+      gap: 8px;
     }
 
     &:hover {
@@ -47,6 +48,7 @@
 
     button {
       background-color: transparent !important;
+      padding: 12px !important;
 
       & > span {
         transition: all 350ms;
@@ -79,6 +81,7 @@
   }
 
   @include mixins.lg {
+    gap: 16px;
     align-items: stretch !important;
 
     article {

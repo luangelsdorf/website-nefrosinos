@@ -9,6 +9,14 @@
 .title {
   text-align: center;
   margin-bottom: 80px;
+
+  @include mixins.lg {
+    margin-bottom: 40px;
+  }
+
+  header {
+    margin-bottom: 32px;
+  }
 }
 
 .imgContainer {
@@ -30,10 +38,11 @@
   }
 
   @include mixins.sm {
-    .smallImage {
-      height: 240px;
+    :gloal(.col-12) {
+      padding: 0 !important;
     }
-    .largeImage {
+
+    .smallImage, .largeImage {
       height: 360px;
     }
   }

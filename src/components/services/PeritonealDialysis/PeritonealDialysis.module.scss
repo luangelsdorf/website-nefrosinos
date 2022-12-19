@@ -4,6 +4,10 @@
   position: relative;
   padding: 120px 0;
 
+  @include mixins.lg {
+    padding: 80px 0;
+  }
+
   &::after,
   &::before {
     content: "";
@@ -120,5 +124,9 @@
     gap: 16px;
     text-align: center;
     justify-content: center;
+  }
+
+  @include mixins.sm {
+    display: none;
   }
 }

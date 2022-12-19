@@ -9,7 +9,7 @@ export default function Hemodialysis({ content }) {
     <div className={styles.section}>
       <div className="container">
         <div className="row">
-          <div className="col offset-xl-1">
+          <div className="col-12 col-lg offset-xl-1">
             <Image src={apiURL + content.image.data.attributes.url} width="542" height="632" alt="" />
           </div>
           <div className="col-12 col-lg-4 offset-lg-1">

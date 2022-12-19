@@ -4,6 +4,10 @@
   background-color: var(--gray-10);
   padding: 160px 0;
 
+  @include mixins.lg {
+    padding: 80px 0;
+  }
+
   .textContent {
     header {
       margin-bottom: 32px;
