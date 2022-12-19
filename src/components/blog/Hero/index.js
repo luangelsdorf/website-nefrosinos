@@ -15,7 +15,7 @@ export default function Hero({ content, categories }) {
             <div className={styles.categories}>
               {
                 categories.map(cat => (
-                  <Link href="/categorias" key={cat.id}>
+                  <Link href={`/blog/categorias/${cat.attributes.slug}`} key={cat.id}>
                     <a className="btn pink">{cat.attributes.name}</a>
                   </Link>
                 ))

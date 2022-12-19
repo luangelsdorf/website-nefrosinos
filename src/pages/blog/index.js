@@ -24,11 +24,11 @@ export default function Blog({ blog, posts, categories }) {
               </Section>
 
               <Section mt="150 80" pt="120 80" style={{ borderTop: '1px solid var(--gray-10)' }} id="artigos">
-                <PostList posts={newsAndArticles} title="Artigos e Notícias" />
+                <PostList posts={newsAndArticles} title="Artigos e Notícias" category="noticias" />
               </Section>
 
               <Section mb="200 120" mt="160 96" pt="120 96" style={{ borderTop: '1px solid var(--gray-10)' }} id="midia">
-                <PostList posts={mediaPosts} title="Saiu na Mídia" />
+                <PostList posts={mediaPosts} title="Saiu na Mídia" category="na-midia" />
               </Section>
 
             </div>

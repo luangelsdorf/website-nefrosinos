@@ -26,16 +26,16 @@ export default function FooterLinks({ content }) {
                 <h2>Sobre Nós</h2>
                 <ul>
                   <li>
-                    <Link href="/sobre-nos"><a>Apresentação</a></Link>
+                    <Link href="/sobre-nos#"><a>Apresentação</a></Link>
                   </li>
                   <li>
-                    <Link href="/sobre-nos"><a>Norteadores</a></Link>
+                    <Link href="/sobre-nos#proposito"><a>Norteadores</a></Link>
                   </li>
                   <li>
-                    <Link href="/sobre-nos"><a>História</a></Link>
+                    <Link href="/sobre-nos#linha-do-tempo"><a>História</a></Link>
                   </li>
                   <li>
-                    <Link href="/sobre-nos"><a>Certificados</a></Link>
+                    <Link href="#certificados"><a>Certificados</a></Link>
                   </li>
                 </ul>
               </div>
@@ -43,22 +43,22 @@ export default function FooterLinks({ content }) {
                 <h2>Serviços</h2>
                 <ul>
                   <li>
-                    <Link href="/servicos"><a>Diálise em Trânsito</a></Link>
+                    <Link href="/servicos#dialise-em-transito"><a>Diálise em Trânsito</a></Link>
                   </li>
                   <li>
-                    <Link href="/servicos"><a>Diálise Peritoneal</a></Link>
+                    <Link href="/servicos#diálise-peritoneal"><a>Diálise Peritoneal</a></Link>
                   </li>
                   <li>
-                    <Link href="/servicos"><a>Hemodiálise</a></Link>
+                    <Link href="/servicos#hemodiálise"><a>Hemodiálise</a></Link>
                   </li>
                   <li>
-                    <Link href="/servicos"><a>Hemodiafiltração</a></Link>
+                    <Link href="/servicos#hemodiafiltração"><a>Hemodiafiltração</a></Link>
                   </li>
                   <li>
-                    <Link href="/servicos"><a>Tratamento Conservador</a></Link>
+                    <Link href="/servicos#tratamento-conservador"><a>Tratamento Conservador</a></Link>
                   </li>
                   <li>
-                    <Link href="/servicos"><a>Transplante</a></Link>
+                    <Link href="/servicos#transplante"><a>Transplante</a></Link>
                   </li>
                 </ul>
               </div>
@@ -66,20 +66,20 @@ export default function FooterLinks({ content }) {
                 <h2>Links Úteis</h2>
                 <ul>
                   <li>
-                    <Link href="/servicos"><a>Estrutura</a></Link>
+                    <Link href="/servicos#estrutura"><a>Estrutura</a></Link>
                   </li>
                   <li>
-                    <Link href="/servicos"><a>Equipe</a></Link>
+                    <Link href="/#equipe"><a>Equipe</a></Link>
                   </li>
                   <li>
-                    <Link href="/servicos"><a>Convênios</a></Link>
+                    <Link href="/#convenios"><a>Convênios</a></Link>
                   </li>
                   <li>
-                    <Link href="/servicos"><a>Fale Conosco</a></Link>
+                    <Link href="/contato"><a>Fale Conosco</a></Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="/servicos"><a>Trabalhe Conosco</a></Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>

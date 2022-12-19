@@ -14,12 +14,12 @@ export default function Footer({ content, contact }) {
     <footer className={styles.footer}>
       {
         contact && (
-          <Section pb="80 0" mb="144 80">
+          <Section pb="80 0" mb="144 80" id="contato">
             <Contact content={content.footer} info={content.info} />
           </Section>
         )
       }
-      <Section mt="-80 0" mb="0 80" className={styles.certSection}>
+      <Section mt="-80 0" mb="0 80" className={styles.certSection} id="certificados">
         <Certificates content={content.footer.certificates} />
       </Section>
       <FooterLinks content={content.footer.footer} />

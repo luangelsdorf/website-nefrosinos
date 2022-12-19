@@ -30,8 +30,8 @@ export default function ContactInfo({ content, info }) {
               <Title content={content.title} align="start" spacing="16" />
               <p>{content.firstText}</p>
               <address>
-                <InfoCard icon="/images/icons/square.png" name="Telefone" phone={info.phone} />
-                <InfoCard icon="/images/icons/square.png" name="WhatsApp" phone={info.whatsapp} />
+                <InfoCard icon="/images/phone.svg" name="Telefone" phone={info.phone} />
+                <InfoCard icon="/images/whats.svg" name="WhatsApp" phone={info.whatsapp} />
               </address>
               <p>{content.secondText}</p>
             </div>

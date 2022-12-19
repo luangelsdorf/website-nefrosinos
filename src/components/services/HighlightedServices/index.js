@@ -16,7 +16,7 @@ export default function HighlightedServices({ content }) {
         <p>{props.subtitle}</p>
       </header>
       <p>{props.text}</p>
-      <Link href="#">
+      <Link href={`#${props.title.toLowerCase().replace(' ', '-')}`}>
         <a>
           Saber mais <Arrow />
         </a>

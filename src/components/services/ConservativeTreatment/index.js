@@ -13,10 +13,10 @@ export default function ConservativeTreatment({ content }) {
               <Title content={content.title} align="center" variant="light" />
               <p>{content.text}</p>
               <div className={styles.links}>
-                <Link href="/">
+                <Link href="/sobre-nos#equipe">
                   <a className="btn dark">Conheça Nossa Equipe</a>
                 </Link>
-                <Link href="/">
+                <Link href="/contato">
                   <a className="btn icon blue">Fale Conosco</a>
                 </Link>
               </div>

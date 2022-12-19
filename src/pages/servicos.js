@@ -28,7 +28,7 @@ export default function Services({ services, faq, partners }) {
         <InTransit content={services.inTransit} />
       </Section>
 
-      <Section mt="160 80" id="dialise-peritoneal">
+      <Section mt="160 80" id="diálise-peritoneal">
         <PeritonealDialysis content={services.peritonealDialysis} />
       </Section>
 
@@ -36,7 +36,7 @@ export default function Services({ services, faq, partners }) {
         <Hemodiafiltration content={services.hemodiafiltration} />
       </Section>
 
-      <Section mt="200 96" id="hemodialise">
+      <Section mt="200 96" id="hemodiálise">
         <Hemodialysis content={services.hemodialysis} />
       </Section>
 
