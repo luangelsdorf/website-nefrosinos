@@ -52,7 +52,7 @@ export default function OurTeam({ content, team }) {
                 >
                   {
                     team.team.map(member => (
-                      <SwiperSlide>
+                      <SwiperSlide key={member.name}>
                         <div style={{ height: '100%' }}>
                           <MemberCard photo={member.photo} name={member.name} speciality={member.speciality} />
                         </div>
