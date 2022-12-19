@@ -2,6 +2,7 @@ import Image from 'next/future/image';
 import React from 'react';
 import Title from 'src/components/common/Title';
 import { apiURL } from 'src/utils/env';
+import Angle from 'public/images/icons/angle-right-solid.svg';
 import styles from './PeritonealDialysis.module.scss';
 
 export default function PeritonealDialysis({ content }) {
@@ -15,7 +16,7 @@ export default function PeritonealDialysis({ content }) {
                 <Title content={content.title} align="start" variant="light" />
                 <p>{content.text}</p>
                 <strong>
-                  <img src={apiURL + content.warning.icon.data.attributes.url} width="56" height="56" />
+                  <Angle />
                   <span>{content.warning.text}</span>
                 </strong>
               </div>

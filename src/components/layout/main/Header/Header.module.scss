@@ -46,6 +46,22 @@
       margin-right: auto;
     }
   }
+
+  nav:not(.active) {
+    .dropDown {
+      li {
+        a {
+          color: var(--pink);
+        }
+
+        &:hover {
+          a {
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
 }
 
 .navbarInner {
@@ -89,7 +105,7 @@
   display: flex;
   gap: 24px;
 
-  li {
+  & > li {
     position: relative;
 
     &[data-dropdown="true"] {
@@ -100,13 +116,13 @@
         }
       }
     }
-  }
 
-  li:last-child {
-    display: none;
+    &:last-child {
+      display: none;
 
-    @include mixins.lg {
-      display: inline-block;
+      @include mixins.lg {
+        display: inline-block;
+      }
     }
   }
 }

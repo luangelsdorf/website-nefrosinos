@@ -30,7 +30,7 @@ export default function Header() {
         },
         {
           name: 'Certificados',
-          url: '/#certificados',
+          url: '#certificados',
         },
       ]
     },
@@ -66,15 +66,15 @@ export default function Header() {
     },
     {
       name: 'Estrutura',
-      url: '/#estrutura',
+      url: '/servicos#estrutura',
     },
     {
       name: 'Equipe',
-      url: '#equipe',
+      url: '/sobre-nos#equipe',
     },
     {
       name: 'Convênio',
-      url: '#convenios',
+      url: '/servicos#convenios',
     },
     {
       name: 'Blog',
