@@ -1,7 +1,7 @@
 @use '../../../styles/scss/mixins';
 
 .section {
-  background-color: var(--gray-10);
+  background-color: #f9f9fa;
   padding: 160px 0;
 
   @include mixins.lg {
