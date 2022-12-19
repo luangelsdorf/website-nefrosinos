@@ -1,8 +1,11 @@
 import Image from 'next/future/image';
 import React from 'react';
+import MemberCard from 'src/components/common/MemberCard';
 import TeamCarousel from 'src/components/common/TeamCarousel';
 import Title from 'src/components/common/Title';
 import { apiURL } from 'src/utils/env';
+import { Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './OurTeam.module.scss';
 
 export default function OurTeam({ content, team }) {
@@ -42,13 +45,21 @@ export default function OurTeam({ content, team }) {
 
             <div className="col-12 col-lg-4 d-none d-lg-block">
               <div className={styles.centerImage}>
-                <Image
-                  src={apiURL + content.image.data.attributes.url}
-                  width={content.image.data.attributes.width}
-                  /* height={content.image.data.attributes.height} */
-                  height="600"
-                  alt="Especialista da Nefrosinos"
-                />
+                <Swiper
+                  spaceBetween={24}
+                  modules={[Autoplay]}
+                  autoplay
+                >
+                  {
+                    team.team.map(member => (
+                      <SwiperSlide>
+                        <div style={{ height: '100%' }}>
+                          <MemberCard photo={member.photo} name={member.name} speciality={member.speciality} />
+                        </div>
+                      </SwiperSlide>
+                    ))
+                  }
+                </Swiper>
               </div>
             </div>
 

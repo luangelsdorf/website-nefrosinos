@@ -100,6 +100,19 @@
     height: 100%;
     align-items: center;
 
+    figure {
+      height: 100%;
+      justify-content: center;
+    }
+
+    figcaption {
+      text-align: center;
+    }
+
+    :global(.swiper-slide), :global(.swiper) {
+      height: 100%;
+    }
+
     img {
       width: 100%;
       object-fit: cover;
