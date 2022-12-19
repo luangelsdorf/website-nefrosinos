@@ -89,6 +89,19 @@
   display: flex;
   gap: 24px;
 
+  li {
+    position: relative;
+
+    &[data-dropdown="true"] {
+      &:hover {
+        .dropDown {
+          opacity: 1;
+          transform: scaleY(1);
+        }
+      }
+    }
+  }
+
   li:last-child {
     display: none;
 
@@ -122,5 +135,35 @@
 
   .navbarInner {
     padding: 16px 0px;
+  }
+}
+
+.dropDown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  transition: all 350ms;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top center;
+
+  li {
+    transition: all 350ms;
+    background-color: var(--white);
+
+    &:hover {
+      background-color: var(--pink);
+
+      a {
+        color: var(--white);
+      }
+    }
+
+    a {
+      padding: 1rem;
+      &::after {
+        content: none !important;
+      }
+    }
   }
 }

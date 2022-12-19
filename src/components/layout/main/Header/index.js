@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import styles from './Header.module.scss';
 import Logo from 'public/images/header-logo.svg';
 import Link from 'next/link';
-import useMediaQuery from 'src/hooks/useMediaQuery';
 import { useRouter } from 'next/router';
 
 export default function Header() {
@@ -16,10 +15,54 @@ export default function Header() {
     {
       name: 'Sobre Nós',
       url: '/sobre-nos',
+      dropLinks: [
+        {
+          name: 'Apresentação',
+          url: '/sobre-nos#',
+        },
+        {
+          name: 'Norteadores',
+          url: '/sobre-nos#proposito',
+        },
+        {
+          name: 'História',
+          url: '/sobre-nos#linha-do-tempo',
+        },
+        {
+          name: 'Certificados',
+          url: '/#certificados',
+        },
+      ]
     },
     {
       name: 'Serviços',
       url: '/servicos',
+      dropLinks: [
+        {
+          name: 'Diálise em Trânsito',
+          url: '/servicos#dialise-em-transito',
+        },
+        {
+          name: 'Diálise Peritoneal',
+          url: '/servicos#diálise-peritoneal',
+        },
+        {
+          name: 'Hemodiálise',
+          url: '/servicos#hemodiálise',
+        },
+        {
+          name: 'Hemodiafiltração',
+          url: '/servicos#hemodiafiltração',
+        },
+        {
+          name: 'Tratamento Conservador',
+          url: '/servicos#tratamento-conservador',
+        },
+        {
+          name: 'Transplante',
+          url: '/servicos#transplante',
+        },
+      ]
     },
     {
       name: 'Estrutura',
@@ -38,6 +81,20 @@ export default function Header() {
       url: '/blog',
     },
   ];
+
+  const DropDown = ({ links }) => (
+    <ul className={styles.dropDown}>
+      {
+        links.map(link => (
+          <li key={link.name}>
+            <Link href={link.url}>
+              <a>{link.name}</a>
+            </Link>
+          </li>
+        ))
+      }
+    </ul>
+  )
 
   useEffect(() => {
     require('bootstrap/js/dist/collapse');
@@ -99,10 +156,15 @@ export default function Header() {
                 <ul className={`${styles.links} collapse`} id="navbar">
                   {
                     links.map(link => (
-                      <li key={link.name} onClick={() => document.querySelector('[data-bs-target="#navbar"]').click()}>
+                      <li key={link.name} data-dropdown={!!link.dropLinks} onClick={() => document.querySelector('[data-bs-target="#navbar"]').click()}>
                         <Link href={link.url}>
                           <a>{link.name}</a>
                         </Link>
+                        {
+                          link.dropLinks ? (
+                            <DropDown links={link.dropLinks} />
+                          ) : null
+                        }
                       </li>
                     ))
                   }
