@@ -14,19 +14,23 @@ export default function Blog({ blog, posts, categories }) {
   return (
     <main>
       <Hero content={blog.banner} categories={categories} />
-      <div style={{backgroundColor: 'var(--white)'}}>
+      <div style={{ backgroundColor: 'var(--white)' }}>
         <div className="container">
           <div className="row">
             <div className="col-xl-10 mx-auto">
-              <Section mt="160">
+
+              <Section mt="160 80">
                 <MainPosts posts={posts} />
               </Section>
+
               <Section mt="150 80" pt="120 80" style={{ borderTop: '1px solid var(--gray-10)' }}>
                 <PostList posts={newsAndArticles} title="Artigos e Notícias" />
               </Section>
+
               <Section mb="200 120" mt="160 96" pt="120 96" style={{ borderTop: '1px solid var(--gray-10)' }}>
                 <PostList posts={mediaPosts} title="Saiu na Mídia" />
               </Section>
+
             </div>
           </div>
         </div>

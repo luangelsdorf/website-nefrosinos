@@ -11,5 +11,10 @@
     h2 {
       font: var(--title-lg);
     }
+
+    @include mixins.sm {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 }

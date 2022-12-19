@@ -7,6 +7,10 @@
   gap: 48px;
   height: 100%;
 
+  @include mixins.lg {
+    gap: 24px;
+  }
+
   &[data-first] {
     @media (min-width: 992px /* (lg) */) {
       flex-direction: row;
@@ -76,6 +80,10 @@
 .body {
   padding: 0 24px;
   padding-bottom: 16px;
+
+  @include mixins.lg {
+    padding: 0;
+  }
 
   h3 {
     margin-bottom: 16px;
