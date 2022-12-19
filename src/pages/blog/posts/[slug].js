@@ -24,7 +24,7 @@ export default function Post({ singlePost, recentPosts }) {
           </div>
         </div>
       </div>
-      <Section pt="120" pb="120" style={{ backgroundColor: 'var(--blue)' }}>
+      <Section pt="120" pb="120" style={{ backgroundColor: 'var(--blue)' }} id="posts-recentes">
         <RecentPosts posts={recentPosts} />
       </Section>
     </main>
@@ -56,6 +56,7 @@ export async function getStaticProps({ params: { slug } }) {
       recentPosts,
 
       layout, // will only be used in `_app.js`
-    }
+    },
+    revalidate: 60,
   }
 }

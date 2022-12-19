@@ -13,19 +13,19 @@ export default function Contato({ contact, faq, layout: { info } }) {
     <main>
       <Hero info={info} />
 
-      <Section className="bg-gray">
+      <Section className="bg-gray" id="endereco">
         <Address content={contact.location} info={info} />
       </Section>
 
-      <Section pt="60 4" pb="200 144" className="bg-gray">
+      <Section pt="60 4" pb="200 144" className="bg-gray" id="info-contato">
         <ContactInfo content={contact.details} info={info} />
       </Section>
 
-      <Section mt="-75" mb="160 120">
+      <Section mt="-75" mb="160 120" id="horarios">
         <Hours info={info} />
       </Section>
       
-      <Section mb="280 120">
+      <Section mb="280 120" id="faq">
         <FAQ content={faq} />
       </Section>
     </main>
@@ -47,6 +47,7 @@ export async function getStaticProps() {
       faq,
 
       layout,
-    }
+    },
+    revalidate: 60,
   }
 }

@@ -44,6 +44,7 @@ export async function getStaticProps({ params: { category } }) {
       posts,
       category: categoryName[0].attributes.name,
       layout, // will only be used in `_app.js`
-    }
+    },
+    revalidate: 60,
   }
 }

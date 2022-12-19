@@ -19,15 +19,15 @@ export default function Blog({ blog, posts, categories }) {
           <div className="row">
             <div className="col-xl-10 mx-auto">
 
-              <Section mt="160 80">
+              <Section mt="160 80" id="principais">
                 <MainPosts posts={posts} />
               </Section>
 
-              <Section mt="150 80" pt="120 80" style={{ borderTop: '1px solid var(--gray-10)' }}>
+              <Section mt="150 80" pt="120 80" style={{ borderTop: '1px solid var(--gray-10)' }} id="artigos">
                 <PostList posts={newsAndArticles} title="Artigos e Notícias" />
               </Section>
 
-              <Section mb="200 120" mt="160 96" pt="120 96" style={{ borderTop: '1px solid var(--gray-10)' }}>
+              <Section mb="200 120" mt="160 96" pt="120 96" style={{ borderTop: '1px solid var(--gray-10)' }} id="midia">
                 <PostList posts={mediaPosts} title="Saiu na Mídia" />
               </Section>
 
@@ -56,6 +56,7 @@ export async function getStaticProps() {
       categories,
 
       layout, // will only be used in `_app.js`
-    }
+    },
+    revalidate: 60,
   }
 }

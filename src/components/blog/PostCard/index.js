@@ -19,7 +19,7 @@ export default function PostCard(props) {
           <a className={`link-image ${styles.thumbnail}`}>
             <div>
               <div className={styles.badge}>
-                <Link href={`/categorias/${category.slug}`}>
+                <Link href={`/blog/categorias/${category.slug}`}>
                   <a className="btn small">{category.name}</a>
                 </Link>
               </div>
@@ -37,7 +37,7 @@ export default function PostCard(props) {
         </Link>
 
         <div className={styles.body}>
-          <Link href={props.slug}>
+          <Link href={`/blog/posts/${props.slug}`}>
             <a className="link-image">
               <h3>{props.title}</h3>
             </a>

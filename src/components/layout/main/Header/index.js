@@ -27,11 +27,11 @@ export default function Header() {
     },
     {
       name: 'Equipe',
-      url: '#',
+      url: '#equipe',
     },
     {
       name: 'Convênio',
-      url: '#',
+      url: '#convenios',
     },
     {
       name: 'Blog',
@@ -91,7 +91,7 @@ export default function Header() {
           <div className="row">
             <div className="col-12">
               <div className={styles.navbarInner}>
-                <Link href="/#">
+                <Link href="/">
                   <a className="link-image">
                     <Logo />
                   </a>

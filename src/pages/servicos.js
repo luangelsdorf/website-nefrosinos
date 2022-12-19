@@ -20,47 +20,47 @@ export default function Services({ services, faq, partners }) {
     <main>
       <Hero content={services.banner} />
 
-      <Section mb="-164">
+      <Section mb="-164" id="servicos-destaque">
         <HighlightedServices content={services.highlighted} />
       </Section>
 
-      <Section mt="160 120">
+      <Section mt="160 120" id="dialise-em-transito">
         <InTransit content={services.inTransit} />
       </Section>
 
-      <Section mt="160 80">
+      <Section mt="160 80" id="dialise-peritoneal">
         <PeritonealDialysis content={services.peritonealDialysis} />
       </Section>
 
-      <Section mt="160 80">
+      <Section mt="160 80" id="hemodiafiltração">
         <Hemodiafiltration content={services.hemodiafiltration} />
       </Section>
 
-      <Section mt="200 96">
+      <Section mt="200 96" id="hemodialise">
         <Hemodialysis content={services.hemodialysis} />
       </Section>
 
-      <Section>
+      <Section id="tratamento-conservador">
         <ConservativeTreatment content={services.conservative} />
       </Section>
 
-      <Section mt="200 80">
+      <Section mt="200 80" id="transplante">
         <Transplant content={services.transplant} />
       </Section>
 
-      <Section mt="200 120">
+      <Section mt="200 120" id="convenios">
         <Partners content={services.partners} partners={partners.partners} />
       </Section>
 
-      <Section mt="200 136">
+      <Section mt="200 136" id="estrutura">
         <Structure content={services.structure} />
       </Section>
 
-      <Section mt="200 136">
+      <Section mt="200 136" id="tratamento-agua">
         <WaterTreatment content={services.waterTreatment} />
       </Section>
 
-      <Section mt="200 120" mb="200 120">
+      <Section mt="200 120" mb="200 120" id="faq">
         <FAQ content={faq} />
       </Section>
     </main>
@@ -84,6 +84,7 @@ export async function getStaticProps() {
       partners,
 
       layout, // will only be used in `_app.js`
-    }
+    },
+    revalidate: 60,
   }
 }

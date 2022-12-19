@@ -20,31 +20,31 @@ export default function Home({ home, partners, team, recentPosts }) {
       <HeroSlider content={home.bannerSlider} height={880} />
       <div style={{ backgroundColor: 'var(--white)' }}>
 
-        <Section>
+        <Section id="servico">
           <Service content={home.service} />
         </Section>
 
-        <Section mt="140 80">
+        <Section mt="140 80" id="sobre">
           <AboutUs content={home.aboutUs} />
         </Section>
 
-        <Section pt="96" mt="184 120">
+        <Section pt="96" mt="184 120" id="equipe">
           <OurTeam content={home.ourTeam} team={team} />
         </Section>
 
-        <Section mt="200 120">
+        <Section mt="200 120" id="convenios">
           <Partners content={home.partners} partners={partners} length={6} />
         </Section>
 
-        <Section mt="200 120">
+        <Section mt="200 120" id="estrutura">
           <Structure content={home.structure} />
         </Section>
 
-        <Section mt="160">
+        <Section mt="160" id="calculadora">
           <Calculator content={home.referenceTable} />
         </Section>
 
-        <Section mt="160" mb="200 120">
+        <Section mt="160" mb="200 120" id="posts-recentes">
           <RecentPosts content={home.blog} posts={recentPosts} />
         </Section>
       </div>
@@ -72,6 +72,7 @@ export async function getStaticProps() {
       recentPosts,
 
       layout, // will only be used in `_app.js`
-    }
+    },
+    revalidate: 60,
   }
 }
