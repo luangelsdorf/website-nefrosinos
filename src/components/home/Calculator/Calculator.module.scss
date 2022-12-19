@@ -22,7 +22,7 @@
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
 
   @include mixins.sm {
-    padding: 40px 24px;
+    padding: 56px 32px;
   }
 
   header {
@@ -60,6 +60,10 @@
 
     @include mixins.md {
       justify-content: center;
+
+      & > button {
+        width: 100%;
+      }
     }
   }
 }

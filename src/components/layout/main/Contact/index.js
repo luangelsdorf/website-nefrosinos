@@ -16,7 +16,7 @@ export default function Contact({ content, info }) {
               <Title content={content.contact.title} align="start" spacing="16" />
               <p>{content.contact.text}</p>
               <address>
-                <span>Telefone: </span>{info.phone}
+                <span>Telefone: </span>{info.phone + '\n'} 
                 <span>WhatsApp: </span>{info.whatsapp}
               </address>
               <ContactForm />

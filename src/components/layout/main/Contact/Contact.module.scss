@@ -1,4 +1,4 @@
-@use '../../../../styles/scss/mixins';
+@use "../../../../styles/scss/mixins";
 
 .section {
   position: relative;
@@ -13,9 +13,14 @@
   :global {
     .row {
       position: relative;
-      
+
       @include mixins.lg {
-        gap: 120px;
+        gap: 0;
+
+        & > :nth-child(2) {
+          margin-top: 72px;
+          margin-bottom: 24px;
+        }
       }
     }
 
@@ -50,14 +55,22 @@
     span {
       font-weight: 700;
       color: var(--dark-blue);
-      
+
       &:last-child {
         &::before {
           content: "  |  ";
           white-space: pre-wrap;
           font-weight: normal;
+
+          @include mixins.sm {
+            content: none;
+          }
         }
       }
+    }
+
+    @include mixins.sm {
+      white-space: break-spaces;
     }
   }
 }

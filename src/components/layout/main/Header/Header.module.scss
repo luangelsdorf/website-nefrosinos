@@ -74,6 +74,11 @@
 
   button {
     display: none;
+
+    span {
+      transform: rotate(90deg);
+    }
+
     @include mixins.lg {
       display: inline-flex;
     }
@@ -116,6 +121,6 @@
   }
 
   .navbarInner {
-    padding: 28px 0px;
+    padding: 16px 0px;
   }
 }

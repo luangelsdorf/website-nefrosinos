@@ -6,6 +6,10 @@
   display: flex;
   align-items: center;
 
+  @include mixins.md {
+    padding: 16px 0;
+  }
+
   .content {
     display: flex;
     justify-content: space-between;
@@ -16,7 +20,7 @@
     }
 
     @include mixins.sm {
-      gap: 48px;
+      gap: 24px;
 
       small {
         text-align: center;

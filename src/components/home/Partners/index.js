@@ -16,7 +16,7 @@ export default function Partners({ content, partners, length = 6 }) {
               <Title content={{ title: content.title, overline: 'Convênios' }} align="start" />
               <p>{content.text}</p>
               <Link href="/services#convenios">
-                <a className="btn pink">Lista de Convênios</a>
+                <a className="btn pink icon d-none d-lg-inline-flex">Lista de Convênios</a>
               </Link>
             </div>
           </div>
@@ -26,7 +26,7 @@ export default function Partners({ content, partners, length = 6 }) {
                 numberOfPartners.map(partner => {
                   let currentPartner = partners.partners[partner].image.data.attributes;
                   return (
-                    <div className="col-12 col-md-6 col-lg-4" key={partners.partners[partner].id}>
+                    <div className="col-6 col-md-6 col-lg-4" key={partners.partners[partner].id}>
                       <div className={styles.partnerLogo}>
                         <Image
                           src={apiURL + currentPartner.url}
@@ -38,6 +38,11 @@ export default function Partners({ content, partners, length = 6 }) {
                   )
                 })
               }
+              <div style={{ padding: '0 10px', marginTop: '40px' }}>
+                <Link href="/services#convenios">
+                  <a style={{ width: 'max-content' }} className="btn pink icon d-inline-flex d-lg-none">Lista de Convênios</a>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

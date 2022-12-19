@@ -113,7 +113,7 @@ export default function Header() {
                   </li>
                 </ul>
                 <button className="btn small" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
-                  |||
+                  <span>|||</span>
                 </button>
                 <Link href="/contato">
                   <a className="btn pink">Fale Conosco</a>

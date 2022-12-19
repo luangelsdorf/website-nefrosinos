@@ -3,7 +3,7 @@
 .section {
   @include mixins.lg {
     & > div > :global(.row) {
-      gap: 80px;
+      gap: 24px;
     }
   }
 }
@@ -24,6 +24,11 @@
 .logoRow {
   --bs-gutter-x: 20px;
   --bs-gutter-y: 20px;
+
+  @include mixins.sm {
+    --bs-gutter-x: 16px;
+    --bs-gutter-y: 16px;
+  }
 }
 
 .partnerLogo {
@@ -38,6 +43,11 @@
   align-items: center;
   border-radius: 4px;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+
+  @include mixins.md {
+    height: 120px;
+    padding: 16px 24px;
+  }
 
   img {
     width: 100%;

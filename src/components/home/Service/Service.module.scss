@@ -10,10 +10,14 @@
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  padding: 60px 48px;
+  padding: 56px 48px;
   background-color: var(--blue);
-  gap: 48px;
+  gap: 24px;
   flex-wrap: wrap;
+
+  @include mixins.md {
+    padding: 48px;
+  }
 
   h2 {
     font: var(--title-lg);

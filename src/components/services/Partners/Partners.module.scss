@@ -1,4 +1,4 @@
-@use '../../../styles/scss/mixins';
+@use "../../../styles/scss/mixins";
 
 .section {
   header {
@@ -15,6 +15,11 @@
   object-fit: contain;
   border: 1px solid var(--gray-10);
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+
+  @include mixins.md {
+    height: 120px;
+    padding: 16px 24px;
+  }
 }
 
 .finalText {
