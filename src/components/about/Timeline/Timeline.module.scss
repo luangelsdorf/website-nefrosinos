@@ -6,6 +6,10 @@
 .headingSection {
   position: relative;
   margin-bottom: 160px;
+  
+  @include mixins.lg {
+    margin-bottom: 80px;
+  }
 
   &::before {
     content: "";

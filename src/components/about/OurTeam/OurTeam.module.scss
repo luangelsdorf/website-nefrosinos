@@ -43,6 +43,10 @@
 
   .mainSection {
     margin-bottom: 160px;
+
+    @include mixins.lg {
+      margin-bottom: 80px;
+    }
   }
 
   .specList {

@@ -3,7 +3,11 @@
 .section {
   @include mixins.lg {
     :global(.row) {
-      gap: 96px;
+      gap: 56px;
+
+      & > :first-child {
+        order: 1;
+      }
     }
   }
 }
