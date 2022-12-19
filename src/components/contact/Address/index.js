@@ -9,7 +9,7 @@ export default function Address({ content, info }) {
           <div className="col-12 col-lg-10 mx-auto">
             <div className={styles.content}>
               <div>
-                <p>{content.text.title}</p>
+                <p className="d-none d-md-none">{content.text.title}</p>
                 <h1>{content.text.text}</h1>
               </div>
               <div>

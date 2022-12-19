@@ -17,11 +17,11 @@ export default function Contato({ contact, faq, layout: { info } }) {
         <Address content={contact.location} info={info} />
       </Section>
 
-      <Section pt="60 4" pb="200" className="bg-gray">
+      <Section pt="60 4" pb="200 144" className="bg-gray">
         <ContactInfo content={contact.details} info={info} />
       </Section>
 
-      <Section mt="-75" mb="160">
+      <Section mt="-75" mb="160 120">
         <Hours info={info} />
       </Section>
       

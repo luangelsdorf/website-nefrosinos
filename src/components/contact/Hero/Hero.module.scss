@@ -1,18 +1,17 @@
-@use '../../../styles/scss/mixins';
+@use "../../../styles/scss/mixins";
 
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 760px;
-  padding-top: 116px;
   position: relative;
   z-index: -2;
   pointer-events: none;
   background-color: var(--blue);
 
-  @include mixins.xl {
-    padding-top: 96px;
+  @include mixins.lg {
+    height: 600px;
   }
 
   &::after {
