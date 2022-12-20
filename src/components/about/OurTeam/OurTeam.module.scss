@@ -113,6 +113,21 @@
       height: 100%;
     }
 
+    :global(.swiper-pagination) {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      z-index: 2;
+      color: var(--gray-30);
+      font-size: 0.64rem;
+      font-weight: normal;
+    }
+
+    :global(.swiper-pagination-current) {
+      color: var(--white);
+      font: var(--body-sm);
+    }
+
     img {
       width: 100%;
       object-fit: cover;

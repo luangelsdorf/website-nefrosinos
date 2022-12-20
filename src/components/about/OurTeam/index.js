@@ -4,7 +4,7 @@ import MemberCard from 'src/components/common/MemberCard';
 import TeamCarousel from 'src/components/common/TeamCarousel';
 import Title from 'src/components/common/Title';
 import { apiURL } from 'src/utils/env';
-import { Autoplay } from 'swiper';
+import { Autoplay, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './OurTeam.module.scss';
 
@@ -47,7 +47,11 @@ export default function OurTeam({ content, team }) {
               <div className={styles.centerImage}>
                 <Swiper
                   spaceBetween={24}
-                  modules={[Autoplay]}
+                  modules={[Autoplay, Pagination]}
+                  pagination={{
+                    enabled: true,
+                    type: 'fraction',
+                  }}
                   autoplay
                 >
                   {
