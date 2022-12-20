@@ -15,7 +15,7 @@ export default function Partners({ content, partners, length = 6 }) {
             <div className={styles.textContent}>
               <Title content={{ title: content.title, overline: 'Convênios' }} align="start" />
               <p>{content.text}</p>
-              <Link href="/services#convenios">
+              <Link href="/convenios">
                 <a className="btn pink icon d-none d-lg-inline-flex">Lista de Convênios</a>
               </Link>
             </div>
