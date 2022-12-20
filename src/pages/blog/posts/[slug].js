@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from 'react';
 import Section from 'src/components/common/Section';
 import MainLayout from 'src/components/layout/main';
@@ -11,6 +12,16 @@ export default function Post({ singlePost, recentPosts }) {
 
   return (
     <main>
+
+      <Head>
+        <title>{singlePost.title} - Blog NefroSinos</title>
+        <meta name="description" content="" />
+        <meta property="og:image" content="/images/cover.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${singlePost.title} - Blog NefroSinos`} />
+        <meta property="og:url" content={`https://nefrosinos.com.br/blog/posts/${category}`} />
+      </Head>
+
       <Hero content={singlePost} />
       <div style={{ backgroundColor: 'var(--white)' }}>
         <div className="container">

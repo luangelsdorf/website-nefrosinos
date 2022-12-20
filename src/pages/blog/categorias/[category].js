@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from 'react';
 import FilteredPosts from 'src/components/categories/FilteredPosts';
 import Section from 'src/components/common/Section';
@@ -5,9 +6,18 @@ import MainLayout from 'src/components/layout/main';
 import fetchAPI, { getLayoutContent } from 'src/utils/fetch';
 
 export default function Category({ posts, category }) {
-
   return (
     <main>
+
+      <Head>
+        <title>{category} - Blog NefroSinos</title>
+        <meta name="description" content="" />
+        <meta property="og:image" content="/images/cover.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${category} - Blog NefroSinos`} />
+        <meta property="og:url" content={`https://nefrosinos.com.br/blog/categorias/${category}`} />
+      </Head>
+
       <div className="container">
         <div className="row">
           <div className="col-12 col-xl-10 mx-auto p-0">

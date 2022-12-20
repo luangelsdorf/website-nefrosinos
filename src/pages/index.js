@@ -17,6 +17,16 @@ export default function Home({ home, partners, team, recentPosts }) {
 
   return (
     <main>
+
+      <Head>
+        <title>NefroSinos</title>
+        <meta name="description" content="" />
+        <meta property="og:image" content="/images/cover.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Home" />
+        <meta property="og:url" content="https://nefrosinos.com.br/" />
+      </Head>
+
       <HeroSlider content={home.bannerSlider} height={880} />
       <div style={{ backgroundColor: 'var(--white)' }}>
 

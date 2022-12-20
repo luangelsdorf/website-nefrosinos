@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from 'react';
 import Hero from 'src/components/blog/Hero';
 import MainPosts from 'src/components/blog/MainPosts';
@@ -13,6 +14,16 @@ export default function Blog({ blog, posts, categories }) {
 
   return (
     <main>
+
+      <Head>
+        <title>Blog - NefroSinos</title>
+        <meta name="description" content="" />
+        <meta property="og:image" content="/images/cover.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Blog" />
+        <meta property="og:url" content="https://nefrosinos.com.br/blog" />
+      </Head>
+
       <Hero content={blog.banner} categories={categories} />
       <div style={{ backgroundColor: 'var(--white)' }}>
         <div className="container">

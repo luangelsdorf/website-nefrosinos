@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from 'react'
 import FAQ from 'src/components/common/FAQ';
 import Section from 'src/components/common/Section';
@@ -11,6 +12,16 @@ import fetchAPI, { getLayoutContent } from 'src/utils/fetch';
 export default function Contato({ contact, faq, layout: { info } }) {
   return (
     <main>
+
+      <Head>
+        <title>Contato - NefroSinos</title>
+        <meta name="description" content="" />
+        <meta property="og:image" content="/images/cover.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Contato" />
+        <meta property="og:url" content="https://nefrosinos.com.br/contato" />
+      </Head>
+
       <Hero info={info} />
 
       <Section className="bg-gray" id="endereco">
@@ -24,7 +35,7 @@ export default function Contato({ contact, faq, layout: { info } }) {
       <Section mt="-75" mb="160 120" id="horarios">
         <Hours info={info} />
       </Section>
-      
+
       <Section mb="280 120" id="faq">
         <FAQ content={faq} />
       </Section>

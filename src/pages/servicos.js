@@ -15,6 +15,16 @@ import fetchAPI, { getLayoutContent } from 'src/utils/fetch';
 export default function Services({ services, faq }) {
   return (
     <main>
+
+      <Head>
+        <title>Serviços - NefroSinos</title>
+        <meta name="description" content="" />
+        <meta property="og:image" content="/images/cover.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Serviços" />
+        <meta property="og:url" content="https://nefrosinos.com.br/services" />
+      </Head>
+
       <Hero content={services.banner} />
 
       <Section mb="-164" id="servicos-destaque">
