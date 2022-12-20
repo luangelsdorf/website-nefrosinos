@@ -31,6 +31,11 @@
       }
     }
   }
+
+  & > div {
+    position: relative;
+    width: 100%;
+  }
 }
 
 .thumbnail {

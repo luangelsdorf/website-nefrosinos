@@ -15,26 +15,28 @@ export default function PostCard(props) {
     <div className={`${first ? '' : `col-md-6 col-xl-${props.size ?? 6}`}`}>
       <article className={styles.card} data-first={first || undefined}>
 
-        <Link href={`/blog/posts/${props.slug}`}>
-          <a className={`link-image ${styles.thumbnail}`}>
-            <div>
-              <div className={styles.badge}>
-                <Link href={`/blog/categorias/${category.slug}`}>
-                  <a className="btn small">{category.name}</a>
-                </Link>
+        <div>
+          <div className={styles.badge}>
+            <Link href={`/blog/categorias/${category.slug}`}>
+              <a className="btn small">{category.name}</a>
+            </Link>
+          </div>
+          <Link href={`/blog/posts/${props.slug}`}>
+            <a className={`link-image ${styles.thumbnail}`}>
+              <div>
+                <Image
+                  fill
+                  src={apiURL + props.cover.data.attributes.url}
+                  alt="Thumbnail"
+                  sizes="
+                  (max-width: 576px) 100vw,
+                  (max-width: 992px) 50vw, 33vw
+                  "
+                />
               </div>
-              <Image
-                fill
-                src={apiURL + props.cover.data.attributes.url}
-                alt="Thumbnail"
-                sizes="
-                (max-width: 576px) 100vw,
-                (max-width: 992px) 50vw, 33vw
-                "
-              />
-            </div>
-          </a>
-        </Link>
+            </a>
+          </Link>
+        </div>
 
         <div className={styles.body}>
           <Link href={`/blog/posts/${props.slug}`}>
