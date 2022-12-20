@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from 'react';
 import FAQ from 'src/components/common/FAQ';
 import Section from 'src/components/common/Section';

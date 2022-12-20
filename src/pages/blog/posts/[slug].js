@@ -19,7 +19,7 @@ export default function Post({ singlePost, recentPosts }) {
         <meta property="og:image" content="/images/cover.png" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`${singlePost.title} - Blog NefroSinos`} />
-        <meta property="og:url" content={`https://nefrosinos.com.br/blog/posts/${category}`} />
+        <meta property="og:url" content={`https://nefrosinos.com.br/blog/posts/${singlePost.title}`} />
       </Head>
 
       <Hero content={singlePost} />

@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from 'react';
 import AboutUs from 'src/components/about/AboutUs';
 import Purpose from 'src/components/about/Purpose';
