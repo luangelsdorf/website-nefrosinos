@@ -10,7 +10,7 @@ import styles from './OurTeam.module.scss';
 
 export default function OurTeam({ content, team }) {
 
-  const spec = content.specialists;
+  const spec = content.infoCards;
   const sliceIndex = Math.ceil(spec.length / 2);
 
   const firstHalf = spec.slice(0, sliceIndex);

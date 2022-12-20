@@ -66,15 +66,15 @@ export default function Header() {
     },
     {
       name: 'Estrutura',
-      url: '/servicos#estrutura',
+      url: '/estrutura',
     },
     {
       name: 'Equipe',
-      url: '/sobre-nos#equipe',
+      url: '/equipe',
     },
     {
-      name: 'Convênio',
-      url: '/servicos#convenios',
+      name: 'Convênios',
+      url: '/convenios',
     },
     {
       name: 'Blog',

@@ -1,14 +1,12 @@
-import React from 'react'
-import AboutOurTeam from 'src/components/about/AboutOurTeam';
+import React from 'react';
 import AboutUs from 'src/components/about/AboutUs';
-import OurTeam from 'src/components/about/OurTeam';
 import Purpose from 'src/components/about/Purpose';
 import Timeline from 'src/components/about/Timeline';
 import Section from 'src/components/common/Section';
 import MainLayout from 'src/components/layout/main'
 import fetchAPI, { getLayoutContent } from 'src/utils/fetch';
 
-export default function SobreNos({ about, team }) {
+export default function SobreNos({ about }) {
   return (
     <main>
       <Section pt="72" mt="72" id="sobre-nos">
@@ -19,16 +17,8 @@ export default function SobreNos({ about, team }) {
         <Purpose content={about.purpose} />
       </Section>
 
-      <Section pt="147 96" mt="214 96" id="linha-do-tempo">
+      <Section pt="147 96" mt="214 96" mb="200 136" id="linha-do-tempo">
         <Timeline content={about.timeline} />
-      </Section>
-
-      <Section mt="200 120" id="equipe">
-        <OurTeam content={about.ourTeam} team={team} />
-      </Section>
-
-      <Section mt="200 136" mb="200 136" id="sobre-equipe">
-        <AboutOurTeam content={about.aboutOurTeam} />
       </Section>
     </main>
   )
@@ -39,14 +29,12 @@ SobreNos.showContact = true;
 
 export async function getStaticProps() {
   const about = await fetchAPI('sobre-nos');
-  const team = await fetchAPI('equipe');
 
   const layout = await getLayoutContent();
 
   return {
     props: {
       about,
-      team,
 
       layout, // will only be used in `_app.js`
     },
