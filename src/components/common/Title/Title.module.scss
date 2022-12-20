@@ -8,15 +8,11 @@
   width: 100%;
 
   p {
-    background-color: #ffeef1;
+    background-color: var(--soft-pink);
     color: var(--pink);
     font: var(--body-sm);
     padding: 10px 16px;
     border-radius: 2px;
-
-    & + * {
-      color: var(--blue);
-    }
   }
 }
 
@@ -35,10 +31,6 @@
   p {
     background-color: var(--pink);
     color: var(--white);
-
-    & + * {
-      color: var(--gray-80);
-    }
   }
 }
 

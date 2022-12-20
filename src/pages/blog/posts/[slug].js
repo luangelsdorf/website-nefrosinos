@@ -36,7 +36,7 @@ export default function Post({ singlePost, recentPosts }) {
         </div>
       </div>
       <Section pt="120" pb="120" style={{ backgroundColor: 'var(--blue)' }} id="posts-recentes">
-        <RecentPosts posts={recentPosts} />
+        <RecentPosts posts={recentPosts} dark />
       </Section>
     </main>
   )

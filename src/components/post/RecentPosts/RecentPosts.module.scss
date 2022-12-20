@@ -32,3 +32,13 @@
     }
   }
 }
+
+.dark {
+  a {
+    &:hover {
+      h3 {
+        color: var(--pink);
+      }
+    }
+  }
+}
