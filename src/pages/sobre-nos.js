@@ -35,7 +35,7 @@ export default function SobreNos({ about }) {
   )
 }
 
-SobreNos.layout = MainLayout;
+SobreNos.layout =  MainLayout;
 SobreNos.showContact = true;
 
 export async function getStaticProps() {

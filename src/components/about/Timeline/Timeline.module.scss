@@ -6,7 +6,7 @@
 .headingSection {
   position: relative;
   margin-bottom: 160px;
-  
+
   @include mixins.lg {
     margin-bottom: 80px;
   }
@@ -271,6 +271,39 @@
           background-color: white;
           z-index: -1;
         }
+      }
+    }
+  }
+
+  @include mixins.md {
+    svg {
+      display: none;
+    }
+
+    ol {
+      gap: 48px;
+    }
+
+    li {
+      padding: 0 30px !important;
+      flex-direction: column !important;
+
+      time {
+        margin-bottom: 16px !important;
+      }
+
+      & > * {
+        order: unset !important;
+        text-align: center;
+      }
+
+      .info {
+        margin: 0 !important;
+      }
+
+      &::after,
+      &::before {
+        content: none !important;
       }
     }
   }
