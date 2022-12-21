@@ -123,7 +123,7 @@ export default function Header() {
       nav.current?.removeEventListener('show.bs.collapse', handleCollapse);
       nav.current?.removeEventListener('hide.bs.collapse', handleCollapse);
     }
-  }, [router.route]);
+  }, [router.route, router.asPath]);
 
   useEffect(() => {
     if (router.route !== '/') {

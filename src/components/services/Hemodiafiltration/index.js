@@ -31,7 +31,7 @@ export default function Hemodiafiltration({ content }) {
             <div className="col-12 col-lg-4 offset-lg-1">
               <div className={styles.note}>
                 <Link href="/contato">
-                  <a className="btn icon">Agendar Consulta</a>
+                  <a className="btn icon d-lg-inline-flex d-none">Agendar Consulta</a>
                 </Link>
                 <strong>{highlightFirstWord(content.note)}</strong>
               </div>
@@ -55,6 +55,11 @@ export default function Hemodiafiltration({ content }) {
                 </div>
               ))
             }
+            <div className="col-12">
+              <Link href="/contato">
+                <a className="btn icon d-inline-flex d-lg-none" style={{width: '100%'}}>Agendar Consulta</a>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
