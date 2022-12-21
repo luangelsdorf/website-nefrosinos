@@ -82,7 +82,6 @@
 }
 
 .advantages {
-  counter-reset: heading;
   max-width: 185px;
   display: flex;
   flex-direction: column;
@@ -94,8 +93,8 @@
     margin-bottom: 8px;
 
     &::before {
-      content: "#0" counter(heading) " | ";
-      counter-increment: heading;
+      color: var(--light-pink);
+      content: "+ ";
     }
   }
 

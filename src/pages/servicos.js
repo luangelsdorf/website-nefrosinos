@@ -32,20 +32,20 @@ export default function Services({ services, faq }) {
         <HighlightedServices content={services.highlighted} />
       </Section>
 
-      <Section mt="160 120" id="dialise-em-transito">
-        <InTransit content={services.inTransit} />
-      </Section>
-
-      <Section mt="160 80" id="diálise-peritoneal">
-        <PeritonealDialysis content={services.peritonealDialysis} />
-      </Section>
-
       <Section mt="160 80" id="hemodiafiltração">
         <Hemodiafiltration content={services.hemodiafiltration} />
       </Section>
 
       <Section mt="200 96" id="hemodiálise">
         <Hemodialysis content={services.hemodialysis} />
+      </Section>
+
+      <Section mt="160 120" id="dialise-em-transito">
+        <InTransit content={services.inTransit} />
+      </Section>
+
+      <Section mt="160 80" id="diálise-peritoneal">
+        <PeritonealDialysis content={services.peritonealDialysis} />
       </Section>
 
       <Section id="tratamento-conservador">

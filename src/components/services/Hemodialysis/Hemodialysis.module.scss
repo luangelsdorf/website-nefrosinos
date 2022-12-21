@@ -4,27 +4,16 @@
   background-color: var(--blue);
   position: relative;
 
-  &::before,
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     width: 40%;
-    
+    background-color: var(--white);
+    height: 100%;
+
     @include mixins.lg {
       content: none;
     }
-  }
-
-  &::before {
-    background-color: var(--white);
-    top: 0;
-    bottom: 50%;
-  }
-
-  &::after {
-    background-color: #f9f9fa;
-    top: 50%;
-    bottom: 0;
   }
 
   img {
