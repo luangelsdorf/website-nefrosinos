@@ -16,7 +16,7 @@ export default function Certificates({ content }) {
           {
             content.certificates.map(cert => (
               <div key={cert.id}>
-                <Link href="#">
+                <Link href={cert.link}>
                   <a className="link-image">
                     <Image
                       src={apiURL + cert.image.data.attributes.url}
