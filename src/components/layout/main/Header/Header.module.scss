@@ -109,7 +109,8 @@
     position: relative;
 
     &[data-dropdown="true"] {
-      &:hover {
+      &:hover,
+      &:focus-within {
         .dropDown {
           opacity: 1;
           transform: scaleY(1);
@@ -156,12 +157,14 @@
 
 .dropDown {
   position: absolute;
+  z-index: 2;
   top: calc(100% + 8px);
   left: 0;
   transition: all 350ms;
   opacity: 0;
   transform: scaleY(0);
   transform-origin: top center;
+  box-shadow: var(--shadow-lg);
 
   li {
     transition: all 350ms;

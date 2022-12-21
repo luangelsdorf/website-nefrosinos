@@ -96,8 +96,13 @@ export default function Header() {
     </ul>
   )
 
+  const router = useRouter();
+
   useEffect(() => {
-    require('bootstrap/js/dist/collapse');
+    const Collapse = require('bootstrap/js/dist/collapse');
+    const colNavbar = new Collapse(document.getElementById('navbar'), { toggle: false });
+
+    colNavbar.hide();
 
     if (router.route !== '/') return;
 
@@ -105,7 +110,9 @@ export default function Header() {
       if (e.type === 'show.bs.collapse') {
         nav.current?.classList.add(styles.active);
       } else {
-        nav.current?.classList.remove(styles.active);
+        if (window.scrollY < 48) {
+          nav.current?.classList.remove(styles.active);
+        }
       }
     }
 
@@ -116,9 +123,7 @@ export default function Header() {
       nav.current?.removeEventListener('show.bs.collapse', handleCollapse);
       nav.current?.removeEventListener('hide.bs.collapse', handleCollapse);
     }
-  }, []);
-
-  const router = useRouter();
+  }, [router.route]);
 
   useEffect(() => {
     if (router.route !== '/') {
@@ -156,7 +161,7 @@ export default function Header() {
                 <ul className={`${styles.links} collapse`} id="navbar">
                   {
                     links.map(link => (
-                      <li key={link.name} data-dropdown={!!link.dropLinks} onClick={() => document.querySelector('[data-bs-target="#navbar"]').click()}>
+                      <li key={link.name} data-dropdown={!!link.dropLinks}>
                         <Link href={link.url}>
                           <a>{link.name}</a>
                         </Link>
