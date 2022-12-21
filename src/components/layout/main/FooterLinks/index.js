@@ -43,16 +43,16 @@ export default function FooterLinks({ content }) {
                 <h2>Serviços</h2>
                 <ul>
                   <li>
-                    <Link href="/servicos#dialise-em-transito"><a>Diálise em Trânsito</a></Link>
-                  </li>
-                  <li>
-                    <Link href="/servicos#diálise-peritoneal"><a>Diálise Peritoneal</a></Link>
-                  </li>
-                  <li>
                     <Link href="/servicos#hemodiálise"><a>Hemodiálise</a></Link>
                   </li>
                   <li>
                     <Link href="/servicos#hemodiafiltração"><a>Hemodiafiltração</a></Link>
+                  </li>
+                  <li>
+                    <Link href="/servicos#dialise-em-transito"><a>Diálise em Trânsito</a></Link>
+                  </li>
+                  <li>
+                    <Link href="/servicos#diálise-peritoneal"><a>Diálise Peritoneal</a></Link>
                   </li>
                   <li>
                     <Link href="/servicos#tratamento-conservador"><a>Tratamento Conservador</a></Link>

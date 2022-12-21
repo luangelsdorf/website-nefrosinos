@@ -39,20 +39,20 @@ export default function Header() {
       url: '/servicos',
       dropLinks: [
         {
-          name: 'Diálise em Trânsito',
-          url: '/servicos#dialise-em-transito',
-        },
-        {
-          name: 'Diálise Peritoneal',
-          url: '/servicos#diálise-peritoneal',
-        },
-        {
           name: 'Hemodiálise',
           url: '/servicos#hemodiálise',
         },
         {
           name: 'Hemodiafiltração',
           url: '/servicos#hemodiafiltração',
+        },
+        {
+          name: 'Diálise em Trânsito',
+          url: '/servicos#dialise-em-transito',
+        },
+        {
+          name: 'Diálise Peritoneal',
+          url: '/servicos#diálise-peritoneal',
         },
         {
           name: 'Tratamento Conservador',
