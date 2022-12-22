@@ -43,6 +43,7 @@ export default function Timeline({ content }) {
           </div>
         </div>
       </div>
+      
       <div className={styles.timeline}>
         {/* <Line className={styles.line} /> */}
         <Point className={styles.point} />
