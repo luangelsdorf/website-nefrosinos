@@ -29,7 +29,7 @@ export default function ReferencePopUp({ content }) {
 
   return (
     <>
-      <a onClick={showDialog} href="#modal">Confira aqui a tabela completa com valores de referência.</a>
+      <div role="button" onClick={showDialog}>Confira aqui a tabela completa com valores de referência.</div>
 
       <dialog className={styles.dialog} id="modal">
         <div className="container">

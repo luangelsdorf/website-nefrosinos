@@ -75,10 +75,11 @@ small {
   font: var(--body-sm);
 }
 
-a:not(.btn) {
+a:not(.btn), div[role=button]:not(.btn) {
   --link-fill-color: var(--gray-10);
 
   color: var(--link-fill-color);
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 8px;
