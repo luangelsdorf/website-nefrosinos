@@ -1,5 +1,8 @@
 import React from 'react';
 import styles from './ReferencePopUp.module.scss';
+import Close from 'public/images/icons/xmark-solid.svg';
+import Link from 'next/link';
+import Arrow from 'public/images/icons/arrow-right.svg';
 
 export default function ReferencePopUp({ content }) {
 
@@ -33,7 +36,9 @@ export default function ReferencePopUp({ content }) {
           <div className="row">
             <div className="col-12 col-xl-10 mx-auto">
               <div className={styles.dialogContent}>
-                <button type="button" className={styles.close} onClick={hideDialog}>X</button>
+                <button title="Fechar" type="button" className={styles.close} onClick={hideDialog}>
+                  <Close />
+                </button>
                 <h3>{content.title}</h3>
                 <dl>
                   {
@@ -45,6 +50,12 @@ export default function ReferencePopUp({ content }) {
                     ))
                   }
                 </dl>
+                <p>
+                  É fundamental que o resultado seja avaliado por um especialista da área para garantir o melhor uso dessa informação.&nbsp;
+                  <Link href="/contato">
+                    <a>Fale Conosco <Arrow /></a>
+                  </Link>
+                </p>
               </div>
             </div>
           </div>

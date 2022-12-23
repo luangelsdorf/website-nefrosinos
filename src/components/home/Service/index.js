@@ -12,8 +12,8 @@ export default function Service({ content }) {
               <h2>{content.title}</h2>
               <div className={styles.separator} />
               <p>{content.text}</p>
-              <Link href="/contato">
-                <a className="btn large">Agendar Horário</a>
+              <Link href="/servicos#hemodiafiltração">
+                <a className="btn large">Saiba Mais</a>
               </Link>
             </div>
           </div>

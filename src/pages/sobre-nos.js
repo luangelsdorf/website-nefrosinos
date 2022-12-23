@@ -3,6 +3,7 @@ import React from 'react';
 import AboutUs from 'src/components/about/AboutUs';
 import Purpose from 'src/components/about/Purpose';
 import Timeline from 'src/components/about/Timeline';
+import TimeLineNew from 'src/components/about/TimeLineNew';
 import Section from 'src/components/common/Section';
 import MainLayout from 'src/components/layout/main'
 import fetchAPI, { getLayoutContent } from 'src/utils/fetch';
@@ -31,11 +32,12 @@ export default function SobreNos({ about }) {
       <Section pt="147 96" mt="214 96" mb="200 136" id="linha-do-tempo">
         <Timeline content={about.timeline} />
       </Section>
+      {/* <TimeLineNew content={about.timeline} /> */}
     </main>
   )
 }
 
-SobreNos.layout =  MainLayout;
+SobreNos.layout = MainLayout;
 SobreNos.showContact = true;
 
 export async function getStaticProps() {

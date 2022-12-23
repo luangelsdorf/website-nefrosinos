@@ -25,6 +25,7 @@
     justify-content: center;
     gap: 24px;
     flex-wrap: wrap;
+    margin-bottom: 32px;
 
     .item {
       background-color: var(--gray-10);
@@ -54,6 +55,16 @@
   dd {
     margin: 0;
   }
+
+  & > p {
+    a {
+      gap: 4px;
+    }
+    a,
+    a:hover {
+      --link-fill-color: var(--pink);
+    }
+  }
 }
 
 .close {
@@ -64,6 +75,12 @@
   background-color: transparent;
   border: 0;
   padding: 16px;
+  color: var(--gray-20);
+  transition: all 350ms;
+
+  &:hover {
+    color: var(--gray-90);
+  }
 }
 
 .backdropFade {
