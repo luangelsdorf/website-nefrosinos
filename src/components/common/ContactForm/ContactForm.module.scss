@@ -1,6 +1,7 @@
-@use '../../../styles/scss/mixins';
+@use "../../../styles/scss/mixins";
 
 .form {
+  position: relative;
   input {
     &[name="name"],
     &[name="phone"] {
@@ -17,8 +18,65 @@
   }
 
   @include mixins.lg {
-    button[type=submit] {
+    button[type="submit"] {
       width: 100%;
+      position: relative;
+      span {
+        transition: all 350ms;
+      }
     }
+  }
+
+  :disabled {
+    cursor: not-allowed;
+    filter: opacity(0.6);
+  }
+
+  :global(.btn):disabled {
+    filter: none;
+    background-color: rgba(218, 51, 114, 0.6);
+  }
+
+  :global(.spinner) {
+    --size: 24px;
+    opacity: 0;
+    transform: translateX(-250px);
+    transition: all 350ms;
+    position: absolute;
+    color: var(--dark-pink);
+  }
+}
+
+.feedback {
+  opacity: 0;
+  position: absolute;
+  bottom: -32px;
+  color: var(--support-02);
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.loading {
+  [type="submit"] {
+    filter: none;
+    background-color: rgba(218, 51, 114, 0.6);
+
+    span,
+    &::after {
+      transform: translateX(250px);
+      opacity: 0;
+    }
+
+    :global(.spinner) {
+      opacity: 1;
+      transform: initial;
+    }
+  }
+}
+
+.loaded {
+  .feedback {
+    opacity: 1;
   }
 }

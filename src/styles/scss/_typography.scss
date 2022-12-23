@@ -75,7 +75,8 @@ small {
   font: var(--body-sm);
 }
 
-a:not(.btn), div[role=button]:not(.btn) {
+a:not(.btn),
+div[role="button"]:not(.btn) {
   --link-fill-color: var(--gray-10);
 
   color: var(--link-fill-color);
@@ -116,5 +117,23 @@ a:not(.btn), div[role=button]:not(.btn) {
     &::after {
       transform: scaleX(1);
     }
+  }
+}
+
+.spinner {
+  --size: 32px;
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: calc(var(--size) * 0.09) solid currentColor;
+    border-color: currentColor transparent currentColor transparent;
+    animation: spin 1.2s linear infinite;
   }
 }

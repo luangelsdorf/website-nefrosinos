@@ -78,6 +78,7 @@ $outlined-buttons: (
   &.icon {
     &::after {
       content: "";
+      transition: inherit;
       height: 0.75rem;
       width: 0.75rem;
       mask-image: url("/images/icons/arrow-right.svg");
