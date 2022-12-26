@@ -1,12 +1,53 @@
 @use "../../../styles/scss/mixins";
 
+.section {
+}
+
+.headingSection {
+  position: relative;
+  margin-bottom: 160px;
+
+  @include mixins.lg {
+    margin-bottom: 80px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -147px;
+    bottom: 45%;
+    left: 0;
+    right: 0;
+    z-index: -2;
+    background-color: var(--blue);
+
+    @include mixins.lg {
+      top: -104px;
+    }
+  }
+
+  .image {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin-top: 107px;
+
+    @include mixins.lg {
+      height: 360px;
+      margin-top: 72px;
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
 .timeline {
-  background-color: #000;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 128vh 0;
 
   svg {
     position: relative;
@@ -38,6 +79,29 @@
       bottom: 240px;
       left: -25px;
     }
+
+    @include mixins.lg {
+      right: auto;
+      top: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 56px;
+
+      & > svg:first-child {
+        top: 0;
+      }
+
+      article {
+        left: auto;
+        bottom: auto;
+      }
+    }
+    /* @include mixins.sm {
+      & > svg:last-child {
+        height: 450px;
+      }
+    } */
   }
 
   .middle {
@@ -69,6 +133,27 @@
         position: absolute;
       }
     }
+
+    @include mixins.lg {
+      & > :nth-child(odd) {
+        left: auto;
+        article {
+          right: auto;
+        }
+      }
+
+      & > :nth-child(even) {
+        left: auto;
+        article {
+          left: auto;
+        }
+      }
+
+      & > div {
+        transform: none;
+        justify-content: center;
+      }
+    }
   }
 
   .last {
@@ -90,6 +175,45 @@
       left: -27px;
       rect:first-child {
         fill: var(--blue);
+      }
+    }
+
+    @include mixins.lg {
+      right: auto;
+      justify-content: center;
+      align-items: center;
+
+      article {
+        top: auto;
+        left: auto;
+        bottom: auto;
+      }
+
+      & > svg:last-child {
+        bottom: -50px;
+      }
+    }
+
+    &.flipped {
+      right: -92px;
+
+      & > svg {
+        &:first-child {
+          transform-origin: left;
+          transform: rotateY(180deg);
+        }
+        &:last-child {
+          left: -28px;
+        }
+      }
+
+      @include mixins.lg {
+        right: auto;
+        & > svg {
+          &:first-child {
+            transform: none;
+          }
+        }
       }
     }
   }
@@ -123,7 +247,11 @@
     padding: 48px;
     background-color: var(--soft-pink);
     border-radius: 4px;
-    max-width: 390px;
+    width: 390px;
+
+    @include mixins.sm {
+      width: 310px;
+    }
 
     h3 {
       color: var(--dark-blue);

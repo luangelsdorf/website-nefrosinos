@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2" height="380" fill="none">
+  <line x1="1" x2="1" y2="100%" stroke="#9EA5B8" stroke-width="2" stroke-dasharray="8 8"></line>
+  <line class="fill" x1="1" x2="1" y2="100%" stroke="#193e72" stroke-width="3" stroke-dasharray="1"
+    pathLength="1" stroke-dashoffset="1"></line>
+</svg>

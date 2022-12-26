@@ -15,7 +15,7 @@ export default function useMediaQuery(breakpoint) {
     
     queryResult.addEventListener('change', handleChange);
     return () => queryResult.removeEventListener('change', handleChange);
-  }, []);
+  }, [breakpoint]);
 
   return matches;
 }

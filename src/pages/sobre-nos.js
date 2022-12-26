@@ -30,9 +30,9 @@ export default function SobreNos({ about }) {
       </Section>
 
       <Section pt="147 96" mt="214 96" mb="200 136" id="linha-do-tempo">
-        <Timeline content={about.timeline} />
+        <TimeLineNew content={about.timeline} />
       </Section>
-      {/* <TimeLineNew content={about.timeline} /> */}
+      {/* <Timeline content={about.timeline} /> */}
     </main>
   )
 }
