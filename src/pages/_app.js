@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import WhatsAppButton from 'src/components/common/WhatsAppButton';
 import 'src/styles/styles.scss';
 import 'swiper/css';
 
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }) {
         Component.layout ? (
           <Layout content={pageProps.layout} contact={Component.showContact}>
             <Component {...pageProps} />
+            <WhatsAppButton number={'55' + pageProps.layout.info.whatsapp.replace(/[^a-zA-Z0-9 ]/g, '').split(' ').join('')} />
           </Layout>
         ) : (
           <Component {...pageProps} />
