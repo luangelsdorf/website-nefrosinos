@@ -103,6 +103,10 @@
     figure {
       height: 100%;
       justify-content: center;
+
+      @include mixins.lg {
+        height: 512px;
+      }
     }
 
     figcaption {

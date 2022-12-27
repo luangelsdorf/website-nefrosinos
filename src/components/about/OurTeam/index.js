@@ -1,10 +1,7 @@
-import Image from 'next/future/image';
 import React from 'react';
 import MemberCard from 'src/components/common/MemberCard';
 import Section from 'src/components/common/Section';
-import TeamCarousel from 'src/components/common/TeamCarousel';
 import Title from 'src/components/common/Title';
-import { apiURL } from 'src/utils/env';
 import { Autoplay, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Collaborators from '../Collaborators';
@@ -34,7 +31,7 @@ export default function OurTeam({ content, team }) {
       <Title content={content.title} variant="dark" />
       <div className={styles.mainSection}>
         <div className="container">
-          <div className="row">
+          <div className="row justify-content-center">
             <div className="col-12 col-lg-4 d-none d-lg-block">
               <div className={`${styles.specList} ${styles.first}`}>
                 {
@@ -45,7 +42,7 @@ export default function OurTeam({ content, team }) {
               </div>
             </div>
 
-            <div className="col-12 col-lg-4 d-none d-lg-block">
+            <div className="col-12 col-sm-8 col-md-6 col-lg-4">
               <div className={styles.centerImage}>
                 <Swiper
                   spaceBetween={24}
