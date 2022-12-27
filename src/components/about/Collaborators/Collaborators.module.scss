@@ -2,7 +2,7 @@
 
 .section {
   :global(.swiper-slide) {
-    width: 16%;
+    width: 200px;
 
     @include mixins.lg {
       width: 24%;
@@ -37,6 +37,9 @@
       justify-content: center;
       text-align: center;
       padding: 24px 16px;
+      & > :first-child {
+        font: var(--body-sm);
+      }
     }
   }
 }
