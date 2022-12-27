@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React from 'react'
 import AboutOurTeam from 'src/components/about/AboutOurTeam';
+import Collaborators from 'src/components/about/Collaborators';
 import OurTeam from 'src/components/about/OurTeam';
 import Section from 'src/components/common/Section';
 import MainLayout from 'src/components/layout/main';

@@ -1,11 +1,13 @@
 import Image from 'next/future/image';
 import React from 'react';
 import MemberCard from 'src/components/common/MemberCard';
+import Section from 'src/components/common/Section';
 import TeamCarousel from 'src/components/common/TeamCarousel';
 import Title from 'src/components/common/Title';
 import { apiURL } from 'src/utils/env';
 import { Autoplay, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Collaborators from '../Collaborators';
 import styles from './OurTeam.module.scss';
 
 export default function OurTeam({ content, team }) {
@@ -79,7 +81,10 @@ export default function OurTeam({ content, team }) {
           </div>
         </div>
       </div>
-      <TeamCarousel team={team} />
+      {/* <TeamCarousel team={team} /> */}
+      <Section id="colaboradores">
+        <Collaborators content={team.collaborators} />
+      </Section>
     </div>
   )
 }

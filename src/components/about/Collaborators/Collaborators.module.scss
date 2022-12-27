@@ -1,0 +1,42 @@
+@use "../../../styles/scss/mixins";
+
+.section {
+  :global(.swiper-slide) {
+    width: 16%;
+
+    @include mixins.lg {
+      width: 24%;
+    }
+    @include mixins.md {
+      width: 72vw;
+    }
+  }
+
+  :global(.swiper:first-child) {
+    margin-bottom: 24px;
+  }
+
+  figure {
+    height: 240px;
+
+    @include mixins.md {
+      height: 320px;
+    }
+
+    &::before {
+      background: linear-gradient(
+        180deg,
+        rgba(25, 62, 114, 0) 25%,
+        rgba(25, 62, 114, 0.8) 100%,
+        rgba(25, 62, 114, 0.7) 100%
+      );
+    }
+
+    figcaption {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      padding: 24px 16px;
+    }
+  }
+}
