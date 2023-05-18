@@ -46,7 +46,7 @@ Post.layout = MainLayout;
 Post.showContact = true;
 
 export async function getStaticPaths() {
-  const posts = await fetchAPI('posts');
+  const posts = await fetchAPI('posts', '', '*');
   const paths = posts.map(post => ({
     params: { slug: post.attributes.slug },
   }));
@@ -55,7 +55,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const posts = await fetchAPI('posts', '&sort=createdAt:DESC');
+  const posts = await fetchAPI('posts', '&sort=createdAt:DESC', '*');
   const recentPosts = [posts[0], posts[1]];
   const singlePost = posts.filter(post => post.attributes.slug === slug)[0].attributes;
 

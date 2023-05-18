@@ -67,7 +67,7 @@ export async function getStaticProps() {
   const home = await fetchAPI('home-site');
   const partners = await fetchAPI('parceiro');
   const team = await fetchAPI('equipe');
-  const posts = await fetchAPI('posts', '&sort=createdAt:DESC');
+  const posts = await fetchAPI('posts', '&sort=createdAt:DESC', '*');
   const recentPosts = [posts[0], posts[1], posts[2]];
 
   const layout = await getLayoutContent();

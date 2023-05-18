@@ -35,7 +35,7 @@ Category.layout = MainLayout;
 Category.showContact = true;
 
 export async function getStaticPaths() {
-  const categories = await fetchAPI('categorias');
+  const categories = await fetchAPI('categorias', '', '*');
   const paths = categories.map(cat => ({
     params: { category: cat.attributes.slug },
   }));
@@ -44,7 +44,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { category } }) {
-  const posts = await fetchAPI('posts', `&filters[$and][0][categories][slug][$contains]=${category}`);
+  const posts = await fetchAPI('posts', `&filters[$and][0][categories][slug][$contains]=${category}`, '*');
   const categoryName = await fetchAPI('categorias', `&filters[$and][0][slug][$eq]=${category}`);
 
   const layout = await getLayoutContent();
