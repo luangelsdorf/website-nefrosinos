@@ -44,7 +44,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { category } }) {
-  const posts = await fetchAPI('posts', `&filters[$and][0][categories][slug][$contains]=${category}`, '*');
+  const posts = await fetchAPI('posts', `&filters[$and][0][categories][slug][$contains]=${category}&sort=createdAt:DESC`, '*');
   const categoryName = await fetchAPI('categorias', `&filters[$and][0][slug][$eq]=${category}`);
 
   const layout = await getLayoutContent();

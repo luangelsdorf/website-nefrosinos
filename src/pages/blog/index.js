@@ -55,7 +55,7 @@ Blog.showContact = true;
 
 export async function getStaticProps() {
   const blog = await fetchAPI('home-blog');
-  const posts = await fetchAPI('posts', '', '*');
+  const posts = await fetchAPI('posts', '&sort=createdAt:DESC', '*');
   const categories = await fetchAPI('categorias', '', '*');
 
   const layout = await getLayoutContent();
