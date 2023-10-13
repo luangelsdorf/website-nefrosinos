@@ -75,11 +75,11 @@ export default function FooterLinks({ content }) {
                     <Link href="/#convenios"><a>Convênios</a></Link>
                   </li>
                   <li>
+                    <Link href="/servicos#faq"><a>Perguntas Frequentes</a></Link>
+                  </li>
+                  <li>
                     <Link href="/contato"><a>Fale Conosco</a></Link>
                   </li>
-                  {/* <li>
-                    <Link href="/servicos"><a>Trabalhe Conosco</a></Link>
-                  </li> */}
                 </ul>
               </div>
             </div>
