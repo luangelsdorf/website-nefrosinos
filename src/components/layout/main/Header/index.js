@@ -209,8 +209,8 @@ export default function Header() {
                   <li style={{ display: 'flex' }}>
                     {searching && (
                       <form onSubmit={submitSearch} className="d-flex" style={{ gap: '4px', marginRight: '24px' }}>
-                        <input required type="text" style={{ padding: '8px' }} />
-                        <button name="search" type="submit" className="btn small">
+                        <input autoFocus name="search" required type="text" style={{ padding: '8px' }} />
+                        <button type="submit" className="btn small">
                           <Search style={{ fill: 'currentColor', height: '1em', width: '1em' }} />
                         </button>
                       </form>
