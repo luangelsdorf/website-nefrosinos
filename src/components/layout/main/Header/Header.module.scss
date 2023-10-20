@@ -88,7 +88,16 @@
     }
   }
 
-  button {
+  & > .openSearchButton {
+    margin-right: 24px;
+    margin-left: auto;
+
+    @include mixins.lg {
+      margin-right: 16px;
+    }
+  }
+
+  button[data-bs-toggle="collapse"] {
     display: none;
 
     span {
@@ -104,6 +113,7 @@
 .links {
   display: flex;
   gap: 24px;
+  margin-left: auto;
 
   & > li {
     position: relative;
@@ -125,6 +135,22 @@
         display: inline-block;
       }
     }
+  }
+
+  &.searching {
+    & + .openSearchButton {
+      margin-right: auto;
+      margin-left: 0;
+
+      @include mixins.lg {
+        margin-right: 16px;
+        margin-left: auto;
+      }
+    }
+  }
+
+  @include mixins.xl {
+    font-size: 12px;
   }
 }
 

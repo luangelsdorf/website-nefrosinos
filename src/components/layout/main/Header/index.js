@@ -1,11 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './Header.module.scss';
 import Logo from 'public/images/header-logo.svg';
+import Search from 'public/images/icons/search.svg';
+import Close from 'public/images/icons/x.svg';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 export default function Header() {
   const nav = useRef();
+  const [searching, setSearching] = useState(false);
 
   const links = [
     {
@@ -99,10 +102,14 @@ export default function Header() {
   const router = useRouter();
 
   useEffect(() => {
+    const navbarEl = document.getElementById('navbar');
+    if (!navbarEl) return;
     const Collapse = require('bootstrap/js/dist/collapse');
-    const colNavbar = new Collapse(document.getElementById('navbar'), { toggle: false });
+    const colNavbar = new Collapse(navbarEl, { toggle: false });
 
     colNavbar.hide();
+
+    if (searching) colNavbar.show();
 
     if (router.route !== '/') return;
 
@@ -123,7 +130,7 @@ export default function Header() {
       nav.current?.removeEventListener('show.bs.collapse', handleCollapse);
       nav.current?.removeEventListener('hide.bs.collapse', handleCollapse);
     }
-  }, [router.route, router.asPath]);
+  }, [router.route, router.asPath, searching]);
 
   useEffect(() => {
     if (router.route !== '/') {
@@ -146,6 +153,32 @@ export default function Header() {
     return () => document.removeEventListener('scroll', handleScroll);
   }, [router.route]);
 
+  useEffect(() => {
+    const handleKeyDown = e => (e.isTrusted && e.key === 'Escape') && setSearching(false);
+    const handleClick = e => document.querySelector('main').contains(e.target) && setSearching(false);
+
+    searching ? window.addEventListener('keydown', handleKeyDown) : window.removeEventListener('keydown', handleKeyDown);
+    searching ? window.addEventListener('click', handleClick) : window.removeEventListener('click', handleClick);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('click', handleClick)
+    }
+  }, [searching]);
+
+  function handleSearchClick(e) {
+    e.preventDefault();
+    setSearching(prev => !prev);
+  }
+
+  function submitSearch(e) {
+    e.preventDefault();
+    router.push(`/busca?search=${e.target[0].value}`).then(() => setSearching(false));
+  }
+
+  function openSearchBar() { }
+  function closeSearchBar() { }
+
   return (
     <header className={styles.navbar}>
       <nav ref={nav}>
@@ -158,8 +191,8 @@ export default function Header() {
                     <Logo />
                   </a>
                 </Link>
-                <ul className={`${styles.links} collapse`} id="navbar">
-                  {
+                <ul className={`${styles.links} ${searching ? styles.searching : ''} collapse`} id="navbar">
+                  {!searching && (
                     links.map(link => (
                       <li key={link.name} data-dropdown={!!link.dropLinks}>
                         <Link href={link.url}>
@@ -172,13 +205,32 @@ export default function Header() {
                         }
                       </li>
                     ))
-                  }
+                  )}
+                  <li style={{ display: 'flex' }}>
+                    {searching && (
+                      <form onSubmit={submitSearch} className="d-flex" style={{ gap: '4px', marginRight: '24px' }}>
+                        <input required type="text" style={{ padding: '8px' }} />
+                        <button name="search" type="submit" className="btn small">
+                          <Search style={{ fill: 'currentColor', height: '1em', width: '1em' }} />
+                        </button>
+                      </form>
+                    )}
+                  </li>
                   <li>
                     <Link href="/contato">
                       <a className="btn pink">Fale Conosco</a>
                     </Link>
                   </li>
                 </ul>
+                <Link href="" title="Pesquisar">
+                  <a onClick={handleSearchClick} className={styles.openSearchButton}>
+                    {searching ? (
+                      <Close style={{ fill: 'currentColor', height: '1em', width: '1em' }} />
+                    ) : (
+                      <Search style={{ fill: 'currentColor', height: '1em', width: '1em' }} />
+                    )}
+                  </a>
+                </Link>
                 <button className="btn small" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
                   <span>|||</span>
                 </button>

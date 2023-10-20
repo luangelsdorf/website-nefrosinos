@@ -120,6 +120,13 @@ div[role="button"]:not(.btn) {
   }
 }
 
+button {
+  & > svg {
+    height: 0.75em;
+    width: 0.75em;
+  }
+}
+
 .spinner {
   --size: 32px;
   display: inline-block;
