@@ -14,7 +14,7 @@ export default function Post({ singlePost, recentPosts }) {
     <main>
 
       <Head>
-        <title>{singlePost.title} - Blog NefroSinos</title>
+        <title>{`${singlePost.title} - Blog NefroSinos`}</title>
         <meta name="description" content="" />
         <meta property="og:image" content="/images/cover.png" />
         <meta property="og:type" content="website" />
