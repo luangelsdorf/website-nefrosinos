@@ -4,6 +4,7 @@ import 'src/styles/styles.scss';
 import 'swiper/css';
 import env from 'src/utils/env';
 import TagManager from 'src/components/analytics/TagManager';
+import PopUp from 'src/components/common/PopUp';
 
 function MyApp({ Component, pageProps }) {
   const Layout = Component.layout;
@@ -25,6 +26,8 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         )
       }
+
+      <PopUp />
     </>
   )
 }

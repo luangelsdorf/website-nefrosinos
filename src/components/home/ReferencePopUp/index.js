@@ -15,7 +15,7 @@ export default function ReferencePopUp({ content }) {
   function hideDialog({ target }) {
     const dialog = target.closest('dialog');
     dialog.classList.add(styles.backdropFade);
-    dialog.animate(keyframes, { direction: 'reverse', easing: 'ease-in', duration: 400, }).finished.then(() => {
+    dialog.animate(keyframes, { direction: 'reverse', easing: 'ease-in', duration: 350, }).finished.then(() => {
       dialog.close();
       dialog.classList.remove(styles.backdropFade);
     });
@@ -23,7 +23,7 @@ export default function ReferencePopUp({ content }) {
 
   function showDialog({ target }) {
     const dialog = target.nextElementSibling;
-    dialog.animate(keyframes, { easing: 'ease-out', duration: 400, });
+    dialog.animate(keyframes, { easing: 'ease-out', duration: 350, });
     dialog.showModal();
   }
 
