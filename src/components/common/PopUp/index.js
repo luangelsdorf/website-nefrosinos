@@ -30,8 +30,8 @@ export default function PopUp({ content }) {
                 <Title variant="light" align="start" content={{ title: 'Hemodiafiltração de Alto Volume', overline: 'Disponível na Nefrosinos!' }} />
                 <p>A terapia dialítica mais eficaz da atualidade.</p>
                 <p>Semelhante à Hemodiálise, ela promove melhor qualidade de vida aos pacientes, através de inúmeros benefícios.</p>
-                <Link href="/contato">
-                  <a className="btn pink icon">Fale Conosco</a>
+                <Link href="/contato#info-contato">
+                  <a onClick={e => e.target.closest('dialog').close()} className="btn pink icon">Fale Conosco</a>
                 </Link>
               </div>
             </div>
