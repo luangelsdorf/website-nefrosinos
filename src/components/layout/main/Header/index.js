@@ -35,6 +35,14 @@ export default function Header() {
           name: 'Certificados',
           url: '#certificados',
         },
+        {
+          name: 'Estrutura',
+          url: '/estrutura',
+        },
+        {
+          name: 'Equipe',
+          url: '/equipe',
+        },
       ]
     },
     {
@@ -68,16 +76,22 @@ export default function Header() {
       ]
     },
     {
-      name: 'Estrutura',
-      url: '/estrutura',
-    },
-    {
-      name: 'Equipe',
-      url: '/equipe',
-    },
-    {
       name: 'Convênios',
       url: '/convenios',
+    },
+    {
+      name: 'Paciente',
+      url: '#',
+      dropLinks: [
+        {
+          name: 'Calculadora da Função Renal',
+          url: '/calculadora',
+        },
+        {
+          name: 'Guias Rápidos',
+          url: '/guias-rapidos',
+        },
+      ]
     },
     {
       name: 'Blog',
@@ -196,7 +210,15 @@ export default function Header() {
                     links.map(link => (
                       <li key={link.name} data-dropdown={!!link.dropLinks}>
                         <Link href={link.url}>
-                          <a>{link.name}</a>
+                          <a
+                            onClick={(e) => {
+                              if (link.url === '#') {
+                                e.preventDefault();
+                              }
+                            }}
+                          >
+                            {link.name}
+                          </a>
                         </Link>
                         {
                           link.dropLinks ? (

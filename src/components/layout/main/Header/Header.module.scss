@@ -191,6 +191,7 @@
   transform: scaleY(0);
   transform-origin: top center;
   box-shadow: var(--shadow-lg);
+  width: max-content;
 
   li {
     transition: all 350ms;

@@ -14,7 +14,7 @@ const nextConfig = {
   },
 
   images: {
-    domains: ['picsum.photos', 'localhost', 'nefrosinos.com', 'nefrosinos.com.br'],
+    domains: ['picsum.photos', 'localhost', '127.0.0.1', 'nefrosinos.com', 'nefrosinos.com.br'],
   }
 }
 
