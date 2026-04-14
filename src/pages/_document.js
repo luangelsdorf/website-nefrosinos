@@ -18,6 +18,9 @@ export default function Document() {
           rel="stylesheet"
         />
         <link rel="icon" href="/images/logo.svg" />
+        
+        <meta name="google-site-verification" content="SrtNvlim9u_-Hc8uPyp1P2IDvwyf5667ML4FcjO7C1E" />
+        
       </Head>
       <body>
         <Main />
