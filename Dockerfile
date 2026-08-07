@@ -8,6 +8,8 @@ RUN npm ci
 
 # Copia o código-fonte e realiza o build
 COPY . .
+ARG NEXT_PUBLIC_API_URL=https://nefrosinos.com.br/strapi
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 RUN npm run build
 
 # Estágio final (runner)
