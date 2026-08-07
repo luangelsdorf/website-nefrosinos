@@ -1,4 +1,4 @@
-FROM node:18-alpine AS builder
+FROM node:18-alpine3.18 AS builder
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ COPY . .
 RUN npm run build
 
 # Estágio final (runner)
-FROM node:18-alpine AS runner
+FROM node:18-alpine3.18 AS runner
 
 WORKDIR /app
 ENV NODE_ENV=production
